@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "cloud_boots",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Clouds"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Clouds"
+      },
+      {
+        "value": "CUSTOM:Clouds"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:Clouds"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Cloud.boots"
+    },
+    "name": "cloud_boots",
+    "namespace": "mod"
+  }
+}

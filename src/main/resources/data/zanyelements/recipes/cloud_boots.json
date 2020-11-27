@@ -1,0 +1,26 @@
+{
+  "group": "cloud_boots",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:cloud"
+    },
+    "2": {
+      "item": "zanyelements:cloud"
+    },
+    "3": {
+      "item": "zanyelements:cloud"
+    },
+    "5": {
+      "item": "zanyelements:cloud"
+    }
+  },
+  "result": {
+    "item": "zanyelements:cloud_boots",
+    "count": 1
+  }
+}

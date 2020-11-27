@@ -1,0 +1,16 @@
+{
+  "group": "void_pouch",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:bedrock"
+    }
+  },
+  "result": {
+    "item": "zanyelements:void_pouch",
+    "count": 1
+  }
+}
