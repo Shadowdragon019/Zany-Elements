@@ -22,6 +22,5 @@ public class VoudPouchItemIsCraftedsmeltedProcedure extends ZanyelementsModEleme
 		(itemstack).getOrCreateTag().putDouble("consumedEndermen", 0);
 		(itemstack).getOrCreateTag().putDouble("consumedEndermenTotal", 0);
 		(itemstack).getOrCreateTag().putDouble("pouchCurrentLevel", 0);
-		(itemstack).getOrCreateTag().putDouble("pouchMaxLevel", 3);
 	}
 }

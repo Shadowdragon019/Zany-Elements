@@ -233,6 +233,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -245,9 +249,28 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "void_pouch"
+    },
+    {
+      "name": "EntityDies",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_dies",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "voidPouchMaxLevel",
+      "type": "number",
+      "scope": "map",
+      "value": "3.0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {

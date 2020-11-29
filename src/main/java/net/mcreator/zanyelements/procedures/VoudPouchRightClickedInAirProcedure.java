@@ -13,6 +13,7 @@ import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 import java.util.stream.Collectors;
@@ -111,7 +112,11 @@ public class VoudPouchRightClickedInAirProcedure extends ZanyelementsModElements
 								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.enderman.scream")),
 								SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 					}
-					(itemstack).getOrCreateTag().putDouble("consumedEndermen", (((itemstack).getOrCreateTag().getDouble("consumedEndermen")) + 1));
+					if ((((itemstack).getOrCreateTag()
+							.getDouble("pouchCurrentLevel")) < (ZanyelementsModVariables.MapVariables.get(world).voidPouchMaxLevel))) {
+						(itemstack).getOrCreateTag().putDouble("consumedEndermen",
+								(((itemstack).getOrCreateTag().getDouble("consumedEndermen")) + 1));
+					}
 					(itemstack).getOrCreateTag().putDouble("consumedEndermenTotal",
 							(((itemstack).getOrCreateTag().getDouble("consumedEndermenTotal")) + 1));
 				}
