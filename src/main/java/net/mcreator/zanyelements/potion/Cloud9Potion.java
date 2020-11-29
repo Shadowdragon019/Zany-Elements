@@ -52,7 +52,7 @@ public class Cloud9Potion extends ZanyelementsModElements.ModElement {
 		public EffectCustom() {
 			super(EffectType.BENEFICIAL, -1);
 			setRegistryName("cloud_9");
-			potionIcon = new ResourceLocation("zanyelements:textures/need_texture_texture.png");
+			potionIcon = new ResourceLocation("zanyelements:textures/cloud_9_effect.png");
 		}
 
 		@Override

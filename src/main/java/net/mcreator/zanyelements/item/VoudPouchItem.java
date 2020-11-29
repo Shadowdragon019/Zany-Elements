@@ -4,6 +4,8 @@ package net.mcreator.zanyelements.item;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
@@ -12,6 +14,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.zanyelements.procedures.VoudPouchRightClickedInAirProcedure;
@@ -20,6 +23,7 @@ import net.mcreator.zanyelements.procedures.VoudPouchItemInHandTickProcedure;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
 
 @ZanyelementsModElements.ModElement.Tag
@@ -36,7 +40,7 @@ public class VoudPouchItem extends ZanyelementsModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(1).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.COMMON));
 			setRegistryName("void_pouch");
 		}
 
@@ -53,6 +57,13 @@ public class VoudPouchItem extends ZanyelementsModElements.ModElement {
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
+		}
+
+		@Override
+		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+			super.addInformation(itemstack, world, list, flag);
+			list.add(new StringTextComponent("Right click to teleport all items in a raidus to you"));
+			list.add(new StringTextComponent("You can level your Void Pouch up by consuming Endermen in the same radius"));
 		}
 
 		@Override

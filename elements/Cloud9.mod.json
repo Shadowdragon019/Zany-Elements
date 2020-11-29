@@ -4,7 +4,7 @@
   "definition": {
     "name": "Cloud 9",
     "effectName": "Cloud 9",
-    "icon": "need_texture_texture.png",
+    "icon": "cloud_9_effect.png",
     "color": {
       "value": -1,
       "falpha": 0.0

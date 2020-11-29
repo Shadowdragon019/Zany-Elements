@@ -261,6 +261,40 @@
       "metadata": {
         "dependencies": []
       }
+    },
+    {
+      "name": "MaxiumumVoidPouchLevel",
+      "type": "command",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maxiumum_void_pouch_level"
+    },
+    {
+      "name": "MaxiumumVoidPouchLevelCommandExecuted",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "maxiumum_void_pouch_level_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
