@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.SHULKER_SHELL"
       },
       {
-        "value": ""
+        "value": "Blocks.OBSIDIAN"
       },
       {
-        "value": ""
+        "value": "Items.SHULKER_SHELL"
       },
       {
-        "value": ""
+        "value": "Blocks.OBSIDIAN"
       },
       {
-        "value": "Blocks.BEDROCK"
+        "value": "Blocks.ENDER_CHEST"
       },
       {
-        "value": ""
+        "value": "Blocks.OBSIDIAN"
       },
       {
-        "value": ""
+        "value": "Items.SHULKER_SHELL"
       },
       {
-        "value": ""
+        "value": "Blocks.OBSIDIAN"
       },
       {
-        "value": ""
+        "value": "Items.SHULKER_SHELL"
       }
     ],
     "recipeReturnStack": {

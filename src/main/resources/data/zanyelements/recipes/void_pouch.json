@@ -2,11 +2,37 @@
   "group": "void_pouch",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "0"
+    "012",
+    "345",
+    "678"
   ],
   "key": {
     "0": {
-      "item": "minecraft:bedrock"
+      "item": "minecraft:shulker_shell"
+    },
+    "1": {
+      "item": "minecraft:obsidian"
+    },
+    "2": {
+      "item": "minecraft:shulker_shell"
+    },
+    "3": {
+      "item": "minecraft:obsidian"
+    },
+    "4": {
+      "item": "minecraft:ender_chest"
+    },
+    "5": {
+      "item": "minecraft:obsidian"
+    },
+    "6": {
+      "item": "minecraft:shulker_shell"
+    },
+    "7": {
+      "item": "minecraft:obsidian"
+    },
+    "8": {
+      "item": "minecraft:shulker_shell"
     }
   },
   "result": {

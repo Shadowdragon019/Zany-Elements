@@ -295,6 +295,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "Totem",
+      "type": "block",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem"
+    },
+    {
+      "name": "TotemGUI",
+      "type": "gui",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_gui"
     }
   ],
   "variable_elements": [
@@ -308,23 +326,24 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.zanyelements.cloud_boots": "Cloud Boots",
-      "block.zanyelements.cloud": "Cloud",
+      "block.zanyelements.totem": "Totem",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
+      "effect.cloud_9": "Cloud 9",
+      "item.minecraft.potion.effect.cloud_9": "Cloud 9",
+      "item.zanyelements.cloud_boots": "Cloud Boots",
+      "block.zanyelements.cloud": "Cloud",
       "item.zanyelements.void_pouch": "Void Pouch",
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
       "item.zanyelements.cloud_chestplate": "Cloud Body",
-      "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9",
-      "effect.cloud_9": "Cloud 9",
-      "item.minecraft.potion.effect.cloud_9": "Cloud 9"
+      "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9"
     }
   },
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.0",
+    "version": "1.0.0 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
@@ -334,6 +353,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.zanyelements",
     "lockBaseModFiles": false
   },

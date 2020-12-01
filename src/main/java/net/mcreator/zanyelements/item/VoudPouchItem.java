@@ -108,6 +108,9 @@ public class VoudPouchItem extends ZanyelementsModElements.ModElement {
 			if (selected) {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("itemstack", itemstack);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				VoudPouchItemInHandTickProcedure.executeProcedure($_dependencies);
 			}
