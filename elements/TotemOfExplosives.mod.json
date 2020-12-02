@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "void_pouch_better",
+    "texture": "totem_of_explosions",
     "customModelName": "Normal",
-    "name": "Void Pouch",
+    "name": "Totem Of Explosives",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "COMBAT"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -23,22 +23,10 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "Right click to teleport all items in a raidus to you",
-      "You can level your Void Pouch up by consuming Endermen in the same radius"
-    ],
+    "specialInfo": [],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
-    "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "VoudPouchRightClickedInAir"
-    },
-    "onCrafted": {
-      "name": "VoudPouchItemIsCraftedsmelted"
-    },
-    "onItemInUseTick": {
-      "name": "VoudPouchItemInHandTick"
-    }
+    "inventoryStackSize": 64
   }
 }

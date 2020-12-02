@@ -259,7 +259,16 @@
       "ids": {},
       "registry_name": "entity_dies",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -313,6 +322,48 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "totem_gui"
+    },
+    {
+      "name": "TotemOfExplosives",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_explosives"
+    },
+    {
+      "name": "EntityTriesToGrief",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_tries_to_grief",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -327,6 +378,7 @@
   "language_map": {
     "en_us": {
       "block.zanyelements.totem": "Totem",
+      "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "effect.cloud_9": "Cloud 9",
@@ -343,7 +395,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.0 Beta",
+    "version": "1.0.1 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
