@@ -11,6 +11,8 @@ import net.minecraft.world.Explosion;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.monster.CreeperEntity;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
@@ -82,6 +84,14 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 900, (int) 1));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
+		}
+		if (((Math.round((Math.random() * 63)) == 0) == (entity instanceof CreeperEntity))) {
+			if (!world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+						new ItemStack(TotemOfExplosivesItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
 		}
 	}
 

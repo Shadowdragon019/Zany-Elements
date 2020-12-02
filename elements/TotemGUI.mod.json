@@ -8,7 +8,7 @@
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
-    "doesPauseGame": true,
+    "doesPauseGame": false,
     "components": [
       {
         "type": "inputslot",

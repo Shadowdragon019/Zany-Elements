@@ -297,11 +297,6 @@ public class TotemGUIGui extends ZanyelementsModElements.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-
-		@Override
-		public boolean isPauseScreen() {
-			return true;
-		}
 		private static final ResourceLocation texture = new ResourceLocation("zanyelements:textures/totem_gui.png");
 		@Override
 		public void render(int mouseX, int mouseY, float partialTicks) {

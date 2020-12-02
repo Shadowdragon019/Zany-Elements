@@ -364,6 +364,35 @@
           }
         ]
       }
+    },
+    {
+      "name": "TotemUpdateTick",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -395,7 +424,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.1 Beta",
+    "version": "1.0.2 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,

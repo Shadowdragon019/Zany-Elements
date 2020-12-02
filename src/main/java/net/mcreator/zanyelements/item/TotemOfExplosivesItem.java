@@ -25,7 +25,7 @@ public class TotemOfExplosivesItem extends ZanyelementsModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.COMMON));
+			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.UNCOMMON));
 			setRegistryName("totem_of_explosives");
 		}
 

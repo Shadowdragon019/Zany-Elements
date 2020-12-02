@@ -64,6 +64,16 @@ public class EntityTriesToGriefProcedure extends ZanyelementsModElements.ModElem
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((entity instanceof CreeperEntity)) {
+			if (((true) == (entity.getPersistentData().getBoolean("explosionDisabled")))) {
+				if (dependencies.get("event") != null) {
+					Object _obj = dependencies.get("event");
+					if (_obj instanceof Event) {
+						Event _evt = (Event) _obj;
+						if (_evt.hasResult())
+							_evt.setResult(Event.Result.DENY);
+					}
+				}
+			}
 			{
 				List<Entity> _entfound = world
 						.getEntitiesWithinAABB(Entity.class,
