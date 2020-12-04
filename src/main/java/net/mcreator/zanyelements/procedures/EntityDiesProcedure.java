@@ -85,7 +85,7 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
 		}
-		if (((Math.round((Math.random() * 63)) == 0) == (entity instanceof CreeperEntity))) {
+		if (((Math.round((Math.random() * 63)) == 0) && (entity instanceof CreeperEntity))) {
 			if (!world.getWorld().isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 						new ItemStack(TotemOfExplosivesItem.block, (int) (1)));
