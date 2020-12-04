@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:cloud"
+    },
+    "title": {
+      "translate": "advancements.physical_clouds.title"
+    },
+    "description": {
+      "translate": "advancements.physical_clouds.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "physical_clouds": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "block": "zanyelements:cloud"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "minecraft:adventure/root"
+}

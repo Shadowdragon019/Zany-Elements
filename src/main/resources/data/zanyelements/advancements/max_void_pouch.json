@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:void_pouch"
+    },
+    "title": {
+      "translate": "advancements.max_void_pouch.title"
+    },
+    "description": {
+      "translate": "advancements.max_void_pouch.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "max_void_pouch": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "zanyelements:get_void_pouch"
+}

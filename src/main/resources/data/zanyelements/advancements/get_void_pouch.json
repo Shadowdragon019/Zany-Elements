@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:void_pouch"
+    },
+    "title": {
+      "translate": "advancements.get_void_pouch.title"
+    },
+    "description": {
+      "translate": "advancements.get_void_pouch.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_void_pouch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "zanyelements:void_pouch",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "minecraft:end/find_end_city"
+}

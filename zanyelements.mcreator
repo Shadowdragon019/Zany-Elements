@@ -231,6 +231,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "itemstack",
             "type": "itemstack"
           },
@@ -393,6 +397,69 @@
           }
         ]
       }
+    },
+    {
+      "name": "GetVoidPouch",
+      "type": "achievement",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_void_pouch"
+    },
+    {
+      "name": "Test",
+      "type": "achievement",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "test"
+    },
+    {
+      "name": "MaxVoidPouch",
+      "type": "achievement",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "max_void_pouch"
+    },
+    {
+      "name": "PhysicalClouds",
+      "type": "achievement",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "physical_clouds"
+    },
+    {
+      "name": "GetCloudBoots",
+      "type": "achievement",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_cloud_boots"
+    },
+    {
+      "name": "Totems",
+      "type": "achievement",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totems"
+    },
+    {
+      "name": "CreeperTotem",
+      "type": "achievement",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creeper_totem"
     }
   ],
   "variable_elements": [
@@ -406,17 +473,31 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "block.zanyelements.totem": "Totem",
+      "advancements.max_void_pouch.title": "Max Void Pouch",
+      "advancements.get_void_pouch.descr": "Craft a Void Pouch",
+      "advancements.creeper_totem.title": "Explosive Life",
+      "advancements.totems.title": "Your First Totem",
       "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
-      "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
+      "advancements.test.descr": "Tessst",
+      "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
+      "block.zanyelements.cloud": "Cloud",
+      "advancements.get_cloud_boots.descr": "Craft cloud boots",
+      "item.zanyelements.cloud_helmet": "Cloud Helmet",
+      "item.zanyelements.cloud_leggings": "Cloud Leggings",
+      "advancements.get_cloud_boots.title": "Pep In Your Step!",
+      "block.zanyelements.totem": "Totem",
+      "advancements.test.title": "Test",
+      "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
+      "advancements.physical_clouds.title": "Physical Clouds",
+      "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
+      "advancements.totems.descr": "Obtain a totem pole",
       "effect.cloud_9": "Cloud 9",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
       "item.zanyelements.cloud_boots": "Cloud Boots",
-      "block.zanyelements.cloud": "Cloud",
+      "advancements.get_void_pouch.title": "Pouch of the Void",
       "item.zanyelements.void_pouch": "Void Pouch",
-      "item.zanyelements.cloud_helmet": "Cloud Helmet",
-      "item.zanyelements.cloud_leggings": "Cloud Leggings",
+      "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
       "item.zanyelements.cloud_chestplate": "Cloud Body",
       "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9"
     }

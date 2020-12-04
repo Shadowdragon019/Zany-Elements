@@ -107,6 +107,7 @@ public class VoudPouchItem extends ZanyelementsModElements.ModElement {
 			double z = entity.getPosZ();
 			if (selected) {
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("itemstack", itemstack);
 				$_dependencies.put("world", world);
 				VoudPouchItemInHandTickProcedure.executeProcedure($_dependencies);
