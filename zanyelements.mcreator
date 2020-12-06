@@ -736,8 +736,8 @@
     "en_us": {
       "advancements.max_void_pouch.title": "Max Void Pouch",
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
-      "advancements.creeper_totem.title": "Explosive Life",
       "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
+      "advancements.creeper_totem.title": "Explosive Life",
       "advancements.totems.title": "Your First Totem",
       "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
@@ -776,7 +776,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.3 Beta",
+    "version": "1.0.4 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,

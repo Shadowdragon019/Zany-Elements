@@ -47,7 +47,7 @@ public class AnimalConductorEnchantment extends ZanyelementsModElements.ModEleme
 
 		@Override
 		public boolean isTreasureEnchantment() {
-			return false;
+			return true;
 		}
 
 		@Override
@@ -57,7 +57,7 @@ public class AnimalConductorEnchantment extends ZanyelementsModElements.ModEleme
 
 		@Override
 		public boolean isAllowedOnBooks() {
-			return false;
+			return true;
 		}
 	}
 }

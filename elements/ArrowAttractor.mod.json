@@ -14,8 +14,8 @@
         "value": "CUSTOM:VoudPouch"
       }
     ],
-    "isTreasureEnchantment": false,
+    "isTreasureEnchantment": true,
     "isCurse": false,
-    "isAllowedOnBooks": false
+    "isAllowedOnBooks": true
   }
 }
