@@ -460,6 +460,267 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "creeper_totem"
+    },
+    {
+      "name": "PhilosophersStone",
+      "type": "item",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone"
+    },
+    {
+      "name": "PhilosophersStoneIronToGold",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_iron_to_gold"
+    },
+    {
+      "name": "PhilosophersStoneGoldToIron",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_gold_to_iron"
+    },
+    {
+      "name": "PhilosophersStoneLapisToRedstone",
+      "type": "recipe",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_lapis_to_redstone"
+    },
+    {
+      "name": "PhilosophersStoneRedstoneToLapis",
+      "type": "recipe",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_redstone_to_lapis"
+    },
+    {
+      "name": "PhilosphersStoneDiamondToEmerald",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosphers_stone_diamond_to_emerald"
+    },
+    {
+      "name": "PhilosophersStoneEmeraldToDiamond",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_emerald_to_diamond"
+    },
+    {
+      "name": "PhilosophersStoneIronNuggetToGoldNugget",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_iron_nugget_to_gold_nugget"
+    },
+    {
+      "name": "PhilosophersStoneGoldNuggetToIronNugger",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_gold_nugget_to_iron_nugger"
+    },
+    {
+      "name": "PhilosophersStoneCoalToCharcoal",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_coal_to_charcoal"
+    },
+    {
+      "name": "PhilosophersStoneCharcoalToCoal",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_charcoal_to_coal"
+    },
+    {
+      "name": "PhilosophersStoneIronBlockToGoldBlock",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_iron_block_to_gold_block"
+    },
+    {
+      "name": "PhilosophersStoneGoldBlockToIronBlock",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_gold_block_to_iron_block"
+    },
+    {
+      "name": "PhilosphersStoneDiamondBlockToEmeraldBlock",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosphers_stone_diamond_block_to_emerald_block"
+    },
+    {
+      "name": "PhilosophersStoneEmeraldBlockToDiamondBlock",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_emerald_block_to_diamond_block"
+    },
+    {
+      "name": "PhilosophersStoneLapisBlockToRedstoneBlock",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_lapis_block_to_redstone_block"
+    },
+    {
+      "name": "PhilosophersStoneRedstoneBlockToLapisBlock",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_redstone_block_to_lapis_block"
+    },
+    {
+      "name": "CondensedIron",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "condensed_iron"
+    },
+    {
+      "name": "CharcoalBlock",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charcoal_block"
+    },
+    {
+      "name": "Charcoal",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charcoal"
+    },
+    {
+      "name": "CharcoalBlockR",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charcoal_block_r"
+    },
+    {
+      "name": "PhilosophersStoneCoalBlockToCharcoalBlock",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_coal_block_to_charcoal_block"
+    },
+    {
+      "name": "PhilosophersStoneCharcoalBlockToCoalBlock",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_charcoal_block_to_coal_block"
+    },
+    {
+      "name": "CharcoalBlockF",
+      "type": "fuel",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "charcoal_block_f"
+    },
+    {
+      "name": "GetCharcoalBlock",
+      "type": "achievement",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_charcoal_block"
+    },
+    {
+      "name": "XpSiphon",
+      "type": "enchantment",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "xp_siphon"
+    },
+    {
+      "name": "AnimalConductor",
+      "type": "enchantment",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "animal_conductor"
+    },
+    {
+      "name": "ArrowAttractor",
+      "type": "enchantment",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "arrow_attractor"
+    },
+    {
+      "name": "SupremMaxVoidPouch",
+      "type": "achievement",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "suprem_max_void_pouch"
     }
   ],
   "variable_elements": [
@@ -476,27 +737,37 @@
       "advancements.max_void_pouch.title": "Max Void Pouch",
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
       "advancements.creeper_totem.title": "Explosive Life",
+      "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
       "advancements.totems.title": "Your First Totem",
       "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "advancements.test.descr": "Tessst",
+      "item.zanyelements.philosophers_stone": "Philosopher\u0027s Stone",
+      "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
       "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
       "block.zanyelements.cloud": "Cloud",
       "advancements.get_cloud_boots.descr": "Craft cloud boots",
+      "item.zanyelements.condensed_iron": "Condensed Iron",
+      "enchantment.zanyelements.xp_siphon": "Xp Siphon",
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
       "advancements.get_cloud_boots.title": "Pep In Your Step!",
-      "block.zanyelements.totem": "Totem",
+      "block.zanyelements.totem": "Totem Poles",
       "advancements.test.title": "Test",
       "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
+      "advancements.suprem_max_void_pouch.title": "Supreme Maximum Void Pouch",
       "advancements.physical_clouds.title": "Physical Clouds",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
       "advancements.totems.descr": "Obtain a totem pole",
+      "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
       "effect.cloud_9": "Cloud 9",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
+      "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "item.zanyelements.cloud_boots": "Cloud Boots",
       "advancements.get_void_pouch.title": "Pouch of the Void",
+      "block.zanyelements.charcoal_block": "Charcoal Block",
       "item.zanyelements.void_pouch": "Void Pouch",
+      "enchantment.zanyelements.animal_conductor": "Animal Conductor",
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
       "item.zanyelements.cloud_chestplate": "Cloud Body",
       "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9"
@@ -505,7 +776,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.2 Beta",
+    "version": "1.0.3 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,

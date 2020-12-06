@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "philosphers_stone_diamond_block_to_emerald_block",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "CUSTOM:PhilosophersStone"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      },
+      {
+        "value": "Blocks.DIAMOND_BLOCK"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.EMERALD_BLOCK"
+    },
+    "name": "philosphers_stone_diamond_block_to_emerald_block",
+    "namespace": "mod"
+  }
+}

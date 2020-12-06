@@ -1,0 +1,22 @@
+{
+  "group": "philosophers_stone_charcoal_block_to_coal_block",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:charcoal_block"
+    },
+    "1": {
+      "item": "zanyelements:philosophers_stone"
+    },
+    "2": {
+      "item": "zanyelements:charcoal_block"
+    }
+  },
+  "result": {
+    "item": "minecraft:coal_block",
+    "count": 1
+  }
+}

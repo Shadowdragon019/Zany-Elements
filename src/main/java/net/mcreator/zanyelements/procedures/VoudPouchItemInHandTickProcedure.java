@@ -7,9 +7,13 @@ import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import net.mcreator.zanyelements.enchantment.XpSiphonEnchantment;
+import net.mcreator.zanyelements.enchantment.ArrowAttractorEnchantment;
+import net.mcreator.zanyelements.enchantment.AnimalConductorEnchantment;
 import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
@@ -59,6 +63,22 @@ public class VoudPouchItemInHandTickProcedure extends ZanyelementsModElements.Mo
 					while (_iterator.hasNext()) {
 						String _criterion = (String) _iterator.next();
 						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+					}
+				}
+			}
+			if (((((EnchantmentHelper.getEnchantmentLevel(XpSiphonEnchantment.enchantment, (itemstack)) != 0))
+					&& ((EnchantmentHelper.getEnchantmentLevel(AnimalConductorEnchantment.enchantment, (itemstack)) != 0)))
+					&& ((EnchantmentHelper.getEnchantmentLevel(ArrowAttractorEnchantment.enchantment, (itemstack)) != 0)))) {
+				if (entity instanceof ServerPlayerEntity) {
+					Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+							.getAdvancement(new ResourceLocation("zanyelements:suprem_max_void_pouch"));
+					AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
+					if (!_ap.isDone()) {
+						Iterator _iterator = _ap.getRemaningCriteria().iterator();
+						while (_iterator.hasNext()) {
+							String _criterion = (String) _iterator.next();
+							((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						}
 					}
 				}
 			}

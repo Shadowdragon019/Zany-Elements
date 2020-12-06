@@ -164,7 +164,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Totem");
+						return new StringTextComponent("Totem Poles");
 					}
 
 					@Override
@@ -296,7 +296,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Totem");
+			return new StringTextComponent("Totem Poles");
 		}
 
 		@Override

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zanyelements:blocks/charcoal_block",
+    "up": "zanyelements:blocks/charcoal_block",
+    "north": "zanyelements:blocks/charcoal_block",
+    "east": "zanyelements:blocks/charcoal_block",
+    "south": "zanyelements:blocks/charcoal_block",
+    "west": "zanyelements:blocks/charcoal_block",
+    "particle": "zanyelements:blocks/charcoal_block"
+  }
+}

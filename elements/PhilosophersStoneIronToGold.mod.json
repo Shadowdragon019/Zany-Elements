@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "philosophers_stone_iron_to_gold",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": "CUSTOM:PhilosophersStone"
+      },
+      {
+        "value": "Items.IRON_INGOT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Items.GOLD_INGOT"
+    },
+    "name": "philosophers_stone_iron_to_gold",
+    "namespace": "mod"
+  }
+}

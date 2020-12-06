@@ -1,0 +1,22 @@
+{
+  "group": "philosophers_stone_lapis_to_redstone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "1": {
+      "item": "zanyelements:philosophers_stone"
+    },
+    "2": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "minecraft:redstone",
+    "count": 1
+  }
+}

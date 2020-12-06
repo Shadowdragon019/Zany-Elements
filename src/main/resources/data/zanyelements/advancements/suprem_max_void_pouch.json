@@ -4,23 +4,23 @@
       "item": "zanyelements:void_pouch"
     },
     "title": {
-      "translate": "advancements.max_void_pouch.title"
+      "translate": "advancements.suprem_max_void_pouch.title"
     },
     "description": {
-      "translate": "advancements.max_void_pouch.descr"
+      "translate": "advancements.suprem_max_void_pouch.descr"
     },
-    "frame": "goal",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": false
+    "hidden": true
   },
   "criteria": {
-    "max_void_pouch": {
+    "suprem_max_void_pouch": {
       "trigger": "minecraft:impossible"
     }
   },
   "rewards": {
     "experience": 1
   },
-  "parent": "zanyelements:get_void_pouch"
+  "parent": "zanyelements:max_void_pouch"
 }

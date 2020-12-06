@@ -2,20 +2,20 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "birch_planks",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 2,
-    "customModelName": "totem:default",
+    "texture": "charcoal_block",
+    "textureTop": "charcoal_block",
+    "textureLeft": "charcoal_block",
+    "textureFront": "charcoal_block",
+    "textureRight": "charcoal_block",
+    "textureBack": "charcoal_block",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 0,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "hasTransparency": true,
+    "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
@@ -24,16 +24,16 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Totem Poles",
+    "name": "Charcoal Block",
     "specialInfo": [],
-    "hardness": 2.0,
-    "resistance": 2.0,
+    "hardness": 5.0,
+    "resistance": 6.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
-      "value": "DECORATIONS"
+      "value": "BUILDING_BLOCKS"
     },
-    "destroyTool": "axe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -43,11 +43,11 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 0,
+    "lightOpacity": 255,
     "material": {
-      "value": "WOOD"
+      "value": "ROCK"
     },
-    "tickRate": 40,
+    "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -63,11 +63,11 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "STONE"
     },
     "luminance": 0.0,
     "unbreakable": false,
-    "breakHarvestLevel": -1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "CUSTOM:CloudDust"
@@ -75,10 +75,10 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "hasInventory": true,
-    "guiBoundTo": "TotemGUI",
-    "openGUIOnRightClick": true,
-    "inventorySize": 1,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
@@ -92,9 +92,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onTickUpdate": {
-      "name": "TotemUpdateTick"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

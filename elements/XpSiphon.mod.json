@@ -1,0 +1,21 @@
+{
+  "_fv": 13,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Xp Siphon",
+    "type": "ALL",
+    "rarity": "COMMON",
+    "minLevel": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "compatibleEnchantments": [],
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:VoudPouch"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": false
+  }
+}

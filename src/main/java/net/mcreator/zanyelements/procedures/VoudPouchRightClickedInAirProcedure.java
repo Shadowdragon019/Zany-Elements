@@ -8,11 +8,18 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.item.ExperienceOrbEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
 
+import net.mcreator.zanyelements.enchantment.XpSiphonEnchantment;
+import net.mcreator.zanyelements.enchantment.ArrowAttractorEnchantment;
+import net.mcreator.zanyelements.enchantment.AnimalConductorEnchantment;
 import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
@@ -119,6 +126,36 @@ public class VoudPouchRightClickedInAirProcedure extends ZanyelementsModElements
 					}
 					(itemstack).getOrCreateTag().putDouble("consumedEndermenTotal",
 							(((itemstack).getOrCreateTag().getDouble("consumedEndermenTotal")) + 1));
+				} else if (((entityiterator instanceof ExperienceOrbEntity)
+						&& ((EnchantmentHelper.getEnchantmentLevel(XpSiphonEnchantment.enchantment, (itemstack)) != 0)))) {
+					{
+						Entity _ent = entityiterator;
+						_ent.setPositionAndUpdate((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()));
+						if (_ent instanceof ServerPlayerEntity) {
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+						}
+					}
+				} else if (((entityiterator instanceof ArrowEntity)
+						&& ((EnchantmentHelper.getEnchantmentLevel(ArrowAttractorEnchantment.enchantment, (itemstack)) != 0)))) {
+					{
+						Entity _ent = entityiterator;
+						_ent.setPositionAndUpdate((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()));
+						if (_ent instanceof ServerPlayerEntity) {
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+						}
+					}
+				} else if (((entityiterator instanceof AnimalEntity)
+						&& ((EnchantmentHelper.getEnchantmentLevel(AnimalConductorEnchantment.enchantment, (itemstack)) != 0)))) {
+					{
+						Entity _ent = entityiterator;
+						_ent.setPositionAndUpdate((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()));
+						if (_ent instanceof ServerPlayerEntity) {
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+						}
+					}
 				}
 			}
 		}

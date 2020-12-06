@@ -1,0 +1,22 @@
+{
+  "group": "philosophers_stone_gold_nugget_to_iron_nugget",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:gold_nugget"
+    },
+    "1": {
+      "item": "zanyelements:philosophers_stone"
+    },
+    "2": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "result": {
+    "item": "minecraft:iron_nugget",
+    "count": 1
+  }
+}

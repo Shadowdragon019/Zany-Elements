@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "philosophers_stone_gold_nugget_to_iron_nugget",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": "CUSTOM:PhilosophersStone"
+      },
+      {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Items.IRON_NUGGET"
+    },
+    "name": "philosophers_stone_gold_nugget_to_iron_nugget",
+    "namespace": "mod"
+  }
+}
