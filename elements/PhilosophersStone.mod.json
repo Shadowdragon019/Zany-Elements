@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "need_texture_texture",
+    "texture": "philosophers_stone",
     "customModelName": "Normal",
     "name": "Philosopher's Stone",
     "rarity": "UNCOMMON",

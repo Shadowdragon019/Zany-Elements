@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "zanyelements:items/need_texture_texture"
+    "layer0": "zanyelements:items/philosophers_stone"
   }
 }
