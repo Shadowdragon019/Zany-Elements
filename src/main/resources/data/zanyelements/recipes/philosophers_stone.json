@@ -1,0 +1,42 @@
+{
+  "group": "philosophers_stone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "1": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "2": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "3": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "4": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "5": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "6": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "7": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "8": {
+      "item": "zanyelements:philosophers_shard"
+    }
+  },
+  "result": {
+    "item": "zanyelements:philosophers_stone",
+    "count": 1
+  }
+}

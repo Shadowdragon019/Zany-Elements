@@ -12,11 +12,11 @@ import net.minecraft.block.BlockState;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 @ZanyelementsModElements.ModElement.Tag
-public class PhilosophersStoneItem extends ZanyelementsModElements.ModElement {
-	@ObjectHolder("zanyelements:philosophers_stone")
+public class PhilosophersShardItem extends ZanyelementsModElements.ModElement {
+	@ObjectHolder("zanyelements:philosophers_shard")
 	public static final Item block = null;
-	public PhilosophersStoneItem(ZanyelementsModElements instance) {
-		super(instance, 31);
+	public PhilosophersShardItem(ZanyelementsModElements instance) {
+		super(instance, 62);
 	}
 
 	@Override
@@ -25,18 +25,8 @@ public class PhilosophersStoneItem extends ZanyelementsModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.UNCOMMON));
-			setRegistryName("philosophers_stone");
-		}
-
-		@Override
-		public boolean hasContainerItem() {
-			return true;
-		}
-
-		@Override
-		public ItemStack getContainerItem(ItemStack itemstack) {
-			return new ItemStack(this);
+			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.UNCOMMON));
+			setRegistryName("philosophers_shard");
 		}
 
 		@Override

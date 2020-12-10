@@ -721,6 +721,42 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "suprem_max_void_pouch"
+    },
+    {
+      "name": "PhilosophersOre",
+      "type": "block",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_ore"
+    },
+    {
+      "name": "PhilosophersShard",
+      "type": "item",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_shard"
+    },
+    {
+      "name": "PhilosophersOreLootTalbe",
+      "type": "loottable",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_ore_loot_talbe"
+    },
+    {
+      "name": "PhilosophersStoneR",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_r"
     }
   ],
   "variable_elements": [
@@ -764,11 +800,13 @@
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
       "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "item.zanyelements.cloud_boots": "Cloud Boots",
+      "block.zanyelements.philosophers_ore": "Philosophers Ore",
       "advancements.get_void_pouch.title": "Pouch of the Void",
       "block.zanyelements.charcoal_block": "Charcoal Block",
       "item.zanyelements.void_pouch": "Void Pouch",
       "enchantment.zanyelements.animal_conductor": "Animal Conductor",
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
+      "item.zanyelements.philosophers_shard": "Philosophers Shard",
       "item.zanyelements.cloud_chestplate": "Cloud Body",
       "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9"
     }

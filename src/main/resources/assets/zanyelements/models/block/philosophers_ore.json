@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zanyelements:blocks/philosophers_shard_ore",
+    "up": "zanyelements:blocks/philosophers_shard_ore",
+    "north": "zanyelements:blocks/philosophers_shard_ore",
+    "east": "zanyelements:blocks/philosophers_shard_ore",
+    "south": "zanyelements:blocks/philosophers_shard_ore",
+    "west": "zanyelements:blocks/philosophers_shard_ore",
+    "particle": "zanyelements:blocks/philosophers_shard_ore"
+  }
+}

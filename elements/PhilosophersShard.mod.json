@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "philosophers_stone",
+    "texture": "phiosophers_shard",
     "customModelName": "Normal",
-    "name": "Philosopher's Stone",
+    "name": "Philosophers Shard",
     "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "MISC"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
@@ -19,7 +19,7 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "stayInGridWhenCrafting": true,
+    "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
