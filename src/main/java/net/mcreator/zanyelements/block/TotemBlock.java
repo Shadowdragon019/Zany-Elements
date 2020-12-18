@@ -116,7 +116,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public int tickRate(IWorldReader world) {
-			return 40;
+			return 1;
 		}
 
 		@Override

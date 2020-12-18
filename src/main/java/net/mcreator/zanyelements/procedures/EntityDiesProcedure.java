@@ -14,12 +14,15 @@ import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.Minecraft;
+import net.minecraft.block.Blocks;
 
 import net.mcreator.zanyelements.potion.EndgelicPotion;
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
+import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
@@ -40,12 +43,30 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				System.err.println("Failed to load dependency entity for procedure EntityDies!");
 			return;
 		}
+		if (dependencies.get("x") == null) {
+			if (!dependencies.containsKey("x"))
+				System.err.println("Failed to load dependency x for procedure EntityDies!");
+			return;
+		}
+		if (dependencies.get("y") == null) {
+			if (!dependencies.containsKey("y"))
+				System.err.println("Failed to load dependency y for procedure EntityDies!");
+			return;
+		}
+		if (dependencies.get("z") == null) {
+			if (!dependencies.containsKey("z"))
+				System.err.println("Failed to load dependency z for procedure EntityDies!");
+			return;
+		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
 				System.err.println("Failed to load dependency world for procedure EntityDies!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
+		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
+		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(TotemOfExplosivesItem.block, (int) (1)).getItem())
@@ -105,6 +126,34 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 					((ServerPlayerEntity) _ent).connection.setPlayerLocation(((entity.getPosX()) + (8 - (Math.round(Math.random()) * 16))),
 							((entity.getPosY()) + 8), ((entity.getPosZ()) + (8 - (Math.round(Math.random()) * 16))), _ent.rotationYaw,
 							_ent.rotationPitch, Collections.emptySet());
+				}
+			}
+		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(TotemOfFluffItem.block, (int) (1)).getItem())
+				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == new ItemStack(TotemOfFluffItem.block, (int) (1)).getItem()))) {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).setHealth((float) 1);
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 120, (int) 1));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 900, (int) 1));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
+			for (int index0 = 0; index0 < (int) (16); index0++) {
+				if (!world.getWorld().isRemote) {
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), ((Math.round((Math.random() * 8)) + (-4)) + x), (y + 4),
+							((Math.round((Math.random() * 8)) + (-4)) + z), new ItemStack(Blocks.WHITE_WOOL, (int) (1)));
+					entityToSpawn.setPickupDelay((int) 10);
+					world.addEntity(entityToSpawn);
 				}
 			}
 		}

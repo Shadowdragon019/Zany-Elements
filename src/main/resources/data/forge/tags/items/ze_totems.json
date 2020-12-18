@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "zanyelements:totem_of_explosives",
-    "zanyelements:totem_of_the_end"
+    "zanyelements:totem_of_the_end",
+    "zanyelements:totem_of_fluff"
   ]
 }

@@ -269,6 +269,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -999,6 +1011,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "TotemOfFluff",
+      "type": "item",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_fluff"
     }
   ],
   "variable_elements": [
@@ -1032,6 +1053,7 @@
       "item.minecraft.tipped_arrow.effect.endgelic": "Arrow of Endgelic",
       "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
+      "item.zanyelements.totem_of_fluff": "Totem Of Fluff",
       "item.zanyelements.cloud_boots": "Cloud Boots",
       "block.zanyelements.philosophers_ore": "Philosopher\u0027s Ore",
       "block.zanyelements.charcoal_block": "Charcoal Block",
@@ -1072,7 +1094,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.4 Beta",
+    "version": "1.0.6 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,

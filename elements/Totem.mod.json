@@ -47,7 +47,7 @@
     "material": {
       "value": "WOOD"
     },
-    "tickRate": 40,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",

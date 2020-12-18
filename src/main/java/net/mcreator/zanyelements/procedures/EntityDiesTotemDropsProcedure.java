@@ -7,12 +7,14 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.monster.EndermanEntity;
 import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
+import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
@@ -51,6 +53,13 @@ public class EntityDiesTotemDropsProcedure extends ZanyelementsModElements.ModEl
 				if (!world.getWorld().isRemote) {
 					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 							new ItemStack(TotemOfTheEndItem.block, (int) (1)));
+					entityToSpawn.setPickupDelay((int) 10);
+					world.addEntity(entityToSpawn);
+				}
+			} else if ((entity instanceof SheepEntity)) {
+				if (!world.getWorld().isRemote) {
+					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+							new ItemStack(TotemOfFluffItem.block, (int) (1)));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
 				}
