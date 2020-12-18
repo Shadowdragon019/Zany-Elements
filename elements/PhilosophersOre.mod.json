@@ -24,7 +24,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Philosophers Ore",
+    "name": "Philosopher's Ore",
     "specialInfo": [],
     "hardness": 3.0,
     "resistance": 3.0,
@@ -92,6 +92,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onDestroyedByPlayer": {
+      "name": "PhilosophersOreBlockDestroyedByPlayer"
+    },
     "spawnWorldTypes": [
       "Surface"
     ],
@@ -102,7 +105,7 @@
       }
     ],
     "frequencyPerChunks": 20,
-    "frequencyOnChunk": 16,
+    "frequencyOnChunk": 3,
     "minGenerateHeight": 64,
     "maxGenerateHeight": 255
   }

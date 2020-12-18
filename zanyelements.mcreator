@@ -757,6 +757,248 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "philosophers_stone_r"
+    },
+    {
+      "name": "MinePhilosophersOre",
+      "type": "achievement",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mine_philosophers_ore"
+    },
+    {
+      "name": "GetPhilosophersStone",
+      "type": "achievement",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_philosophers_stone"
+    },
+    {
+      "name": "TwoPhilosophersStones",
+      "type": "achievement",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "two_philosophers_stones"
+    },
+    {
+      "name": "PhilosophersOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PhilosophersStoneItemInInventoryTick",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "philosophers_stone_item_in_inventory_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiscounterWitherSkullR",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "discounter_wither_skull_r"
+    },
+    {
+      "name": "TNT",
+      "type": "armor",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tnt",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      }
+    },
+    {
+      "name": "EntityTakeFallDamage",
+      "type": "procedure",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_take_fall_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TotemOfTheEnd",
+      "type": "item",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_the_end"
+    },
+    {
+      "name": "ZETotems",
+      "type": "tag",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ze_totems"
+    },
+    {
+      "name": "EntityDiesTotemDrops",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_dies_totem_drops",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TNTBootsR",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tnt_boots_r"
+    },
+    {
+      "name": "Endgelic",
+      "type": "potion",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endgelic"
+    },
+    {
+      "name": "EndgelicOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endgelic_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndDust",
+      "type": "particle",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_dust"
+    },
+    {
+      "name": "PlayerTicks",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_ticks",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -770,44 +1012,60 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.max_void_pouch.title": "Max Void Pouch",
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
-      "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
-      "advancements.creeper_totem.title": "Explosive Life",
+      "item.minecraft.potion.effect.endgelic": "Endgelic",
       "advancements.totems.title": "Your First Totem",
-      "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
-      "advancements.test.descr": "Tessst",
+      "item.zanyelements.tnt_leggings": "TNT Leggings",
       "item.zanyelements.philosophers_stone": "Philosopher\u0027s Stone",
-      "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
-      "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
-      "block.zanyelements.cloud": "Cloud",
-      "advancements.get_cloud_boots.descr": "Craft cloud boots",
-      "item.zanyelements.condensed_iron": "Condensed Iron",
+      "item.zanyelements.tnt_chestplate": "TNT Body",
       "enchantment.zanyelements.xp_siphon": "Xp Siphon",
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
-      "advancements.get_cloud_boots.title": "Pep In Your Step!",
-      "block.zanyelements.totem": "Totem Poles",
+      "item.zanyelements.totem_of_the_end": "Totem Of The End",
       "advancements.test.title": "Test",
-      "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
       "advancements.suprem_max_void_pouch.title": "Supreme Maximum Void Pouch",
+      "effect.endgelic": "Endgelic",
       "advancements.physical_clouds.title": "Physical Clouds",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
       "advancements.totems.descr": "Obtain a totem pole",
+      "item.minecraft.tipped_arrow.effect.endgelic": "Arrow of Endgelic",
       "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
-      "effect.cloud_9": "Cloud 9",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
-      "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "item.zanyelements.cloud_boots": "Cloud Boots",
-      "block.zanyelements.philosophers_ore": "Philosophers Ore",
-      "advancements.get_void_pouch.title": "Pouch of the Void",
+      "block.zanyelements.philosophers_ore": "Philosopher\u0027s Ore",
       "block.zanyelements.charcoal_block": "Charcoal Block",
       "item.zanyelements.void_pouch": "Void Pouch",
+      "item.zanyelements.cloud_chestplate": "Cloud Body",
+      "advancements.max_void_pouch.title": "Max Void Pouch",
+      "item.minecraft.splash_potion.effect.endgelic": "Splash Endgelic",
+      "advancements.two_philosophers_stones.descr": "Craft a second Philosopher\u0027s Stone",
+      "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
+      "advancements.creeper_totem.title": "Explosive Life",
+      "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
+      "advancements.test.descr": "Tessst",
+      "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
+      "advancements.get_philosophers_stone.descr": "Craft a Philosopher\u0027s Stone",
+      "advancements.two_philosophers_stones.title": "Why Do You Need Two of Them?",
+      "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
+      "block.zanyelements.cloud": "Cloud",
+      "advancements.mine_philosophers_ore.title": "A Shard of Philosophers",
+      "advancements.get_cloud_boots.descr": "Craft cloud boots",
+      "item.zanyelements.condensed_iron": "Condensed Iron",
+      "advancements.get_philosophers_stone.title": "Philosopher\u0027s Advancement",
+      "advancements.get_cloud_boots.title": "Pep In Your Step!",
+      "block.zanyelements.totem": "Totem Poles",
+      "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
+      "advancements.mine_philosophers_ore.descr": "Mine Philosopher\u0027s Ore",
+      "item.zanyelements.tnt_helmet": "TNT Helmet",
+      "item.zanyelements.tnt_boots": "TNT Boots",
+      "effect.cloud_9": "Cloud 9",
+      "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
+      "item.minecraft.lingering_potion.effect.endgelic": "Lingering Endgelic",
+      "advancements.get_void_pouch.title": "Pouch of the Void",
       "enchantment.zanyelements.animal_conductor": "Animal Conductor",
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
-      "item.zanyelements.philosophers_shard": "Philosophers Shard",
-      "item.zanyelements.cloud_chestplate": "Cloud Body",
+      "item.zanyelements.philosophers_shard": "Philosopher\u0027s Shard",
       "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9"
     }
   },

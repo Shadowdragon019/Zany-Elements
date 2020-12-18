@@ -1,0 +1,19 @@
+{
+  "_fv": 13,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:TotemOfExplosives"
+      },
+      {
+        "value": "CUSTOM:TotemOfTheEnd"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "ze_totems",
+    "namespace": "forge"
+  }
+}

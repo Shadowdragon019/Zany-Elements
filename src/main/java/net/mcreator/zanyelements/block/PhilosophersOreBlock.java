@@ -14,19 +14,26 @@ import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
+import net.minecraft.fluid.IFluidState;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
+import net.mcreator.zanyelements.procedures.PhilosophersOreBlockDestroyedByPlayerProcedure;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 import java.util.Random;
+import java.util.Map;
+import java.util.HashMap;
 
 @ZanyelementsModElements.ModElement.Tag
 public class PhilosophersOreBlock extends ZanyelementsModElements.ModElement {
@@ -48,6 +55,20 @@ public class PhilosophersOreBlock extends ZanyelementsModElements.ModElement {
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("philosophers_ore");
 		}
+
+		@Override
+		public boolean removedByPlayer(BlockState state, World world, BlockPos pos, PlayerEntity entity, boolean willHarvest, IFluidState fluid) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest, fluid);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				PhilosophersOreBlockDestroyedByPlayerProcedure.executeProcedure($_dependencies);
+			}
+			return retval;
+		}
 	}
 	@Override
 	public void init(FMLCommonSetupEvent event) {
@@ -68,7 +89,7 @@ public class PhilosophersOreBlock extends ZanyelementsModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.STONE.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 64, 64, 255))));
+			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 64, 64, 255))));
 		}
 	}
 }

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:philosophers_stone"
+    },
+    "title": {
+      "translate": "advancements.two_philosophers_stones.title"
+    },
+    "description": {
+      "translate": "advancements.two_philosophers_stones.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "two_philosophers_stones": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "zanyelements:get_philosophers_stone"
+}

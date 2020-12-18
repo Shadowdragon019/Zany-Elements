@@ -1,0 +1,26 @@
+{
+  "group": "tnt_boots",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:tnt"
+    },
+    "2": {
+      "item": "minecraft:tnt"
+    },
+    "3": {
+      "item": "minecraft:tnt_minecart"
+    },
+    "5": {
+      "item": "minecraft:tnt_minecart"
+    }
+  },
+  "result": {
+    "item": "zanyelements:tnt_boots",
+    "count": 1
+  }
+}

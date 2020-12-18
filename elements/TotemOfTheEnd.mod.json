@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "totem_of_explosions",
+    "texture": "totem_of_the_end",
     "customModelName": "Normal",
-    "name": "Totem Of Explosives",
+    "name": "Totem Of The End",
     "rarity": "UNCOMMON",
     "creativeTab": {
       "value": "COMBAT"
@@ -24,7 +24,7 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [
-      "Drops from creepers"
+      "Drops from endermen"
     ],
     "hasGlow": false,
     "guiBoundTo": "<NONE>",

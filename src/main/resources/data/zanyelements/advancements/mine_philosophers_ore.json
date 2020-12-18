@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "title": {
+      "translate": "advancements.mine_philosophers_ore.title"
+    },
+    "description": {
+      "translate": "advancements.mine_philosophers_ore.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mine_philosophers_ore": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "minecraft:story/iron_tools"
+}

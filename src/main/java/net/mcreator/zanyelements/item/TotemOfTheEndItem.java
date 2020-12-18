@@ -18,11 +18,11 @@ import net.mcreator.zanyelements.ZanyelementsModElements;
 import java.util.List;
 
 @ZanyelementsModElements.ModElement.Tag
-public class TotemOfExplosivesItem extends ZanyelementsModElements.ModElement {
-	@ObjectHolder("zanyelements:totem_of_explosives")
+public class TotemOfTheEndItem extends ZanyelementsModElements.ModElement {
+	@ObjectHolder("zanyelements:totem_of_the_end")
 	public static final Item block = null;
-	public TotemOfExplosivesItem(ZanyelementsModElements instance) {
-		super(instance, 21);
+	public TotemOfTheEndItem(ZanyelementsModElements instance) {
+		super(instance, 75);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class TotemOfExplosivesItem extends ZanyelementsModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.UNCOMMON));
-			setRegistryName("totem_of_explosives");
+			setRegistryName("totem_of_the_end");
 		}
 
 		@Override
@@ -53,7 +53,7 @@ public class TotemOfExplosivesItem extends ZanyelementsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Drops from creepers"));
+			list.add(new StringTextComponent("Drops from endermen"));
 		}
 	}
 }

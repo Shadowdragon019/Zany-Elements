@@ -1,0 +1,46 @@
+{
+  "_fv": 13,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "tnt_boots",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "Items.TNT_MINECART"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.TNT_MINECART"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:TNT.boots"
+    },
+    "name": "tnt_boots",
+    "namespace": "mod"
+  }
+}
