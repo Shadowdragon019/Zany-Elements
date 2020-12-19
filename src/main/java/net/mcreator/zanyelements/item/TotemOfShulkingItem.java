@@ -18,11 +18,11 @@ import net.mcreator.zanyelements.ZanyelementsModElements;
 import java.util.List;
 
 @ZanyelementsModElements.ModElement.Tag
-public class TotemOfFluffItem extends ZanyelementsModElements.ModElement {
-	@ObjectHolder("zanyelements:totem_of_fluff")
+public class TotemOfShulkingItem extends ZanyelementsModElements.ModElement {
+	@ObjectHolder("zanyelements:totem_of_shulking")
 	public static final Item block = null;
-	public TotemOfFluffItem(ZanyelementsModElements instance) {
-		super(instance, 83);
+	public TotemOfShulkingItem(ZanyelementsModElements instance) {
+		super(instance, 84);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class TotemOfFluffItem extends ZanyelementsModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.UNCOMMON));
-			setRegistryName("totem_of_fluff");
+			setRegistryName("totem_of_shulking");
 		}
 
 		@Override
@@ -53,7 +53,7 @@ public class TotemOfFluffItem extends ZanyelementsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Drops from SHeep"));
+			list.add(new StringTextComponent("Drops from Shulkers"));
 		}
 	}
 }

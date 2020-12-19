@@ -1020,6 +1020,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "totem_of_fluff"
+    },
+    {
+      "name": "TotemOfShulking",
+      "type": "item",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_shulking"
     }
   ],
   "variable_elements": [
@@ -1081,6 +1090,7 @@
       "advancements.mine_philosophers_ore.descr": "Mine Philosopher\u0027s Ore",
       "item.zanyelements.tnt_helmet": "TNT Helmet",
       "item.zanyelements.tnt_boots": "TNT Boots",
+      "item.zanyelements.totem_of_shulking": "Totem Of Shulking",
       "effect.cloud_9": "Cloud 9",
       "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "item.minecraft.lingering_potion.effect.endgelic": "Lingering Endgelic",
@@ -1094,7 +1104,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.6 Beta",
+    "version": "1.0.7 Beta",
     "author": "Oskar W. Heineck, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,

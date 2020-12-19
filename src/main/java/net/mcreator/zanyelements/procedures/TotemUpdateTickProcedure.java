@@ -6,9 +6,11 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -18,6 +20,7 @@ import net.minecraft.block.Blocks;
 
 import net.mcreator.zanyelements.potion.EndgelicPotion;
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
+import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
@@ -153,6 +156,34 @@ public class TotemUpdateTickProcedure extends ZanyelementsModElements.ModElement
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);
 						}
+					}
+				}
+			}
+		} else if (((new Object() {
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
+				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).copy());
+					});
+				}
+				return _retval.get();
+			}
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(TotemOfShulkingItem.block, (int) (1))
+				.getItem())) {
+			{
+				List<Entity> _entfound = world.getEntitiesWithinAABB(Entity.class,
+						new AxisAlignedBB(x - (128 / 2d), y - (128 / 2d), z - (128 / 2d), x + (128 / 2d), y + (128 / 2d), z + (128 / 2d)), null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf(x, y, z)).collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if ((entityiterator instanceof PlayerEntity)) {
+						if (entityiterator instanceof LivingEntity)
+							((LivingEntity) entityiterator).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 100, (int) 0));
 					}
 				}
 			}

@@ -9,6 +9,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -20,6 +21,7 @@ import net.minecraft.block.Blocks;
 
 import net.mcreator.zanyelements.potion.EndgelicPotion;
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
+import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
@@ -108,6 +110,10 @@ public class PlayerTicksProcedure extends ZanyelementsModElements.ModElement {
 								}
 							}
 						}
+					}
+					if (((itemstackiterator).getItem() == new ItemStack(TotemOfShulkingItem.block, (int) (1)).getItem())) {
+						if (entity instanceof LivingEntity)
+							((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 100, (int) 0));
 					}
 				}
 			}
