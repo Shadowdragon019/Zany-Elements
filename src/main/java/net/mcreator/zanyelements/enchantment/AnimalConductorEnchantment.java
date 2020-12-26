@@ -16,7 +16,7 @@ public class AnimalConductorEnchantment extends ZanyelementsModElements.ModEleme
 	@ObjectHolder("zanyelements:animal_conductor")
 	public static final Enchantment enchantment = null;
 	public AnimalConductorEnchantment(ZanyelementsModElements instance) {
-		super(instance, 58);
+		super(instance, 69);
 	}
 
 	@Override

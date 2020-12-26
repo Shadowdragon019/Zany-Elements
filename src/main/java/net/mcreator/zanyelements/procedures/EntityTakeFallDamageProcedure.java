@@ -19,7 +19,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class EntityTakeFallDamageProcedure extends ZanyelementsModElements.ModElement {
 	public EntityTakeFallDamageProcedure(ZanyelementsModElements instance) {
-		super(instance, 74);
+		super(instance, 80);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -37,6 +37,9 @@
           "y": 44
         }
       }
-    ]
+    ],
+    "onClosed": {
+      "name": "TotemGUIThisGUIIsClosed"
+    }
   }
 }

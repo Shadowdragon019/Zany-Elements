@@ -18,7 +18,7 @@ import java.util.Comparator;
 @ZanyelementsModElements.ModElement.Tag
 public class Cloud9ActiveProcedure extends ZanyelementsModElements.ModElement {
 	public Cloud9ActiveProcedure(ZanyelementsModElements instance) {
-		super(instance, 6);
+		super(instance, 23);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

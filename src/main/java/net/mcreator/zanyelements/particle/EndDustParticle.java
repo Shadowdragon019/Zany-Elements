@@ -25,7 +25,7 @@ import net.mcreator.zanyelements.ZanyelementsModElements;
 public class EndDustParticle extends ZanyelementsModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public EndDustParticle(ZanyelementsModElements instance) {
-		super(instance, 81);
+		super(instance, 86);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}

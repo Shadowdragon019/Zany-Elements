@@ -16,7 +16,7 @@ public class XpSiphonEnchantment extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:xp_siphon")
 	public static final Enchantment enchantment = null;
 	public XpSiphonEnchantment(ZanyelementsModElements instance) {
-		super(instance, 56);
+		super(instance, 68);
 	}
 
 	@Override

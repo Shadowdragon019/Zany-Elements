@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zanyelements:blocks/oak_planks",
+    "up": "zanyelements:blocks/core_crafting_table_top",
+    "north": "zanyelements:blocks/core_crafting_table_side_2",
+    "east": "zanyelements:blocks/core_crafting_table_side",
+    "south": "zanyelements:blocks/core_crafting_table_side_2",
+    "west": "zanyelements:blocks/core_crafting_table_side",
+    "particle": "zanyelements:blocks/oak_planks"
+  }
+}

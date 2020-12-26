@@ -12,7 +12,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class CloudBootsTickEventProcedure extends ZanyelementsModElements.ModElement {
 	public CloudBootsTickEventProcedure(ZanyelementsModElements instance) {
-		super(instance, 4);
+		super(instance, 24);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

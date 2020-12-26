@@ -23,7 +23,7 @@ public class CharcoalBlockBlock extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:charcoal_block")
 	public static final Block block = null;
 	public CharcoalBlockBlock(ZanyelementsModElements instance) {
-		super(instance, 49);
+		super(instance, 19);
 	}
 
 	@Override

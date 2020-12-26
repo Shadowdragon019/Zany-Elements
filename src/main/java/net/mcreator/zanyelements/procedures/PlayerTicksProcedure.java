@@ -37,7 +37,7 @@ import java.util.Collections;
 @ZanyelementsModElements.ModElement.Tag
 public class PlayerTicksProcedure extends ZanyelementsModElements.ModElement {
 	public PlayerTicksProcedure(ZanyelementsModElements instance) {
-		super(instance, 82);
+		super(instance, 87);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -16,7 +16,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class PhysicalCloudOnStructureInstanceGeneratedProcedure extends ZanyelementsModElements.ModElement {
 	public PhysicalCloudOnStructureInstanceGeneratedProcedure(ZanyelementsModElements instance) {
-		super(instance, 9);
+		super(instance, 27);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

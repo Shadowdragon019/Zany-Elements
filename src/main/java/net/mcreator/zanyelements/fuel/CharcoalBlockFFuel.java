@@ -13,7 +13,7 @@ import net.mcreator.zanyelements.ZanyelementsModElements;
 @ZanyelementsModElements.ModElement.Tag
 public class CharcoalBlockFFuel extends ZanyelementsModElements.ModElement {
 	public CharcoalBlockFFuel(ZanyelementsModElements instance) {
-		super(instance, 54);
+		super(instance, 66);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

@@ -1,8 +1,0 @@
-{
-  "parent": "zanyelements:custom/totem",
-  "textures": {
-    "all": "zanyelements:blocks/birch_planks",
-    "particle": "zanyelements:blocks/birch_planks",
-    "missing": "zanyelements:blocks/"
-  }
-}

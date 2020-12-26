@@ -22,7 +22,7 @@ public class TotemOfFluffItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:totem_of_fluff")
 	public static final Item block = null;
 	public TotemOfFluffItem(ZanyelementsModElements instance) {
-		super(instance, 83);
+		super(instance, 13);
 	}
 
 	@Override

@@ -22,7 +22,7 @@ public class TotemOfExplosivesItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:totem_of_explosives")
 	public static final Item block = null;
 	public TotemOfExplosivesItem(ZanyelementsModElements instance) {
-		super(instance, 21);
+		super(instance, 11);
 	}
 
 	@Override

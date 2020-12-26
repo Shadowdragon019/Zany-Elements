@@ -1,0 +1,16 @@
+{
+  "group": "endstone_shard",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "result": {
+    "item": "zanyelements:endstone_shard",
+    "count": 4
+  }
+}

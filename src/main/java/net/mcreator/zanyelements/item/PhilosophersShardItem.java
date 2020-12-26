@@ -16,7 +16,7 @@ public class PhilosophersShardItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:philosophers_shard")
 	public static final Item block = null;
 	public PhilosophersShardItem(ZanyelementsModElements instance) {
-		super(instance, 62);
+		super(instance, 18);
 	}
 
 	@Override

@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "2": "totem_pole_base_top",
+        "5": "totem_pole_shulker"
+      },
+      "name": "default"
+    }
+  }
+}

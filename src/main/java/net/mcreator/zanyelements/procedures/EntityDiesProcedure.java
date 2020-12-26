@@ -1,5 +1,6 @@
 package net.mcreator.zanyelements.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
@@ -8,6 +9,8 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.potion.Effects;
@@ -34,7 +37,7 @@ import java.util.Collections;
 @ZanyelementsModElements.ModElement.Tag
 public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 	public EntityDiesProcedure(ZanyelementsModElements instance) {
-		super(instance, 16);
+		super(instance, 33);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -71,12 +74,30 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))) {
+			if (!world.getWorld().isRemote) {
+				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			} else {
+				world.getWorld().playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).setHealth((float) 1);
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).clearActivePotions();
 		} else if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem()))) {
+			if (!world.getWorld().isRemote) {
+				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1);
+			} else {
+				world.getWorld().playSound(x, y, z,
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
+						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
+			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).setHealth((float) 1);
 			if (entity instanceof LivingEntity)

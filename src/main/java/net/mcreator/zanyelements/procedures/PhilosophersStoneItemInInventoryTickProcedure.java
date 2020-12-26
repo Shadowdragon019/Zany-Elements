@@ -22,7 +22,7 @@ import java.util.Iterator;
 @ZanyelementsModElements.ModElement.Tag
 public class PhilosophersStoneItemInInventoryTickProcedure extends ZanyelementsModElements.ModElement {
 	public PhilosophersStoneItemInInventoryTickProcedure(ZanyelementsModElements instance) {
-		super(instance, 71);
+		super(instance, 78);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

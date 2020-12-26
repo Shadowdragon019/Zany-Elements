@@ -36,7 +36,7 @@ import java.util.Collections;
 @ZanyelementsModElements.ModElement.Tag
 public class TotemUpdateTickProcedure extends ZanyelementsModElements.ModElement {
 	public TotemUpdateTickProcedure(ZanyelementsModElements instance) {
-		super(instance, 23);
+		super(instance, 38);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

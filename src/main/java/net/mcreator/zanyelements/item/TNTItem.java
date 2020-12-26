@@ -31,7 +31,7 @@ public class TNTItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:tnt_boots")
 	public static final Item boots = null;
 	public TNTItem(ZanyelementsModElements instance) {
-		super(instance, 73);
+		super(instance, 10);
 	}
 
 	@Override

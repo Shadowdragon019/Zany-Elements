@@ -2,7 +2,7 @@
   "display": {
     "background": "minecraft:textures/block/stone.png",
     "icon": {
-      "item": "zanyelements:totem"
+      "item": "zanyelements:totem_pole"
     },
     "title": {
       "translate": "advancements.totems.title"
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "item": "zanyelements:totem",
+            "item": "zanyelements:totem_pole",
             "count": {
               "min": 1,
               "max": 1

@@ -23,7 +23,7 @@ import java.util.Iterator;
 @ZanyelementsModElements.ModElement.Tag
 public class VoudPouchItemInHandTickProcedure extends ZanyelementsModElements.ModElement {
 	public VoudPouchItemInHandTickProcedure(ZanyelementsModElements instance) {
-		super(instance, 14);
+		super(instance, 31);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

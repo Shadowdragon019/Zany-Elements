@@ -1,0 +1,9 @@
+{
+  "parent": "zanyelements:custom/totem_pole_sheep",
+  "textures": {
+    "all": "zanyelements:blocks/totem_pole_sheep",
+    "particle": "zanyelements:blocks/totem_pole_sheep",
+    "2": "zanyelements:blocks/totem_pole_base_top",
+    "5": "zanyelements:blocks/totem_pole_sheep"
+  }
+}

@@ -22,7 +22,7 @@ public class PhilosophersStoneItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:philosophers_stone")
 	public static final Item block = null;
 	public PhilosophersStoneItem(ZanyelementsModElements instance) {
-		super(instance, 31);
+		super(instance, 16);
 	}
 
 	@Override

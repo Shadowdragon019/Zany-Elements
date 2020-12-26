@@ -40,7 +40,7 @@ public class PhilosophersOreBlock extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:philosophers_ore")
 	public static final Block block = null;
 	public PhilosophersOreBlock(ZanyelementsModElements instance) {
-		super(instance, 61);
+		super(instance, 20);
 	}
 
 	@Override

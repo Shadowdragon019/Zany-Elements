@@ -35,7 +35,7 @@ public class CloudItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:cloud_boots")
 	public static final Item boots = null;
 	public CloudItem(ZanyelementsModElements instance) {
-		super(instance, 3);
+		super(instance, 9);
 	}
 
 	@Override

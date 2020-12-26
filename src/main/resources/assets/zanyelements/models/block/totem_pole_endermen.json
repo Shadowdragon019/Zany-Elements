@@ -1,0 +1,9 @@
+{
+  "parent": "zanyelements:custom/totem_pole_enderman",
+  "textures": {
+    "all": "zanyelements:blocks/totem_pole_enderman",
+    "particle": "zanyelements:blocks/totem_pole_enderman",
+    "2": "zanyelements:blocks/totem_pole_base_top",
+    "4": "zanyelements:blocks/totem_pole_enderman"
+  }
+}

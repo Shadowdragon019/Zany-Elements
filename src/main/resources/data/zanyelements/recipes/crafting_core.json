@@ -1,0 +1,42 @@
+{
+  "group": "crafting_core",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "1": {
+      "item": "zanyelements:endstone_shard"
+    },
+    "2": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "3": {
+      "item": "zanyelements:endstone_shard"
+    },
+    "4": {
+      "item": "minecraft:crafting_table"
+    },
+    "5": {
+      "item": "zanyelements:endstone_shard"
+    },
+    "6": {
+      "item": "zanyelements:philosophers_shard"
+    },
+    "7": {
+      "item": "zanyelements:endstone_shard"
+    },
+    "8": {
+      "item": "zanyelements:philosophers_shard"
+    }
+  },
+  "result": {
+    "item": "zanyelements:crafting_core",
+    "count": 1
+  }
+}

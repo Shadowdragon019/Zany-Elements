@@ -12,7 +12,7 @@ import java.util.HashMap;
 @ZanyelementsModElements.ModElement.Tag
 public class MaxiumumVoidPouchLevelCommandExecutedProcedure extends ZanyelementsModElements.ModElement {
 	public MaxiumumVoidPouchLevelCommandExecutedProcedure(ZanyelementsModElements instance) {
-		super(instance, 18);
+		super(instance, 35);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

@@ -27,7 +27,7 @@ public class Cloud9Potion extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:cloud_9")
 	public static final Potion potionType = null;
 	public Cloud9Potion(ZanyelementsModElements instance) {
-		super(instance, 5);
+		super(instance, 22);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

@@ -9,7 +9,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class VoudPouchItemIsCraftedsmeltedProcedure extends ZanyelementsModElements.ModElement {
 	public VoudPouchItemIsCraftedsmeltedProcedure(ZanyelementsModElements instance) {
-		super(instance, 13);
+		super(instance, 30);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

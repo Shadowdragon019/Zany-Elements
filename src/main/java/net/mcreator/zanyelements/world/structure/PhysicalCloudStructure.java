@@ -36,7 +36,7 @@ import java.util.HashMap;
 @ZanyelementsModElements.ModElement.Tag
 public class PhysicalCloudStructure extends ZanyelementsModElements.ModElement {
 	public PhysicalCloudStructure(ZanyelementsModElements instance) {
-		super(instance, 8);
+		super(instance, 26);
 	}
 
 	@Override

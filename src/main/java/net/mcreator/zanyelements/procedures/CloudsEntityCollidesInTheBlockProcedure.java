@@ -12,7 +12,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class CloudsEntityCollidesInTheBlockProcedure extends ZanyelementsModElements.ModElement {
 	public CloudsEntityCollidesInTheBlockProcedure(ZanyelementsModElements instance) {
-		super(instance, 2);
+		super(instance, 21);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

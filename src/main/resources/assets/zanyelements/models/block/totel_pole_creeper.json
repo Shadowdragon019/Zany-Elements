@@ -1,0 +1,9 @@
+{
+  "parent": "zanyelements:custom/totem_pole_creeper",
+  "textures": {
+    "all": "zanyelements:blocks/totem_pole_creeper",
+    "particle": "zanyelements:blocks/totem_pole_creeper",
+    "2": "zanyelements:blocks/totem_pole_base_top",
+    "3": "zanyelements:blocks/totem_pole_creeper"
+  }
+}

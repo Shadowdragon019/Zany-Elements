@@ -22,7 +22,7 @@ public class TotemOfTheEndItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:totem_of_the_end")
 	public static final Item block = null;
 	public TotemOfTheEndItem(ZanyelementsModElements instance) {
-		super(instance, 75);
+		super(instance, 12);
 	}
 
 	@Override

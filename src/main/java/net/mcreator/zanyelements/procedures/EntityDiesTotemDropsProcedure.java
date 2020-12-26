@@ -26,7 +26,7 @@ import java.util.HashMap;
 @ZanyelementsModElements.ModElement.Tag
 public class EntityDiesTotemDropsProcedure extends ZanyelementsModElements.ModElement {
 	public EntityDiesTotemDropsProcedure(ZanyelementsModElements instance) {
-		super(instance, 77);
+		super(instance, 82);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

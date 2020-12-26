@@ -1,5 +1,5 @@
 {
-  "parent": "zanyelements:block/totem",
+  "parent": "zanyelements:block/olive_log",
   "display": {
     "thirdperson": {
       "rotation": [

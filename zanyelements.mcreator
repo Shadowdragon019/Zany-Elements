@@ -13,7 +13,7 @@
     {
       "name": "CloudsEntityCollidesInTheBlock",
       "type": "procedure",
-      "sortid": 2,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -30,7 +30,7 @@
     {
       "name": "Cloud",
       "type": "armor",
-      "sortid": 3,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -45,7 +45,7 @@
     {
       "name": "Cloud9",
       "type": "potion",
-      "sortid": 5,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -54,7 +54,7 @@
     {
       "name": "Cloud9Active",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -87,7 +87,7 @@
     {
       "name": "CloudBootsTickEvent",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -104,7 +104,7 @@
     {
       "name": "CloudDust",
       "type": "particle",
-      "sortid": 7,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -113,7 +113,7 @@
     {
       "name": "PhysicalCloud",
       "type": "structure",
-      "sortid": 8,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -122,7 +122,7 @@
     {
       "name": "PhysicalCloudOnStructureInstanceGenerated",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -151,7 +151,7 @@
     {
       "name": "CloudBoots",
       "type": "recipe",
-      "sortid": 10,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -160,7 +160,7 @@
     {
       "name": "VoudPouch",
       "type": "item",
-      "sortid": 11,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -169,7 +169,7 @@
     {
       "name": "VoudPouchRightClickedInAir",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -206,7 +206,7 @@
     {
       "name": "VoudPouchItemIsCraftedsmelted",
       "type": "procedure",
-      "sortid": 13,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -223,7 +223,7 @@
     {
       "name": "VoudPouchItemInHandTick",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -248,7 +248,7 @@
     {
       "name": "VoidPouch",
       "type": "recipe",
-      "sortid": 15,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -257,7 +257,7 @@
     {
       "name": "EntityDies",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -290,7 +290,7 @@
     {
       "name": "MaxiumumVoidPouchLevel",
       "type": "command",
-      "sortid": 17,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -299,7 +299,7 @@
     {
       "name": "MaxiumumVoidPouchLevelCommandExecuted",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -324,16 +324,16 @@
     {
       "name": "Totem",
       "type": "block",
-      "sortid": 19,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "totem"
+      "registry_name": "totem_pole"
     },
     {
       "name": "TotemGUI",
       "type": "gui",
-      "sortid": 20,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -342,7 +342,7 @@
     {
       "name": "TotemOfExplosives",
       "type": "item",
-      "sortid": 21,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -351,7 +351,7 @@
     {
       "name": "EntityTriesToGrief",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -384,7 +384,7 @@
     {
       "name": "TotemUpdateTick",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -413,7 +413,7 @@
     {
       "name": "GetVoidPouch",
       "type": "achievement",
-      "sortid": 24,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -422,7 +422,7 @@
     {
       "name": "Test",
       "type": "achievement",
-      "sortid": 25,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -431,7 +431,7 @@
     {
       "name": "MaxVoidPouch",
       "type": "achievement",
-      "sortid": 26,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -440,7 +440,7 @@
     {
       "name": "PhysicalClouds",
       "type": "achievement",
-      "sortid": 27,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -449,7 +449,7 @@
     {
       "name": "GetCloudBoots",
       "type": "achievement",
-      "sortid": 28,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -458,7 +458,7 @@
     {
       "name": "Totems",
       "type": "achievement",
-      "sortid": 29,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -467,7 +467,7 @@
     {
       "name": "CreeperTotem",
       "type": "achievement",
-      "sortid": 30,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -476,7 +476,7 @@
     {
       "name": "PhilosophersStone",
       "type": "item",
-      "sortid": 31,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -485,7 +485,7 @@
     {
       "name": "PhilosophersStoneIronToGold",
       "type": "recipe",
-      "sortid": 32,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -494,7 +494,7 @@
     {
       "name": "PhilosophersStoneGoldToIron",
       "type": "recipe",
-      "sortid": 33,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -503,7 +503,7 @@
     {
       "name": "PhilosophersStoneLapisToRedstone",
       "type": "recipe",
-      "sortid": 34,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -512,7 +512,7 @@
     {
       "name": "PhilosophersStoneRedstoneToLapis",
       "type": "recipe",
-      "sortid": 35,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -521,7 +521,7 @@
     {
       "name": "PhilosphersStoneDiamondToEmerald",
       "type": "recipe",
-      "sortid": 36,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -530,7 +530,7 @@
     {
       "name": "PhilosophersStoneEmeraldToDiamond",
       "type": "recipe",
-      "sortid": 37,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -539,7 +539,7 @@
     {
       "name": "PhilosophersStoneIronNuggetToGoldNugget",
       "type": "recipe",
-      "sortid": 38,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -548,7 +548,7 @@
     {
       "name": "PhilosophersStoneGoldNuggetToIronNugger",
       "type": "recipe",
-      "sortid": 39,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -557,7 +557,7 @@
     {
       "name": "PhilosophersStoneCoalToCharcoal",
       "type": "recipe",
-      "sortid": 40,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -566,7 +566,7 @@
     {
       "name": "PhilosophersStoneCharcoalToCoal",
       "type": "recipe",
-      "sortid": 41,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -575,7 +575,7 @@
     {
       "name": "PhilosophersStoneIronBlockToGoldBlock",
       "type": "recipe",
-      "sortid": 42,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -584,7 +584,7 @@
     {
       "name": "PhilosophersStoneGoldBlockToIronBlock",
       "type": "recipe",
-      "sortid": 43,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -593,7 +593,7 @@
     {
       "name": "PhilosphersStoneDiamondBlockToEmeraldBlock",
       "type": "recipe",
-      "sortid": 44,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -602,7 +602,7 @@
     {
       "name": "PhilosophersStoneEmeraldBlockToDiamondBlock",
       "type": "recipe",
-      "sortid": 45,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -611,7 +611,7 @@
     {
       "name": "PhilosophersStoneLapisBlockToRedstoneBlock",
       "type": "recipe",
-      "sortid": 46,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -620,7 +620,7 @@
     {
       "name": "PhilosophersStoneRedstoneBlockToLapisBlock",
       "type": "recipe",
-      "sortid": 47,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -629,7 +629,7 @@
     {
       "name": "CondensedIron",
       "type": "item",
-      "sortid": 48,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -638,7 +638,7 @@
     {
       "name": "CharcoalBlock",
       "type": "block",
-      "sortid": 49,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -647,7 +647,7 @@
     {
       "name": "Charcoal",
       "type": "recipe",
-      "sortid": 50,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -656,7 +656,7 @@
     {
       "name": "CharcoalBlockR",
       "type": "recipe",
-      "sortid": 51,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -665,7 +665,7 @@
     {
       "name": "PhilosophersStoneCoalBlockToCharcoalBlock",
       "type": "recipe",
-      "sortid": 52,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -674,7 +674,7 @@
     {
       "name": "PhilosophersStoneCharcoalBlockToCoalBlock",
       "type": "recipe",
-      "sortid": 53,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -683,7 +683,7 @@
     {
       "name": "CharcoalBlockF",
       "type": "fuel",
-      "sortid": 54,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -692,7 +692,7 @@
     {
       "name": "GetCharcoalBlock",
       "type": "achievement",
-      "sortid": 55,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -701,7 +701,7 @@
     {
       "name": "XpSiphon",
       "type": "enchantment",
-      "sortid": 56,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -710,7 +710,7 @@
     {
       "name": "AnimalConductor",
       "type": "enchantment",
-      "sortid": 58,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -719,7 +719,7 @@
     {
       "name": "ArrowAttractor",
       "type": "enchantment",
-      "sortid": 59,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -728,7 +728,7 @@
     {
       "name": "SupremMaxVoidPouch",
       "type": "achievement",
-      "sortid": 60,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -737,7 +737,7 @@
     {
       "name": "PhilosophersOre",
       "type": "block",
-      "sortid": 61,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -746,7 +746,7 @@
     {
       "name": "PhilosophersShard",
       "type": "item",
-      "sortid": 62,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -755,7 +755,7 @@
     {
       "name": "PhilosophersOreLootTalbe",
       "type": "loottable",
-      "sortid": 63,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -764,7 +764,7 @@
     {
       "name": "PhilosophersStoneR",
       "type": "recipe",
-      "sortid": 64,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -773,7 +773,7 @@
     {
       "name": "MinePhilosophersOre",
       "type": "achievement",
-      "sortid": 65,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -782,7 +782,7 @@
     {
       "name": "GetPhilosophersStone",
       "type": "achievement",
-      "sortid": 67,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -791,7 +791,7 @@
     {
       "name": "TwoPhilosophersStones",
       "type": "achievement",
-      "sortid": 69,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -800,7 +800,7 @@
     {
       "name": "PhilosophersOreBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 70,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -817,7 +817,7 @@
     {
       "name": "PhilosophersStoneItemInInventoryTick",
       "type": "procedure",
-      "sortid": 71,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -838,7 +838,7 @@
     {
       "name": "DiscounterWitherSkullR",
       "type": "recipe",
-      "sortid": 72,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -847,7 +847,7 @@
     {
       "name": "TNT",
       "type": "armor",
-      "sortid": 73,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -862,7 +862,7 @@
     {
       "name": "EntityTakeFallDamage",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -883,7 +883,7 @@
     {
       "name": "TotemOfTheEnd",
       "type": "item",
-      "sortid": 75,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -892,7 +892,7 @@
     {
       "name": "ZETotems",
       "type": "tag",
-      "sortid": 76,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -901,7 +901,7 @@
     {
       "name": "EntityDiesTotemDrops",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -922,7 +922,7 @@
     {
       "name": "TNTBootsR",
       "type": "recipe",
-      "sortid": 78,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -931,7 +931,7 @@
     {
       "name": "Endgelic",
       "type": "potion",
-      "sortid": 79,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -940,7 +940,7 @@
     {
       "name": "EndgelicOnPotionActiveTick",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -973,7 +973,7 @@
     {
       "name": "EndDust",
       "type": "particle",
-      "sortid": 81,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -982,7 +982,7 @@
     {
       "name": "PlayerTicks",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1015,7 +1015,7 @@
     {
       "name": "TotemOfFluff",
       "type": "item",
-      "sortid": 83,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -1024,11 +1024,501 @@
     {
       "name": "TotemOfShulking",
       "type": "item",
-      "sortid": 84,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "totem_of_shulking"
+    },
+    {
+      "name": "CraftingCore",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_core"
+    },
+    {
+      "name": "CraftingCoreR",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_core_r"
+    },
+    {
+      "name": "CoreCraftingTable",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "core_crafting_table"
+    },
+    {
+      "name": "CraftingCoreBlockAdded",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_core_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CraftingTable",
+      "type": "tag",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_table"
+    },
+    {
+      "name": "CoreCraftingTableGUI",
+      "type": "gui",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "core_crafting_table_gui"
+    },
+    {
+      "name": "CoreCraftingTableGUIWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "core_crafting_table_gui_while_this_gui_is_open_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CoreCraftingCraft",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "core_crafting_craft",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TotelPoleCreeper",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totel_pole_creeper"
+    },
+    {
+      "name": "TotemPoleEndermen",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_pole_endermen"
+    },
+    {
+      "name": "TotemPoleSheep",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_pole_sheep"
+    },
+    {
+      "name": "TotemGUIThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_gui_this_gui_is_closed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TotemPoleShulker",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_pole_shulker"
+    },
+    {
+      "name": "TotemChisel",
+      "type": "item",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_chisel"
+    },
+    {
+      "name": "TotemWood",
+      "type": "tag",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_wood"
+    },
+    {
+      "name": "TotemChiselTool",
+      "type": "tag",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_chisel_tool"
+    },
+    {
+      "name": "BlockRightClicked",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "OliveLog",
+      "type": "block",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_log"
+    },
+    {
+      "name": "Logs",
+      "type": "tag",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "logs"
+    },
+    {
+      "name": "OliveTree",
+      "type": "structure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_tree"
+    },
+    {
+      "name": "OliveTreeOnStructureInstanceGenerated",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_tree_on_structure_instance_generated",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TotemChiselR",
+      "type": "recipe",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_chisel_r"
+    },
+    {
+      "name": "EndstoneShard",
+      "type": "item",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endstone_shard"
+    },
+    {
+      "name": "EndstoneShardR",
+      "type": "recipe",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endstone_shard_r"
+    },
+    {
+      "name": "OakWeb",
+      "type": "structure",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_web"
+    },
+    {
+      "name": "OakWebBig",
+      "type": "structure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "oak_web_big"
+    },
+    {
+      "name": "AcaciaWeb",
+      "type": "structure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "acacia_web"
+    },
+    {
+      "name": "BirchWeb",
+      "type": "structure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "birch_web"
+    },
+    {
+      "name": "JungleWeb",
+      "type": "structure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "jungle_web"
+    },
+    {
+      "name": "SpruceWeb",
+      "type": "structure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "spruce_web"
+    },
+    {
+      "name": "Hole",
+      "type": "structure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hole"
+    },
+    {
+      "name": "WaystoneFire",
+      "type": "structure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waystone_fire"
+    },
+    {
+      "name": "WaystoneIron",
+      "type": "structure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waystone_iron"
+    },
+    {
+      "name": "WaystoneGold",
+      "type": "structure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waystone_gold"
+    },
+    {
+      "name": "WaystoneDiamond",
+      "type": "structure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waystone_diamond"
+    },
+    {
+      "name": "WaystoneEmerald",
+      "type": "structure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waystone_emerald"
+    },
+    {
+      "name": "CreditBook",
+      "type": "item",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "credit_book"
+    },
+    {
+      "name": "CreditBookGUI",
+      "type": "gui",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "credit_book_gui"
+    },
+    {
+      "name": "CredeitBookR",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "credeit_book_r"
+    },
+    {
+      "name": "Get64Stone",
+      "type": "achievement",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_64_stone"
+    },
+    {
+      "name": "TotemOfTheEndA",
+      "type": "achievement",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_the_end_a"
+    },
+    {
+      "name": "SheepTotem",
+      "type": "achievement",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sheep_totem"
     }
   ],
   "variable_elements": [
@@ -1043,15 +1533,22 @@
   "language_map": {
     "en_us": {
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
+      "advancements.totem_of_the_end_a.descr": "Get A Totem Of The End",
       "item.minecraft.potion.effect.endgelic": "Endgelic",
       "advancements.totems.title": "Your First Totem",
+      "advancements.get_64_stone.title": "Stack Some Stones",
+      "block.zanyelements.totem_pole_endermen": "Totem Pole Enderman",
+      "advancements.get_64_stone.descr": "Achieve 64 Stones!",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "item.zanyelements.tnt_leggings": "TNT Leggings",
       "item.zanyelements.philosophers_stone": "Philosopher\u0027s Stone",
       "item.zanyelements.tnt_chestplate": "TNT Body",
       "enchantment.zanyelements.xp_siphon": "Xp Siphon",
+      "block.zanyelements.totem_pole_shulker": "Totem Pole Shulker",
+      "block.zanyelements.totem_pole_sheep": "Totem Pole Sheep",
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
+      "advancements.totem_of_the_end_a.title": "Endgelic",
       "item.zanyelements.totem_of_the_end": "Totem Of The End",
       "advancements.test.title": "Test",
       "advancements.suprem_max_void_pouch.title": "Supreme Maximum Void Pouch",
@@ -1063,17 +1560,23 @@
       "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
       "item.zanyelements.totem_of_fluff": "Totem Of Fluff",
+      "item.zanyelements.credit_book": "Credit Book",
+      "advancements.sheep_totem.title": "IT\u0027S SO FLUFFY!!",
       "item.zanyelements.cloud_boots": "Cloud Boots",
       "block.zanyelements.philosophers_ore": "Philosopher\u0027s Ore",
       "block.zanyelements.charcoal_block": "Charcoal Block",
+      "block.zanyelements.crafting_core": "Crafting Core",
       "item.zanyelements.void_pouch": "Void Pouch",
       "item.zanyelements.cloud_chestplate": "Cloud Body",
+      "block.zanyelements.totem_pole": "Totem Pole",
       "advancements.max_void_pouch.title": "Max Void Pouch",
       "item.minecraft.splash_potion.effect.endgelic": "Splash Endgelic",
       "advancements.two_philosophers_stones.descr": "Craft a second Philosopher\u0027s Stone",
       "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
       "advancements.creeper_totem.title": "Explosive Life",
+      "item.zanyelements.endstone_shard": "Endstone Shard",
       "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
+      "block.zanyelements.olive_log": "Olive Log",
       "advancements.test.descr": "Tessst",
       "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
       "advancements.get_philosophers_stone.descr": "Craft a Philosopher\u0027s Stone",
@@ -1085,15 +1588,18 @@
       "item.zanyelements.condensed_iron": "Condensed Iron",
       "advancements.get_philosophers_stone.title": "Philosopher\u0027s Advancement",
       "advancements.get_cloud_boots.title": "Pep In Your Step!",
-      "block.zanyelements.totem": "Totem Poles",
       "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
       "advancements.mine_philosophers_ore.descr": "Mine Philosopher\u0027s Ore",
       "item.zanyelements.tnt_helmet": "TNT Helmet",
       "item.zanyelements.tnt_boots": "TNT Boots",
       "item.zanyelements.totem_of_shulking": "Totem Of Shulking",
+      "block.zanyelements.totel_pole_creeper": "Totem Pole Creeper",
       "effect.cloud_9": "Cloud 9",
+      "advancements.sheep_totem.descr": "Get a Totem of Fluff",
       "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
+      "block.zanyelements.core_crafting_table": "Core Crafting Table",
       "item.minecraft.lingering_potion.effect.endgelic": "Lingering Endgelic",
+      "item.zanyelements.totem_chisel": "Totem Chisel",
       "advancements.get_void_pouch.title": "Pouch of the Void",
       "enchantment.zanyelements.animal_conductor": "Animal Conductor",
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
@@ -1104,8 +1610,9 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "1.0.7 Beta",
-    "author": "Oskar W. Heineck, MCreator",
+    "version": "1.1.0 PublicBeta",
+    "description": "Thank you to Uraneptus #5442 for help with textures!",
+    "author": "Shadowdragon, MCreator",
     "websiteURL": "https://mcreator.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

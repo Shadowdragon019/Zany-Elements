@@ -28,7 +28,7 @@ import java.util.Comparator;
 @ZanyelementsModElements.ModElement.Tag
 public class EntityTriesToGriefProcedure extends ZanyelementsModElements.ModElement {
 	public EntityTriesToGriefProcedure(ZanyelementsModElements instance) {
-		super(instance, 22);
+		super(instance, 37);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 

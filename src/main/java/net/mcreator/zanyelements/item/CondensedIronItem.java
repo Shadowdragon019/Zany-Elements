@@ -16,7 +16,7 @@ public class CondensedIronItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:condensed_iron")
 	public static final Item block = null;
 	public CondensedIronItem(ZanyelementsModElements instance) {
-		super(instance, 48);
+		super(instance, 17);
 	}
 
 	@Override

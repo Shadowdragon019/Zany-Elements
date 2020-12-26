@@ -15,7 +15,7 @@ import java.util.Iterator;
 @ZanyelementsModElements.ModElement.Tag
 public class PhilosophersOreBlockDestroyedByPlayerProcedure extends ZanyelementsModElements.ModElement {
 	public PhilosophersOreBlockDestroyedByPlayerProcedure(ZanyelementsModElements instance) {
-		super(instance, 70);
+		super(instance, 77);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

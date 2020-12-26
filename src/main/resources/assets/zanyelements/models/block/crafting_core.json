@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zanyelements:blocks/crafting_table_top",
+    "particle": "zanyelements:blocks/crafting_table_top"
+  }
+}

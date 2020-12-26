@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:totem_of_the_end"
+    },
+    "title": {
+      "translate": "advancements.totem_of_the_end_a.title"
+    },
+    "description": {
+      "translate": "advancements.totem_of_the_end_a.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "totem_of_the_end_a": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "zanyelements:totem_of_the_end",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "zanyelements:totems"
+}

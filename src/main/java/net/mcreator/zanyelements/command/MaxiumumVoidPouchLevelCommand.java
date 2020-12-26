@@ -23,7 +23,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 @ZanyelementsModElements.ModElement.Tag
 public class MaxiumumVoidPouchLevelCommand extends ZanyelementsModElements.ModElement {
 	public MaxiumumVoidPouchLevelCommand(ZanyelementsModElements instance) {
-		super(instance, 17);
+		super(instance, 34);
 	}
 
 	@Override

@@ -3,11 +3,14 @@ loaderVersion="[31,)"
 
 [[mods]]
 modId="zanyelements"
-version="1.0.7 Beta"
+version="1.1.0 PublicBeta"
 displayName="ZanyElements"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 displayURL="https://mcreator.net"
-authors="Oskar W. Heineck, MCreator"
+authors="Shadowdragon, MCreator"
+description='''
+Thank you to Uraneptus #5442 for help with textures!
+'''
 
 [[dependencies.zanyelements]]
     modId="minecraft"

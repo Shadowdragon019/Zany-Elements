@@ -15,7 +15,7 @@ import java.util.Map;
 @ZanyelementsModElements.ModElement.Tag
 public class EndgelicOnPotionActiveTickProcedure extends ZanyelementsModElements.ModElement {
 	public EndgelicOnPotionActiveTickProcedure(ZanyelementsModElements instance) {
-		super(instance, 80);
+		super(instance, 85);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

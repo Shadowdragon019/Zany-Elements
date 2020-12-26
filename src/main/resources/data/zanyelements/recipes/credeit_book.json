@@ -1,0 +1,26 @@
+{
+  "group": "credit_book",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "1": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "2": {
+      "item": "minecraft:rabbit_hide"
+    },
+    "3": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "zanyelements:credit_book",
+    "count": 1
+  }
+}

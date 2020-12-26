@@ -34,6 +34,7 @@ import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.zanyelements.procedures.TotemGUIThisGUIIsClosedProcedure;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 import net.mcreator.zanyelements.ZanyelementsMod;
 
@@ -46,7 +47,7 @@ public class TotemGUIGui extends ZanyelementsModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public TotemGUIGui(ZanyelementsModElements instance) {
-		super(instance, 20);
+		super(instance, 36);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
@@ -260,6 +261,14 @@ public class TotemGUIGui extends ZanyelementsModElements.ModElement {
 		@Override
 		public void onContainerClosed(PlayerEntity playerIn) {
 			super.onContainerClosed(playerIn);
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				TotemGUIThisGUIIsClosedProcedure.executeProcedure($_dependencies);
+			}
 			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
 				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
 					for (int j = 0; j < internal.getSlots(); ++j) {

@@ -22,7 +22,7 @@ public class TotemOfShulkingItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:totem_of_shulking")
 	public static final Item block = null;
 	public TotemOfShulkingItem(ZanyelementsModElements instance) {
-		super(instance, 84);
+		super(instance, 14);
 	}
 
 	@Override

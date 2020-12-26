@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "totem_pole_base_v1",
+        "1": "totem_pole_base_top"
+      },
+      "name": "default"
+    }
+  }
+}

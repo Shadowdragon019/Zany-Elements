@@ -33,7 +33,7 @@ import java.util.Collections;
 @ZanyelementsModElements.ModElement.Tag
 public class VoudPouchRightClickedInAirProcedure extends ZanyelementsModElements.ModElement {
 	public VoudPouchRightClickedInAirProcedure(ZanyelementsModElements instance) {
-		super(instance, 12);
+		super(instance, 29);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {

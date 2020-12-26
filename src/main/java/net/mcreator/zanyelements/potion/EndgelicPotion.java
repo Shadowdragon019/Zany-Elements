@@ -27,7 +27,7 @@ public class EndgelicPotion extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:endgelic")
 	public static final Potion potionType = null;
 	public EndgelicPotion(ZanyelementsModElements instance) {
-		super(instance, 79);
+		super(instance, 84);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

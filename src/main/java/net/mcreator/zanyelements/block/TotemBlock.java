@@ -23,6 +23,10 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.NonNullList;
@@ -72,12 +76,12 @@ import io.netty.buffer.Unpooled;
 
 @ZanyelementsModElements.ModElement.Tag
 public class TotemBlock extends ZanyelementsModElements.ModElement {
-	@ObjectHolder("zanyelements:totem")
+	@ObjectHolder("zanyelements:totem_pole")
 	public static final Block block = null;
-	@ObjectHolder("zanyelements:totem")
+	@ObjectHolder("zanyelements:totem_pole")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public TotemBlock(ZanyelementsModElements instance) {
-		super(instance, 19);
+		super(instance, 4);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -89,7 +93,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 
 	@SubscribeEvent
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("totem"));
+		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("totem_pole"));
 	}
 
 	@Override
@@ -101,7 +105,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2f, 2f).lightValue(0).harvestLevel(-1)
 					.harvestTool(ToolType.AXE).notSolid());
-			setRegistryName("totem");
+			setRegistryName("totem_pole");
 		}
 
 		@Override
@@ -112,6 +116,12 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 		@Override
 		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
 			return true;
+		}
+
+		@Override
+		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0.0625D, 0D, 0.0625D, 0.9375D, 1D, 0.9375D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -164,7 +174,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Totem Poles");
+						return new StringTextComponent("Totem Pole");
 					}
 
 					@Override
@@ -281,7 +291,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public ITextComponent getDefaultName() {
-			return new StringTextComponent("totem");
+			return new StringTextComponent("totem_pole");
 		}
 
 		@Override
@@ -296,7 +306,7 @@ public class TotemBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Totem Poles");
+			return new StringTextComponent("Totem Pole");
 		}
 
 		@Override

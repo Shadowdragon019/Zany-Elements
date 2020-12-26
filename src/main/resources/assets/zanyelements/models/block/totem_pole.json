@@ -1,0 +1,9 @@
+{
+  "parent": "zanyelements:custom/totem_pole_base",
+  "textures": {
+    "all": "zanyelements:blocks/totem_pole_base_v1",
+    "particle": "zanyelements:blocks/totem_pole_base_v1",
+    "0": "zanyelements:blocks/totem_pole_base_v1",
+    "1": "zanyelements:blocks/totem_pole_base_top"
+  }
+}

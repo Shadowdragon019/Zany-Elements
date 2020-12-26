@@ -16,7 +16,7 @@ public class ArrowAttractorEnchantment extends ZanyelementsModElements.ModElemen
 	@ObjectHolder("zanyelements:arrow_attractor")
 	public static final Enchantment enchantment = null;
 	public ArrowAttractorEnchantment(ZanyelementsModElements instance) {
-		super(instance, 59);
+		super(instance, 70);
 	}
 
 	@Override

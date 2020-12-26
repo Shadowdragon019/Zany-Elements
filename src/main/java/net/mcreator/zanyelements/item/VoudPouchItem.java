@@ -31,7 +31,7 @@ public class VoudPouchItem extends ZanyelementsModElements.ModElement {
 	@ObjectHolder("zanyelements:void_pouch")
 	public static final Item block = null;
 	public VoudPouchItem(ZanyelementsModElements instance) {
-		super(instance, 11);
+		super(instance, 15);
 	}
 
 	@Override

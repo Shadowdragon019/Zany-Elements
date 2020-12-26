@@ -25,7 +25,7 @@ import net.mcreator.zanyelements.ZanyelementsModElements;
 public class CloudDustParticle extends ZanyelementsModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public CloudDustParticle(ZanyelementsModElements instance) {
-		super(instance, 7);
+		super(instance, 25);
 		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
