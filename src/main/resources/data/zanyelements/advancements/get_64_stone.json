@@ -33,5 +33,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "minecraft:story/mine_stone"
+  "parent": "zanyelements:get_1_stone"
 }

@@ -1,29 +1,29 @@
 {
   "display": {
     "icon": {
-      "item": "zanyelements:totem_pole"
+      "item": "minecraft:blue_orchid"
     },
     "title": {
-      "translate": "advancements.totems.title"
+      "translate": "advancements.notable_advamcement.title"
     },
     "description": {
-      "translate": "advancements.totems.descr"
+      "translate": "advancements.notable_advamcement.descr"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": true
   },
   "criteria": {
-    "totems": {
+    "notable_advamcement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "zanyelements:totem_pole",
+            "item": "minecraft:blue_orchid",
             "count": {
-              "min": 1,
-              "max": 1
+              "min": 64,
+              "max": 64
             }
           }
         ]
@@ -33,5 +33,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "minecraft:adventure/kill_a_mob"
+  "parent": "minecraft:adventure/root"
 }

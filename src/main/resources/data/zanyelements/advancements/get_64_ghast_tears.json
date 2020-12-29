@@ -1,29 +1,29 @@
 {
   "display": {
     "icon": {
-      "item": "zanyelements:totem_pole"
+      "item": "minecraft:ghast_tear"
     },
     "title": {
-      "translate": "advancements.totems.title"
+      "translate": "advancements.get_64_ghast_tears.title"
     },
     "description": {
-      "translate": "advancements.totems.descr"
+      "translate": "advancements.get_64_ghast_tears.descr"
     },
-    "frame": "task",
+    "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,
-    "hidden": true
+    "hidden": false
   },
   "criteria": {
-    "totems": {
+    "get_64_ghast_tears": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "zanyelements:totem_pole",
+            "item": "minecraft:ghast_tear",
             "count": {
-              "min": 1,
-              "max": 1
+              "min": 64,
+              "max": 64
             }
           }
         ]
@@ -33,5 +33,5 @@
   "rewards": {
     "experience": 1
   },
-  "parent": "minecraft:adventure/kill_a_mob"
+  "parent": "minecraft:nether/uneasy_alliance"
 }
