@@ -1,0 +1,26 @@
+{
+  "group": "olive_wood",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:olive_log"
+    },
+    "1": {
+      "item": "zanyelements:olive_log"
+    },
+    "2": {
+      "item": "zanyelements:olive_log"
+    },
+    "3": {
+      "item": "zanyelements:olive_log"
+    }
+  },
+  "result": {
+    "item": "zanyelements:olive_wood",
+    "count": 3
+  }
+}

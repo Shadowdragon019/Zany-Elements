@@ -1,0 +1,61 @@
+{
+  "_fv": 13,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:Totem"
+      },
+      {
+        "value": "CUSTOM:TotelPoleCreeper"
+      },
+      {
+        "value": "CUSTOM:TotemPoleEndermen"
+      },
+      {
+        "value": "CUSTOM:TotemPoleSheep"
+      },
+      {
+        "value": "CUSTOM:TotemPoleShulker"
+      },
+      {
+        "value": "CUSTOM:OliveLog"
+      },
+      {
+        "value": "CUSTOM:OliveWood"
+      },
+      {
+        "value": "CUSTOM:StrippedOliveLog"
+      },
+      {
+        "value": "CUSTOM:StrippedOliveWood"
+      },
+      {
+        "value": "CUSTOM:OliveStairs"
+      },
+      {
+        "value": "CUSTOM:OliveSlab"
+      },
+      {
+        "value": "CUSTOM:OliveFence"
+      },
+      {
+        "value": "CUSTOM:OliveFenceGate"
+      },
+      {
+        "value": "CUSTOM:OliveDoor"
+      },
+      {
+        "value": "CUSTOM:OliveTrapdoor"
+      },
+      {
+        "value": "CUSTOM:OlivePlanks"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "olive_wood_all",
+    "namespace": "forge"
+  }
+}

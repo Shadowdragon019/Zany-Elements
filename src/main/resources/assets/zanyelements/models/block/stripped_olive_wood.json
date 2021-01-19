@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zanyelements:blocks/totem_pole_base_v1",
+    "particle": "zanyelements:blocks/totem_pole_base_v1"
+  }
+}

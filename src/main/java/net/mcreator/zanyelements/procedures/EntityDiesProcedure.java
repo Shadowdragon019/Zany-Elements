@@ -17,6 +17,7 @@ import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
@@ -25,6 +26,7 @@ import net.minecraft.block.Blocks;
 
 import net.mcreator.zanyelements.potion.EndgelicPotion;
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
+import net.mcreator.zanyelements.item.TotemOfSupplementaryItem;
 import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
@@ -220,6 +222,13 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY));
 			}
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
+		}
+		if ((((!(entity instanceof ItemEntity)) && (!(entity instanceof PlayerEntity))) && (0 == Math.round((Math.random() * 511))))) {
+			if (!world.getWorld().isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TotemOfSupplementaryItem.block, (int) (1)));
+				entityToSpawn.setPickupDelay((int) 10);
+				world.addEntity(entityToSpawn);
+			}
 		}
 	}
 

@@ -1,7 +1,12 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/cube",
   "textures": {
-    "all": "zanyelements:blocks/random_wood2",
-    "particle": "zanyelements:blocks/random_wood2"
+    "down": "zanyelements:blocks/totem_pole_base_top",
+    "up": "zanyelements:blocks/totem_pole_base_top",
+    "north": "zanyelements:blocks/random_wood2",
+    "east": "zanyelements:blocks/random_wood2",
+    "south": "zanyelements:blocks/random_wood2",
+    "west": "zanyelements:blocks/random_wood2",
+    "particle": "zanyelements:blocks/totem_pole_base_top"
   }
 }

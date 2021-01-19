@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "zanyelements:totem_pole",
+    "zanyelements:totel_pole_creeper",
+    "zanyelements:totem_pole_endermen",
+    "zanyelements:totem_pole_sheep",
+    "zanyelements:totem_pole_shulker",
+    "zanyelements:olive_log",
+    "zanyelements:olive_wood",
+    "zanyelements:stripped_olive_log",
+    "zanyelements:stripped_olive_wood",
+    "zanyelements:olive_stairs",
+    "zanyelements:olive_slab",
+    "zanyelements:olive_fence",
+    "zanyelements:olive_fence_gate",
+    "zanyelements:olive_door",
+    "zanyelements:olive_trapdoor",
+    "zanyelements:olive_planks"
+  ]
+}

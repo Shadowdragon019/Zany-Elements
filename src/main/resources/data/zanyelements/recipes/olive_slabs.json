@@ -1,0 +1,22 @@
+{
+  "group": "olive_slabs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:olive_planks"
+    },
+    "1": {
+      "item": "zanyelements:olive_planks"
+    },
+    "2": {
+      "item": "zanyelements:olive_planks"
+    }
+  },
+  "result": {
+    "item": "zanyelements:olive_slab",
+    "count": 6
+  }
+}

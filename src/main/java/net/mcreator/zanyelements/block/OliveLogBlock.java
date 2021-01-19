@@ -5,6 +5,8 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.Direction;
 import net.minecraft.state.StateContainer;
@@ -75,6 +77,11 @@ public class OliveLogBlock extends ZanyelementsModElements.ModElement {
 			else
 				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
+		}
+
+		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 5;
 		}
 
 		@Override

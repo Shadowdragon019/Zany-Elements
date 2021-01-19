@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "zanyelements:block/olive_slab"
+    },
+    "type=top": {
+      "model": "zanyelements:block/olive_slab_top"
+    },
+    "type=double": {
+      "model": "zanyelements:block/olive_slab_full"
+    }
+  }
+}

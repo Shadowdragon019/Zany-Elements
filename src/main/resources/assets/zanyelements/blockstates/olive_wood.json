@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "zanyelements:block/olive_wood"
+    },
+    "facing=north": {
+      "model": "zanyelements:block/olive_wood"
+    },
+    "facing=east": {
+      "model": "zanyelements:block/olive_wood",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "zanyelements:block/olive_wood",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "zanyelements:block/olive_wood",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "zanyelements:block/olive_wood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

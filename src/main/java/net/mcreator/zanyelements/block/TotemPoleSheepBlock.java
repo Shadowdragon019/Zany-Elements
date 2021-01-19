@@ -130,6 +130,11 @@ public class TotemPoleSheepBlock extends ZanyelementsModElements.ModElement {
 		}
 
 		@Override
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 20;
+		}
+
+		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
 			return new ItemStack(TotemBlock.block, (int) (1));
 		}

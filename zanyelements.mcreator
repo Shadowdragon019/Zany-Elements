@@ -913,6 +913,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1572,6 +1576,354 @@
           }
         ]
       }
+    },
+    {
+      "name": "TotemOfSupplementary",
+      "type": "item",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_supplementary"
+    },
+    {
+      "name": "OliveWood",
+      "type": "block",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_wood"
+    },
+    {
+      "name": "StrippedOliveLog",
+      "type": "block",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_olive_log"
+    },
+    {
+      "name": "StrippedOliveWood",
+      "type": "block",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_olive_wood"
+    },
+    {
+      "name": "OliveStairs",
+      "type": "block",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_stairs"
+    },
+    {
+      "name": "OliveSlab",
+      "type": "block",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_slab"
+    },
+    {
+      "name": "OliveFence",
+      "type": "block",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_fence"
+    },
+    {
+      "name": "OliveWoodR",
+      "type": "recipe",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_wood_r"
+    },
+    {
+      "name": "StrippedOliveWoodR",
+      "type": "recipe",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stripped_olive_wood_r"
+    },
+    {
+      "name": "WoodenSlabsTB",
+      "type": "tag",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_slabs_tb"
+    },
+    {
+      "name": "WoodenStairsTB",
+      "type": "tag",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_stairs_tb"
+    },
+    {
+      "name": "WoodenFencesTB",
+      "type": "tag",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_fences_tb"
+    },
+    {
+      "name": "OliveFenceGate",
+      "type": "block",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_fence_gate"
+    },
+    {
+      "name": "OliveDoor",
+      "type": "block",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_door"
+    },
+    {
+      "name": "OliveTrapdoor",
+      "type": "block",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_trapdoor"
+    },
+    {
+      "name": "WoodenTrapdoorsTB",
+      "type": "tag",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_trapdoors_tb"
+    },
+    {
+      "name": "WoodenDoorsTB",
+      "type": "tag",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_doors_tb"
+    },
+    {
+      "name": "OlivePlanks",
+      "type": "block",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_planks"
+    },
+    {
+      "name": "PlanksTI",
+      "type": "tag",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "planks_ti"
+    },
+    {
+      "name": "PlanksTB",
+      "type": "tag",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "planks_tb"
+    },
+    {
+      "name": "WoodenSlabsTI",
+      "type": "tag",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_slabs_ti"
+    },
+    {
+      "name": "WoodenStairsTI",
+      "type": "tag",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_stairs_ti"
+    },
+    {
+      "name": "WoodenFencesTI",
+      "type": "tag",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_fences_ti"
+    },
+    {
+      "name": "WoodenDoorsTI",
+      "type": "tag",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_doors_ti"
+    },
+    {
+      "name": "WoodenTrapdoorsTI",
+      "type": "tag",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "wooden_trapdoors_ti"
+    },
+    {
+      "name": "OliveLogs",
+      "type": "tag",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_logs"
+    },
+    {
+      "name": "LogsTI",
+      "type": "tag",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "logs_ti"
+    },
+    {
+      "name": "PlanksWoodR",
+      "type": "recipe",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "planks_wood_r"
+    },
+    {
+      "name": "OliveStairsR",
+      "type": "recipe",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_stairs_r"
+    },
+    {
+      "name": "OliveSlabsR",
+      "type": "recipe",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_slabs_r"
+    },
+    {
+      "name": "OliveFenceR",
+      "type": "recipe",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_fence_r"
+    },
+    {
+      "name": "OliveFenceGateR",
+      "type": "recipe",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_fence_gate_r"
+    },
+    {
+      "name": "OliveDoorR",
+      "type": "recipe",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_door_r"
+    },
+    {
+      "name": "OliveTrapDoorR",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_trap_door_r"
+    },
+    {
+      "name": "OliveWoodAll",
+      "type": "tag",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "olive_wood_all"
+    },
+    {
+      "name": "BlockRightClicks",
+      "type": "procedure",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_right_clicks",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1580,18 +1932,31 @@
       "type": "number",
       "scope": "map",
       "value": "3.0"
+    },
+    {
+      "name": "chance",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "AmazingVariable",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.totem_of_the_end_a.descr": "Get A Totem Of The End",
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
-      "advancements.get_64_stone.title": "Stack Some Stones",
-      "advancements.totems.title": "Your First Totem",
+      "advancements.totem_of_the_end_a.descr": "Get A Totem Of The End",
       "item.minecraft.potion.effect.endgelic": "Endgelic",
-      "block.zanyelements.totem_pole_endermen": "Totem Pole Enderman",
+      "advancements.totems.title": "Your First Totem",
+      "advancements.get_64_stone.title": "Stack Some Stones",
       "advancements.get_64_stone.descr": "Achieve 64 Stones!",
+      "block.zanyelements.totem_pole_endermen": "Totem Pole Enderman",
+      "block.zanyelements.olive_fence_gate": "Olive Fence Gate",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "item.zanyelements.tnt_leggings": "TNT Leggings",
       "item.zanyelements.philosophers_stone": "Philosopher\u0027s Stone",
@@ -1602,9 +1967,10 @@
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
       "advancements.totem_of_the_end_a.title": "Endgelic",
-      "item.zanyelements.totem_of_the_end": "Totem Of The End",
+      "item.zanyelements.totem_of_the_end": "Totem of the End",
       "advancements.test.title": "Test",
       "advancements.suprem_max_void_pouch.title": "Supreme Maximum Void Pouch",
+      "block.zanyelements.stripped_olive_log": "Stripped Olive Log",
       "effect.endgelic": "Endgelic",
       "advancements.physical_clouds.title": "Physical Clouds",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
@@ -1612,7 +1978,7 @@
       "item.minecraft.tipped_arrow.effect.endgelic": "Arrow of Endgelic",
       "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
-      "item.zanyelements.totem_of_fluff": "Totem Of Fluff",
+      "item.zanyelements.totem_of_fluff": "Totem of Fluff",
       "item.zanyelements.credit_book": "Credit Book",
       "advancements.sheep_totem.title": "IT\u0027S SO FLUFFY!!",
       "item.zanyelements.cloud_boots": "Cloud Boots",
@@ -1633,33 +1999,42 @@
       "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
       "advancements.creeper_totem.title": "Explosive Life",
       "item.zanyelements.endstone_shard": "Endstone Shard",
-      "item.zanyelements.totem_of_explosives": "Totem Of Explosives",
+      "item.zanyelements.totem_of_explosives": "Totem of Explosives",
+      "block.zanyelements.olive_planks": "Olive Planks",
       "block.zanyelements.olive_log": "Olive Log",
+      "block.zanyelements.olive_stairs": "Olive Stairs",
       "advancements.test.descr": "Tessst",
       "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
       "advancements.get_philosophers_stone.descr": "Craft a Philosopher\u0027s Stone",
       "advancements.two_philosophers_stones.title": "Why Do You Need Two of Them?",
+      "block.zanyelements.olive_slab": "Olive Slab",
       "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
+      "item.zanyelements.totem_of_supplementary": "Totem of Supplementary",
       "block.zanyelements.cloud": "Cloud",
       "advancements.mine_philosophers_ore.title": "A Shard of Philosophers",
+      "block.zanyelements.olive_fence": "Olive Fence",
       "advancements.get_cloud_boots.descr": "Craft cloud boots",
       "item.zanyelements.condensed_iron": "Condensed Iron",
       "advancements.get_philosophers_stone.title": "Philosopher\u0027s Advancement",
       "advancements.get_cloud_boots.title": "Pep In Your Step!",
+      "block.zanyelements.olive_wood": "Olive Wood",
       "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
       "advancements.mine_philosophers_ore.descr": "Mine Philosopher\u0027s Ore",
       "item.zanyelements.tnt_helmet": "TNT Helmet",
       "item.zanyelements.tnt_boots": "TNT Boots",
-      "item.zanyelements.totem_of_shulking": "Totem Of Shulking",
+      "item.zanyelements.totem_of_shulking": "Totem of Shulking",
+      "block.zanyelements.olive_trapdoor": "Olive Trapdoor",
       "block.zanyelements.totel_pole_creeper": "Totem Pole Creeper",
       "effect.cloud_9": "Cloud 9",
       "advancements.sheep_totem.descr": "Get a Totem of Fluff",
+      "block.zanyelements.stripped_olive_wood": "Stripped Olive Wood",
       "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "block.zanyelements.core_crafting_table": "Core Crafting Table",
       "item.minecraft.lingering_potion.effect.endgelic": "Lingering Endgelic",
       "item.zanyelements.totem_chisel": "Totem Chisel",
       "advancements.notable_advamcement.title": "Notable Advancement",
       "advancements.get_void_pouch.title": "Pouch of the Void",
+      "block.zanyelements.olive_door": "Olive Door",
       "advancements.get_64_ghast_tears.title": "I\u0027m All Teary Eyed!",
       "enchantment.zanyelements.animal_conductor": "Animal Conductor",
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "zanyelements:blocks/totem_pole_base_top_stripped",
+    "up": "zanyelements:blocks/totem_pole_base_top_stripped",
+    "north": "zanyelements:blocks/totem_pole_base_v1",
+    "east": "zanyelements:blocks/totem_pole_base_v1",
+    "south": "zanyelements:blocks/totem_pole_base_v1",
+    "west": "zanyelements:blocks/totem_pole_base_v1",
+    "particle": "zanyelements:blocks/totem_pole_base_top_stripped"
+  }
+}

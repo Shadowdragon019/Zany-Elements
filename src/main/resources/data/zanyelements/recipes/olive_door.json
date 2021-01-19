@@ -1,0 +1,33 @@
+{
+  "group": "olive_door",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23",
+    "45"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:olive_planks"
+    },
+    "1": {
+      "item": "zanyelements:olive_planks"
+    },
+    "2": {
+      "item": "zanyelements:olive_planks"
+    },
+    "3": {
+      "item": "zanyelements:olive_planks"
+    },
+    "4": {
+      "item": "zanyelements:olive_planks"
+    },
+    "5": {
+      "item": "zanyelements:olive_planks"
+    }
+  },
+  "result": {
+    "item": "zanyelements:olive_door",
+    "count": 3
+  }
+}

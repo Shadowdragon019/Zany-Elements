@@ -1,9 +1,10 @@
 {
   "parent": "zanyelements:custom/totem_pole_shulker",
   "textures": {
-    "all": "zanyelements:blocks/totem_pole_shulker",
-    "particle": "zanyelements:blocks/totem_pole_shulker",
-    "2": "zanyelements:blocks/totem_pole_base_top",
-    "5": "zanyelements:blocks/totem_pole_shulker"
+    "all": "zanyelements:blocks/totem_pole_shulker_2",
+    "particle": "zanyelements:blocks/totem_pole_shulker_2",
+    "totem_pole_base_top": "zanyelements:blocks/totem_pole_base_top",
+    "totem_pole_shulker_2": "zanyelements:blocks/totem_pole_shulker_2",
+    "missing": "zanyelements:blocks/totem_pole_shulker_2"
   }
 }

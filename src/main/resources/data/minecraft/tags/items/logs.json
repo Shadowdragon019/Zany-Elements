@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "zanyelements:olive_log",
+    "zanyelements:olive_wood",
+    "zanyelements:stripped_olive_log",
+    "zanyelements:stripped_olive_wood"
+  ]
+}

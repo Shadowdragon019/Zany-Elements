@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top_rh",
+  "textures": {
+    "bottom": "zanyelements:blocks/olive_door_bottom",
+    "top": "zanyelements:blocks/olive_door_top"
+  }
+}

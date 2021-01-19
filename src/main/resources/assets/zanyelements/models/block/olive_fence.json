@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "zanyelements:blocks/olive_planks",
+    "particle": "zanyelements:blocks/olive_planks"
+  }
+}

@@ -9,7 +9,7 @@
     "enableLeggings": false,
     "textureLeggings": "",
     "enableBoots": true,
-    "textureBoots": "cloud_boots",
+    "textureBoots": "cloud_boots_wip",
     "onBootsTick": {
       "name": "CloudBootsTickEvent"
     },
