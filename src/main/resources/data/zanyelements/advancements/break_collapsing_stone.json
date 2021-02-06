@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:collapsing_stone"
+    },
+    "title": {
+      "translate": "advancements.break_collapsing_stone.title"
+    },
+    "description": {
+      "translate": "advancements.break_collapsing_stone.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "break_collapsing_stone": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "minecraft:story/iron_tools"
+}

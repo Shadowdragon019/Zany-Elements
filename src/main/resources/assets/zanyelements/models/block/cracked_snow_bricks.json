@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zanyelements:blocks/cracked_znow_bricks",
+    "particle": "zanyelements:blocks/cracked_znow_bricks"
+  }
+}
