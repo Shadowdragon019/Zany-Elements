@@ -50,7 +50,6 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.zanyelements.procedures.CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.zanyelements.gui.CoreCraftingTableGUIGui;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 

@@ -1056,7 +1056,7 @@
       "name": "CoreCraftingTable",
       "type": "block",
       "sortid": 3,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "core_crafting_table"
@@ -1949,13 +1949,13 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "advancements.get_void_pouch.descr": "Craft a Void Pouch",
       "advancements.totem_of_the_end_a.descr": "Get A Totem Of The End",
-      "item.minecraft.potion.effect.endgelic": "Endgelic",
-      "advancements.totems.title": "Your First Totem",
+      "advancements.get_void_pouch.descr": "Craft a Void Pouch",
       "advancements.get_64_stone.title": "Stack Some Stones",
-      "advancements.get_64_stone.descr": "Achieve 64 Stones!",
+      "advancements.totems.title": "Your First Totem",
+      "item.minecraft.potion.effect.endgelic": "Endgelic",
       "block.zanyelements.totem_pole_endermen": "Totem Pole Enderman",
+      "advancements.get_64_stone.descr": "Achieve 64 Stones!",
       "block.zanyelements.olive_fence_gate": "Olive Fence Gate",
       "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "item.zanyelements.tnt_leggings": "TNT Leggings",
