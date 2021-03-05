@@ -1,25 +1,11 @@
 package net.mcreator.zanyelements.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Difficulty;
-import net.minecraft.item.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.mcreator.zanyelements.ZanyelementsModElements;
-import net.mcreator.zanyelements.ZanyelementsMod;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @ZanyelementsModElements.ModElement.Tag
 public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElements.ModElement {
+
 	public GlacierOnInitialEntitySpawnProcedure(ZanyelementsModElements instance) {
 		super(instance, 187);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -33,8 +19,10 @@ public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElement
 				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure GlacierOnInitialEntitySpawn!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double offset = 0;
 		if ((world.getDifficulty() == Difficulty.EASY)) {
 			offset = (double) 11;
@@ -55,8 +43,10 @@ public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElement
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
+
 				GlacierOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -72,8 +62,10 @@ public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElement
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
+
 				GlacierOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -89,8 +81,10 @@ public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElement
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
+
 				GlacierOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
 			}
 		}
@@ -106,10 +100,14 @@ public class GlacierOnInitialEntitySpawnProcedure extends ZanyelementsModElement
 			}
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
+
 				GlacierOnInitialEntitySpawnProcedure.executeProcedure($_dependencies);
 			}
 		}
+
 	}
+
 }

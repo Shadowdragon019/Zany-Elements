@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "zanyelements:collapsing_stone",
+          "name": "zanyelements:unknown_element",
           "weight": 1,
           "conditions": [
             {

@@ -1,21 +1,11 @@
 package net.mcreator.zanyelements.procedures;
 
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.Explosion;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
-
-import net.mcreator.zanyelements.ZanyelementsModElements;
-import net.mcreator.zanyelements.ZanyelementsMod;
-
-import java.util.Map;
-
 @ZanyelementsModElements.ModElement.Tag
 public class PermafrostCreeperPlayerCollidesWithThisEntityProcedure extends ZanyelementsModElements.ModElement {
+
 	public PermafrostCreeperPlayerCollidesWithThisEntityProcedure(ZanyelementsModElements instance) {
 		super(instance, 190);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -44,18 +34,20 @@ public class PermafrostCreeperPlayerCollidesWithThisEntityProcedure extends Zany
 				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure PermafrostCreeperPlayerCollidesWithThisEntity!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		double yOffset = 0;
 		double xOffset = 0;
 		double zOffset = 0;
-		if (!entity.world.isRemote())
+		if (!entity.world.isRemote)
 			entity.remove();
-		if (world instanceof World && !((World) world).isRemote) {
-			((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 1,
+		if (world instanceof World && !world.getWorld().isRemote) {
+			world.getWorld().createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 1,
 					Explosion.Mode.NONE);
 		}
 		xOffset = (double) 2;
@@ -90,5 +82,7 @@ public class PermafrostCreeperPlayerCollidesWithThisEntityProcedure extends Zany
 			}
 			yOffset = (double) ((yOffset) + 1);
 		}
+
 	}
+
 }
