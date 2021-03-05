@@ -1,10 +1,10 @@
 
 package net.mcreator.zanyelements.world.structure;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.feature.template.Template;
@@ -16,12 +16,12 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.ISeedReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
@@ -34,18 +34,68 @@ import java.util.Random;
 public class OakWebBigStructure extends ZanyelementsModElements.ModElement {
 	public OakWebBigStructure(ZanyelementsModElements instance) {
 		super(instance, 106);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig::deserialize) {
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("mountains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("swamp").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("river").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("jungle").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("jungle_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("jungle_edge").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("badlands").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("wooded_badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("sunflower_plains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("gravelly_mountains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("flower_forest").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("swamp_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_jungle").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_jungle_edge").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_gravelly_mountains").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("eroded_badlands").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_wooded_badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_badlands_plateau").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("bamboo_jungle").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("bamboo_jungle_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig.field_236558_a_) {
 			@Override
-			public boolean place(IWorld world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
 				int ci = (pos.getX() >> 4) << 4;
 				int ck = (pos.getZ() >> 4) << 4;
-				DimensionType dimensionType = world.getDimension().getType();
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == DimensionType.OVERWORLD)
+				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -76,69 +126,18 @@ public class OakWebBigStructure extends ZanyelementsModElements.ModElement {
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
-						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
+						Template template = world.getWorld().getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("zanyelements", "oak_web_big"));
 						if (template == null)
 							return false;
-						template.addBlocksToWorld(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false));
+						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false), random);
 					}
 				}
 				return true;
 			}
 		};
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("plains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("mountains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("swamp")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("river")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle_hills")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle_edge")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("badlands")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("wooded_badlands_plateau")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("badlands_plateau")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("sunflower_plains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("gravelly_mountains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("flower_forest")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("swamp_hills")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_jungle")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_jungle_edge")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_gravelly_mountains")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("eroded_badlands")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_wooded_badlands_plateau")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_badlands_plateau")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("bamboo_jungle")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("bamboo_jungle_hills")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-		}
+		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> feature
+				.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 	}
 }

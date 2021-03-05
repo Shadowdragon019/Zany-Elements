@@ -31,6 +31,7 @@ import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -46,27 +47,27 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure EntityDies!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure EntityDies!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure EntityDies!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency x for procedure EntityDies!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure EntityDies!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency y for procedure EntityDies!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure EntityDies!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency z for procedure EntityDies!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure EntityDies!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure EntityDies!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -74,14 +75,14 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
+		if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))) {
-			if (!world.getWorld().isRemote) {
-				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1);
 			} else {
-				world.getWorld().playSound(x, y, z,
+				((World) world).playSound(x, y, z,
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 			}
@@ -89,14 +90,14 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				((LivingEntity) entity).setHealth((float) 1);
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).clearActivePotions();
-		} else if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
+		} else if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem()))) {
-			if (!world.getWorld().isRemote) {
-				world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+			if (world instanceof World && !world.isRemote()) {
+				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1);
 			} else {
-				world.getWorld().playSound(x, y, z,
+				((World) world).playSound(x, y, z,
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
 						SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 			}
@@ -117,8 +118,8 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 						_evt.setCanceled(true);
 				}
 			}
-			if (world instanceof World && !world.getWorld().isRemote) {
-				world.getWorld().createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 4,
+			if (world instanceof World && !((World) world).isRemote) {
+				((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 4,
 						Explosion.Mode.BREAK);
 			}
 			if (entity instanceof LivingEntity)
@@ -176,8 +177,8 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
 			for (int index0 = 0; index0 < (int) (16); index0++) {
-				if (!world.getWorld().isRemote) {
-					ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), ((Math.round((Math.random() * 8)) + (-4)) + x), (y + 4),
+				if (world instanceof World && !world.isRemote()) {
+					ItemEntity entityToSpawn = new ItemEntity((World) world, ((Math.round((Math.random() * 8)) + (-4)) + x), (y + 4),
 							((Math.round((Math.random() * 8)) + (-4)) + z), new ItemStack(Blocks.WHITE_WOOL, (int) (1)));
 					entityToSpawn.setPickupDelay((int) 10);
 					world.addEntity(entityToSpawn);
@@ -208,24 +209,24 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 800, (int) 0));
 		}
-		if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
+		if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))) {
-			if (world.getWorld().isRemote) {
+			if (world instanceof World && !world.isRemote()) {
 				Minecraft.getInstance().gameRenderer
 						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY));
 			}
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
-		} else if ((ItemTags.getCollection().getOrCreate(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
+		} else if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem()))) {
-			if (world.getWorld().isRemote) {
+			if (world instanceof World && !world.isRemote()) {
 				Minecraft.getInstance().gameRenderer
 						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY));
 			}
 			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
 		}
 		if ((((!(entity instanceof ItemEntity)) && (!(entity instanceof PlayerEntity))) && (0 == Math.round((Math.random() * 511))))) {
-			if (!world.getWorld().isRemote) {
-				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, new ItemStack(TotemOfSupplementaryItem.block, (int) (1)));
+			if (world instanceof World && !world.isRemote()) {
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, new ItemStack(TotemOfSupplementaryItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay((int) 10);
 				world.addEntity(entityToSpawn);
 			}

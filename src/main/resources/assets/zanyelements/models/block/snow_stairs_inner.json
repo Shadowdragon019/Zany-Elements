@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "zanyelements:blocks/snow",
+    "top": "zanyelements:blocks/snow",
+    "side": "zanyelements:blocks/snow"
+  }
+}

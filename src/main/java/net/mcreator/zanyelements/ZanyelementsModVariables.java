@@ -16,8 +16,9 @@ import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.storage.WorldSavedData;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
@@ -45,7 +46,7 @@ public class ZanyelementsModVariables {
 
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote) {
+		if (!event.getPlayer().world.isRemote()) {
 			WorldSavedData mapdata = MapVariables.get(event.getPlayer().world);
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (mapdata != null)
@@ -59,7 +60,7 @@ public class ZanyelementsModVariables {
 
 	@SubscribeEvent
 	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote) {
+		if (!event.getPlayer().world.isRemote()) {
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (worlddata != null)
 				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
@@ -90,14 +91,14 @@ public class ZanyelementsModVariables {
 
 		public void syncData(IWorld world) {
 			this.markDirty();
-			if (!world.getWorld().isRemote)
-				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.getWorld().dimension::getType),
+			if (world instanceof World && !world.isRemote())
+				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
 						new WorldSavedDataSyncMessage(1, this));
 		}
 		static WorldVariables clientSide = new WorldVariables();
 		public static WorldVariables get(IWorld world) {
-			if (world.getWorld() instanceof ServerWorld) {
-				return ((ServerWorld) world.getWorld()).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
+			if (world instanceof ServerWorld) {
+				return ((ServerWorld) world).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -128,13 +129,14 @@ public class ZanyelementsModVariables {
 
 		public void syncData(IWorld world) {
 			this.markDirty();
-			if (!world.getWorld().isRemote)
+			if (world instanceof World && !world.isRemote())
 				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 		}
 		static MapVariables clientSide = new MapVariables();
 		public static MapVariables get(IWorld world) {
-			if (world.getWorld() instanceof ServerWorld) {
-				return world.getWorld().getServer().getWorld(DimensionType.OVERWORLD).getSavedData().getOrCreate(MapVariables::new, DATA_NAME);
+			if (world instanceof IServerWorld) {
+				return ((IServerWorld) world).getWorld().getServer().getWorld(World.OVERWORLD).getSavedData().getOrCreate(MapVariables::new,
+						DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -225,32 +227,33 @@ public class ZanyelementsModVariables {
 	}
 	@SubscribeEvent
 	public void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void clonePlayer(PlayerEvent.Clone event) {
-		PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new PlayerVariables()));
-		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-		clone.chance = original.chance;
-		if (!event.isWasDeath()) {
+		if (event.isWasDeath()) {
+			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PlayerVariables()));
+			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new PlayerVariables()));
+			clone.chance = original.chance;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {

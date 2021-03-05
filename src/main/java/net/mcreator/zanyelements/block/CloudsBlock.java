@@ -6,15 +6,15 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -56,13 +56,9 @@ public class CloudsBlock extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOL).sound(SoundType.CLOTH).hardnessAndResistance(0f, 0f).lightValue(0).notSolid());
+			super(Block.Properties.create(Material.WOOL).sound(SoundType.CLOTH).hardnessAndResistance(0f, 0f).setLightLevel(s -> 0).notSolid()
+					.setOpaque((bs, br, bp) -> false));
 			setRegistryName("cloud");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@OnlyIn(Dist.CLIENT)
@@ -77,7 +73,7 @@ public class CloudsBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			Vec3d offset = state.getOffset(world, pos);
+			Vector3d offset = state.getOffset(world, pos);
 			return VoxelShapes.create(0.01D, 0.01D, 0.01D, 0.99D, 0.99D, 0.99D).withOffset(offset.x, offset.y, offset.z);
 		}
 

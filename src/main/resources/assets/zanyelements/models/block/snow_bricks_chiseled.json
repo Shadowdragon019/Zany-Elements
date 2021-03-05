@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "zanyelements:blocks/chiseled_znow_bricks",
+    "particle": "zanyelements:blocks/chiseled_znow_bricks"
+  }
+}

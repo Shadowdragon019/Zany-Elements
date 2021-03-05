@@ -7,12 +7,12 @@ import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -51,14 +51,9 @@ public class OliveDoorBlock extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomBlock extends DoorBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).lightValue(0).harvestLevel(-1)
-					.harvestTool(ToolType.AXE).notSolid());
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(-1)
+					.harvestTool(ToolType.AXE).notSolid().setOpaque((bs, br, bp) -> false));
 			setRegistryName("olive_door");
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override

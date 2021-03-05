@@ -22,6 +22,7 @@ import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
@@ -37,17 +38,17 @@ public class EntityDiesTotemDropsProcedure extends ZanyelementsModElements.ModEl
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure EntityDiesTotemDrops!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure EntityDiesTotemDrops!");
 			return;
 		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				System.err.println("Failed to load dependency sourceentity for procedure EntityDiesTotemDrops!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure EntityDiesTotemDrops!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure EntityDiesTotemDrops!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure EntityDiesTotemDrops!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -70,29 +71,29 @@ public class EntityDiesTotemDropsProcedure extends ZanyelementsModElements.ModEl
 		for (int index0 = 0; index0 < (int) ((chance)); index0++) {
 			if ((Math.round((Math.random() * 63)) == 0)) {
 				if ((entity instanceof CreeperEntity)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 								new ItemStack(TotemOfExplosivesItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if ((entity instanceof EndermanEntity)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 								new ItemStack(TotemOfTheEndItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if ((entity instanceof SheepEntity)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 								new ItemStack(TotemOfFluffItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}
 				} else if ((entity instanceof ShulkerEntity)) {
-					if (!world.getWorld().isRemote) {
-						ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 								new ItemStack(TotemOfShulkingItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);

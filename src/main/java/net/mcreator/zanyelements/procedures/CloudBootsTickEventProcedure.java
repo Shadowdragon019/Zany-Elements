@@ -6,6 +6,7 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.potion.Cloud9Potion;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.Map;
 
@@ -18,7 +19,7 @@ public class CloudBootsTickEventProcedure extends ZanyelementsModElements.ModEle
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure CloudBootsTickEvent!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure CloudBootsTickEvent!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

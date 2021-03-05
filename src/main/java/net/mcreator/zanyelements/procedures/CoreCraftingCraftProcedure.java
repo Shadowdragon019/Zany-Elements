@@ -13,6 +13,7 @@ import net.mcreator.zanyelements.item.PhilosophersShardItem;
 import net.mcreator.zanyelements.item.EndstoneShardItem;
 import net.mcreator.zanyelements.item.CondensedIronItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class CoreCraftingCraftProcedure extends ZanyelementsModElements.ModEleme
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure CoreCraftingCraft!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure CoreCraftingCraft!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

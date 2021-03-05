@@ -4,11 +4,11 @@ package net.mcreator.zanyelements.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
 import net.minecraft.state.properties.SlabType;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -40,7 +40,7 @@ public class OliveSlabBlock extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomBlock extends SlabBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).lightValue(0).harvestLevel(-1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(-1)
 					.harvestTool(ToolType.AXE));
 			setRegistryName("olive_slab");
 		}

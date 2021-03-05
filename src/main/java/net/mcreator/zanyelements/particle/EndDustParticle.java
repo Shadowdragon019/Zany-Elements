@@ -4,14 +4,13 @@ package net.mcreator.zanyelements.particle;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.World;
 import net.minecraft.particles.ParticleType;
 import net.minecraft.particles.BasicParticleType;
+import net.minecraft.client.world.ClientWorld;
 import net.minecraft.client.particle.SpriteTexturedParticle;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.IParticleRenderType;
@@ -26,7 +25,6 @@ public class EndDustParticle extends ZanyelementsModElements.ModElement {
 	public static final BasicParticleType particle = new BasicParticleType(false);
 	public EndDustParticle(ZanyelementsModElements instance) {
 		super(instance, 86);
-		MinecraftForge.EVENT_BUS.register(this);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -43,7 +41,7 @@ public class EndDustParticle extends ZanyelementsModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	private static class CustomParticle extends SpriteTexturedParticle {
 		private final IAnimatedSprite spriteSet;
-		protected CustomParticle(World world, double x, double y, double z, double vx, double vy, double vz, IAnimatedSprite spriteSet) {
+		protected CustomParticle(ClientWorld world, double x, double y, double z, double vx, double vy, double vz, IAnimatedSprite spriteSet) {
 			super(world, x, y, z);
 			this.spriteSet = spriteSet;
 			this.setSize((float) 0.2, (float) 0.2);
@@ -75,7 +73,7 @@ public class EndDustParticle extends ZanyelementsModElements.ModElement {
 			this.spriteSet = spriteSet;
 		}
 
-		public Particle makeParticle(BasicParticleType typeIn, World worldIn, double x, double y, double z, double xSpeed, double ySpeed,
+		public Particle makeParticle(BasicParticleType typeIn, ClientWorld worldIn, double x, double y, double z, double xSpeed, double ySpeed,
 				double zSpeed) {
 			return new CustomParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
 		}

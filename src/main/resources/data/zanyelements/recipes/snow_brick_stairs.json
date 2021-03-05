@@ -1,0 +1,33 @@
+{
+  "group": "snow_brick_stairs",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 45",
+    "678"
+  ],
+  "key": {
+    "2": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "4": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "5": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "6": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "7": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "8": {
+      "item": "zanyelements:snow_bricks"
+    }
+  },
+  "result": {
+    "item": "zanyelements:snow_brick_stairs",
+    "count": 8
+  }
+}

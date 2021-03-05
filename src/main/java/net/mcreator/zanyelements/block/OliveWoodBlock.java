@@ -4,13 +4,13 @@ package net.mcreator.zanyelements.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.Direction;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -44,7 +44,7 @@ public class OliveWoodBlock extends ZanyelementsModElements.ModElement {
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = DirectionalBlock.FACING;
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).lightValue(0).harvestLevel(-1)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(-1)
 					.harvestTool(ToolType.AXE));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.SOUTH));
 			setRegistryName("olive_wood");

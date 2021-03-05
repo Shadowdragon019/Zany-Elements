@@ -16,6 +16,7 @@ import net.mcreator.zanyelements.enchantment.ArrowAttractorEnchantment;
 import net.mcreator.zanyelements.enchantment.AnimalConductorEnchantment;
 import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.Map;
 import java.util.Iterator;
@@ -29,17 +30,17 @@ public class VoudPouchItemInHandTickProcedure extends ZanyelementsModElements.Mo
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure VoudPouchItemInHandTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure VoudPouchItemInHandTick!");
 			return;
 		}
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				System.err.println("Failed to load dependency itemstack for procedure VoudPouchItemInHandTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency itemstack for procedure VoudPouchItemInHandTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure VoudPouchItemInHandTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure VoudPouchItemInHandTick!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

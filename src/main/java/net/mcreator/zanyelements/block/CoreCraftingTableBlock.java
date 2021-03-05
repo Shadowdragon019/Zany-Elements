@@ -13,10 +13,7 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
@@ -33,6 +30,7 @@ import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -50,17 +48,13 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.mcreator.zanyelements.procedures.CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure;
 import net.mcreator.zanyelements.gui.CoreCraftingTableGUIGui;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
-import java.util.Random;
-import java.util.Map;
 import java.util.List;
-import java.util.HashMap;
 import java.util.Collections;
 
 import io.netty.buffer.Unpooled;
@@ -73,7 +67,7 @@ public class CoreCraftingTableBlock extends ZanyelementsModElements.ModElement {
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public CoreCraftingTableBlock(ZanyelementsModElements instance) {
 		super(instance, 3);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new TileEntityRegisterHandler());
 	}
 
 	@Override
@@ -81,21 +75,19 @@ public class CoreCraftingTableBlock extends ZanyelementsModElements.ModElement {
 		elements.blocks.add(() -> new CustomBlock());
 		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(ItemGroup.DECORATIONS)).setRegistryName(block.getRegistryName()));
 	}
-
-	@SubscribeEvent
-	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
-		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("core_crafting_table"));
+	private static class TileEntityRegisterHandler {
+		@SubscribeEvent
+		public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
+			event.getRegistry()
+					.register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("core_crafting_table"));
+		}
 	}
+
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.5f, 2.5f).lightValue(0).harvestLevel(3)
+			super(Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(2.5f, 2.5f).setLightLevel(s -> 0).harvestLevel(3)
 					.harvestTool(ToolType.AXE));
 			setRegistryName("core_crafting_table");
-		}
-
-		@Override
-		public int tickRate(IWorldReader world) {
-			return 1;
 		}
 
 		@Override
@@ -104,32 +96,6 @@ public class CoreCraftingTableBlock extends ZanyelementsModElements.ModElement {
 			if (!dropsOriginal.isEmpty())
 				return dropsOriginal;
 			return Collections.singletonList(new ItemStack(this, 1));
-		}
-
-		@Override
-		public void onBlockAdded(BlockState state, World world, BlockPos pos, BlockState oldState, boolean moving) {
-			super.onBlockAdded(state, world, pos, oldState, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
-		}
-
-		@Override
-		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-			super.tick(state, world, pos, random);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure.executeProcedure($_dependencies);
-			}
-			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
 
 		@Override
@@ -213,8 +179,8 @@ public class CoreCraftingTableBlock extends ZanyelementsModElements.ModElement {
 		}
 
 		@Override
-		public void read(CompoundNBT compound) {
-			super.read(compound);
+		public void read(BlockState blockState, CompoundNBT compound) {
+			super.read(blockState, compound);
 			if (!this.checkLootAndRead(compound)) {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
@@ -242,7 +208,7 @@ public class CoreCraftingTableBlock extends ZanyelementsModElements.ModElement {
 
 		@Override
 		public void onDataPacket(NetworkManager net, SUpdateTileEntityPacket pkt) {
-			this.read(pkt.getNbtCompound());
+			this.read(this.getBlockState(), pkt.getNbtCompound());
 		}
 
 		@Override

@@ -4,10 +4,10 @@ package net.mcreator.zanyelements.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Direction;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -40,7 +40,7 @@ public class OliveStairsBlock extends ZanyelementsModElements.ModElement {
 	public static class CustomBlock extends StairsBlock {
 		public CustomBlock() {
 			super(new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(1f, 1f)).getDefaultState(),
-					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).lightValue(0).harvestLevel(-1)
+					Block.Properties.create(Material.WOOD).sound(SoundType.WOOD).hardnessAndResistance(1f, 1f).setLightLevel(s -> 0).harvestLevel(-1)
 							.harvestTool(ToolType.AXE));
 			setRegistryName("olive_stairs");
 		}

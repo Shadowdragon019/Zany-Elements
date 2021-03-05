@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "snow_brick_stairs",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      },
+      {
+        "value": "CUSTOM:SnowBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SnowBrickStairs"
+    },
+    "name": "snow_brick_stairs",
+    "namespace": "mod"
+  }
+}

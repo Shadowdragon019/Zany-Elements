@@ -1,15 +1,15 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "structure",
   "definition": {
-    "structure": "air",
+    "structure": "corner_cloud",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 10000,
+    "spawnProbability": 1250,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Air",
-    "spawnHeightOffset": 75,
+    "spawnHeightOffset": 125,
     "spawnXOffset": 0,
     "spawnZOffset": 0,
     "spawnWorldTypes": [
@@ -21,9 +21,6 @@
       }
     ],
     "restrictionBiomes": [],
-    "ignoreBlocks": "STRUCTURE_BLOCK",
-    "onStructureGenerated": {
-      "name": "PhysicalCloudOnStructureInstanceGenerated"
-    }
+    "ignoreBlocks": "STRUCTURE_BLOCK"
   }
 }

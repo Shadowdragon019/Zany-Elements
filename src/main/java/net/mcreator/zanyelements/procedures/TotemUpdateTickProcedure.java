@@ -2,6 +2,7 @@ package net.mcreator.zanyelements.procedures;
 
 import net.minecraftforge.items.CapabilityItemHandler;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -24,6 +25,7 @@ import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -42,22 +44,22 @@ public class TotemUpdateTickProcedure extends ZanyelementsModElements.ModElement
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure TotemUpdateTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency x for procedure TotemUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure TotemUpdateTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency y for procedure TotemUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure TotemUpdateTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency z for procedure TotemUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure TotemUpdateTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure TotemUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -150,8 +152,8 @@ public class TotemUpdateTickProcedure extends ZanyelementsModElements.ModElement
 						}.compareDistOf(x, y, z)).collect(Collectors.toList());
 				for (Entity entityiterator : _entfound) {
 					if (((0 == Math.round((Math.random() * 100))) && (entityiterator instanceof SheepEntity))) {
-						if (!world.getWorld().isRemote) {
-							ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entityiterator.getPosX()), (entityiterator.getPosY()),
+						if (world instanceof World && !world.isRemote()) {
+							ItemEntity entityToSpawn = new ItemEntity((World) world, (entityiterator.getPosX()), (entityiterator.getPosY()),
 									(entityiterator.getPosZ()), new ItemStack(Blocks.WHITE_WOOL, (int) (1)));
 							entityToSpawn.setPickupDelay((int) 10);
 							world.addEntity(entityToSpawn);

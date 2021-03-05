@@ -16,10 +16,7 @@
   },
   "criteria": {
     "physical_clouds": {
-      "trigger": "minecraft:enter_block",
-      "conditions": {
-        "block": "zanyelements:cloud"
-      }
+      "trigger": "minecraft:impossible"
     }
   },
   "rewards": {

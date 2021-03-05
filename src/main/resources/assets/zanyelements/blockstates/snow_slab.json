@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "zanyelements:block/snow_slab"
+    },
+    "type=top": {
+      "model": "zanyelements:block/snow_slab_top"
+    },
+    "type=double": {
+      "model": "zanyelements:block/snow_slab_full"
+    }
+  }
+}

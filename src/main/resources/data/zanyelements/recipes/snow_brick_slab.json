@@ -1,0 +1,22 @@
+{
+  "group": "snow_brick_slab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "1": {
+      "item": "zanyelements:snow_bricks"
+    },
+    "2": {
+      "item": "zanyelements:snow_bricks"
+    }
+  },
+  "result": {
+    "item": "zanyelements:snow_brick_slab",
+    "count": 6
+  }
+}

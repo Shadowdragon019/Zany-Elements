@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "structure",
   "definition": {
     "structure": "gold_waystone",
@@ -17,6 +17,9 @@
     ],
     "restrictionBlocks": [],
     "restrictionBiomes": [],
-    "ignoreBlocks": "STRUCTURE_BLOCK"
+    "ignoreBlocks": "STRUCTURE_BLOCK",
+    "generateCondition": {
+      "name": "WaystoneFireOnStructureInstanceGenerated"
+    }
   }
 }

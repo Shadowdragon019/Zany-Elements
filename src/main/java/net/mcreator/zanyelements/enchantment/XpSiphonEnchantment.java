@@ -25,7 +25,7 @@ public class XpSiphonEnchantment extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomEnchantment extends Enchantment {
 		public CustomEnchantment(EquipmentSlotType... slots) {
-			super(Enchantment.Rarity.COMMON, EnchantmentType.ALL, slots);
+			super(Enchantment.Rarity.COMMON, EnchantmentType.DIGGER, slots);
 		}
 
 		@Override

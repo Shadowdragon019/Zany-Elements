@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "block",
   "definition": {
     "texture": "znow_bricks",
@@ -15,6 +15,8 @@
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -39,13 +41,12 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "SNOW"
+      "value": "CRAFTED_SNOW"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -65,7 +66,7 @@
     "soundOnStep": {
       "value": "SNOW"
     },
-    "luminance": 0.0,
+    "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": false,

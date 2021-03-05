@@ -4,7 +4,7 @@ package net.mcreator.zanyelements.block;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -35,8 +35,8 @@ public class CrackedSnowBricksBlock extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.SNOW).sound(SoundType.SNOW).hardnessAndResistance(0.4f, 0.4f).lightValue(0).harvestLevel(0)
-					.harvestTool(ToolType.SHOVEL));
+			super(Block.Properties.create(Material.SNOW_BLOCK).sound(SoundType.SNOW).hardnessAndResistance(0.4f, 0.4f).setLightLevel(s -> 0)
+					.harvestLevel(0).harvestTool(ToolType.SHOVEL));
 			setRegistryName("cracked_snow_bricks");
 		}
 

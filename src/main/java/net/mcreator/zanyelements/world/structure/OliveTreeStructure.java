@@ -1,10 +1,10 @@
 
 package net.mcreator.zanyelements.world.structure;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.MinecraftForge;
 
-import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.IPlacementConfig;
 import net.minecraft.world.gen.feature.template.Template;
@@ -16,12 +16,12 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.Heightmap;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.ISeedReader;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.RegistryKey;
 import net.minecraft.util.Mirror;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
@@ -37,18 +37,32 @@ import java.util.HashMap;
 public class OliveTreeStructure extends ZanyelementsModElements.ModElement {
 	public OliveTreeStructure(ZanyelementsModElements instance) {
 		super(instance, 100);
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig::deserialize) {
+	@SubscribeEvent
+	public void addFeatureToBiomes(BiomeLoadingEvent event) {
+		boolean biomeCriteria = false;
+		if (new ResourceLocation("jungle").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("jungle_hills").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("jungle_edge").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_jungle").equals(event.getName()))
+			biomeCriteria = true;
+		if (new ResourceLocation("modified_jungle_edge").equals(event.getName()))
+			biomeCriteria = true;
+		if (!biomeCriteria)
+			return;
+		Feature<NoFeatureConfig> feature = new Feature<NoFeatureConfig>(NoFeatureConfig.field_236558_a_) {
 			@Override
-			public boolean place(IWorld world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
+			public boolean generate(ISeedReader world, ChunkGenerator generator, Random random, BlockPos pos, NoFeatureConfig config) {
 				int ci = (pos.getX() >> 4) << 4;
 				int ck = (pos.getZ() >> 4) << 4;
-				DimensionType dimensionType = world.getDimension().getType();
+				RegistryKey<World> dimensionType = world.getWorld().getDimensionKey();
 				boolean dimensionCriteria = false;
-				if (dimensionType == DimensionType.OVERWORLD)
+				if (dimensionType == World.OVERWORLD)
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
@@ -71,12 +85,12 @@ public class OliveTreeStructure extends ZanyelementsModElements.ModElement {
 						int x = spawnTo.getX();
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
-						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
+						Template template = world.getWorld().getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("zanyelements", "air"));
 						if (template == null)
 							return false;
-						template.addBlocksToWorld(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
-								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false));
+						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)
+								.addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_BLOCK).setChunk(null).setIgnoreEntities(false), random);
 						{
 							Map<String, Object> $_dependencies = new HashMap<>();
 							$_dependencies.put("x", x);
@@ -90,22 +104,7 @@ public class OliveTreeStructure extends ZanyelementsModElements.ModElement {
 				return true;
 			}
 		};
-		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
-			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle_hills")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("jungle_edge")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_jungle")))
-				biomeCriteria = true;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("modified_jungle_edge")))
-				biomeCriteria = true;
-			if (!biomeCriteria)
-				continue;
-			biome.addFeature(GenerationStage.Decoration.SURFACE_STRUCTURES, feature.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG)
-					.withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
-		}
+		event.getGeneration().getFeatures(GenerationStage.Decoration.SURFACE_STRUCTURES).add(() -> feature
+				.withConfiguration(IFeatureConfig.NO_FEATURE_CONFIG).withPlacement(Placement.NOPE.configure(IPlacementConfig.NO_PLACEMENT_CONFIG)));
 	}
 }

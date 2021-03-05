@@ -6,6 +6,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.function.Supplier;
 import java.util.Map;
@@ -19,7 +20,7 @@ public class DecreaseLeftCoreProcedure extends ZanyelementsModElements.ModElemen
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DecreaseLeftCore!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure DecreaseLeftCore!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

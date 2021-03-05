@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 4,
+    "group": "snow_slab",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.SNOW"
+      },
+      {
+        "value": "Blocks.SNOW"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SnowSlabs"
+    },
+    "name": "snow_slab",
+    "namespace": "mod"
+  }
+}

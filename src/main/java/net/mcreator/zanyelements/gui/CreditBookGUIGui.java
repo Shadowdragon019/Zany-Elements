@@ -34,6 +34,8 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
+
 @ZanyelementsModElements.ModElement.Tag
 public class CreditBookGUIGui extends ZanyelementsModElements.ModElement {
 	public static HashMap guistate = new HashMap();
@@ -45,17 +47,17 @@ public class CreditBookGUIGui extends ZanyelementsModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("credit_book_gui"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
 		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("credit_book_gui"));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -116,19 +118,19 @@ public class CreditBookGUIGui extends ZanyelementsModElements.ModElement {
 		}
 		private static final ResourceLocation texture = new ResourceLocation("zanyelements:textures/credit_book_gui.png");
 		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
+		public void render(MatrixStack ms, int mouseX, int mouseY, float partialTicks) {
+			this.renderBackground(ms);
+			super.render(ms, mouseX, mouseY, partialTicks);
+			this.renderHoveredTooltip(ms, mouseX, mouseY);
 		}
 
 		@Override
-		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
+		protected void drawGuiContainerBackgroundLayer(MatrixStack ms, float par1, int par2, int par3) {
 			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+			this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 		}
 
 		@Override
@@ -146,14 +148,14 @@ public class CreditBookGUIGui extends ZanyelementsModElements.ModElement {
 		}
 
 		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Credit Book", 6, 7, -12829636);
-			this.font.drawString("Uraneptus #5442 - Textures", 6, 25, -12829636);
+		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
+			this.font.drawString(ms, "Credit Book", 6, 7, -12829636);
+			this.font.drawString(ms, "Uraneptus #5442 - Textures", 6, 25, -12829636);
 		}
 
 		@Override
-		public void removed() {
-			super.removed();
+		public void onClose() {
+			super.onClose();
 			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
 		}
 

@@ -3,7 +3,7 @@ package net.mcreator.zanyelements.block;
 
 import net.minecraftforge.registries.ObjectHolder;
 
-import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
@@ -34,7 +34,7 @@ public class CharcoalBlockBlock extends ZanyelementsModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 6f).lightValue(0));
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 6f).setLightLevel(s -> 0));
 			setRegistryName("charcoal_block");
 		}
 

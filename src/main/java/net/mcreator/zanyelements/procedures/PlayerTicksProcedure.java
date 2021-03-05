@@ -24,6 +24,7 @@ import net.mcreator.zanyelements.item.TotemOfTheEndItem;
 import net.mcreator.zanyelements.item.TotemOfShulkingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -44,27 +45,27 @@ public class PlayerTicksProcedure extends ZanyelementsModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure PlayerTicks!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure PlayerTicks!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure PlayerTicks!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency x for procedure PlayerTicks!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure PlayerTicks!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency y for procedure PlayerTicks!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure PlayerTicks!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency z for procedure PlayerTicks!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure PlayerTicks!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure PlayerTicks!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -101,8 +102,8 @@ public class PlayerTicksProcedure extends ZanyelementsModElements.ModElement {
 									}.compareDistOf(x, y, z)).collect(Collectors.toList());
 							for (Entity entityiterator : _entfound) {
 								if (((0 == Math.round((Math.random() * 100))) && (entityiterator instanceof SheepEntity))) {
-									if (!world.getWorld().isRemote) {
-										ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), (entityiterator.getPosX()),
+									if (world instanceof World && !world.isRemote()) {
+										ItemEntity entityToSpawn = new ItemEntity((World) world, (entityiterator.getPosX()),
 												(entityiterator.getPosY()), (entityiterator.getPosZ()), new ItemStack(Blocks.WHITE_WOOL, (int) (1)));
 										entityToSpawn.setPickupDelay((int) 10);
 										world.addEntity(entityToSpawn);

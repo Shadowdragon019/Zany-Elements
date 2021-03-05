@@ -3,11 +3,11 @@ package net.mcreator.zanyelements.procedures;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.particle.CloudDustParticle;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -24,27 +24,27 @@ public class Cloud9ActiveProcedure extends ZanyelementsModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Cloud9Active!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure Cloud9Active!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure Cloud9Active!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency x for procedure Cloud9Active!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure Cloud9Active!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency y for procedure Cloud9Active!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure Cloud9Active!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency z for procedure Cloud9Active!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Cloud9Active!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure Cloud9Active!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -52,8 +52,10 @@ public class Cloud9ActiveProcedure extends ZanyelementsModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.07), (entity.getMotion().getZ()));
-		entity.fallDistance = (float) (0);
+		if ((!(entity.isSneaking()))) {
+			entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.07), (entity.getMotion().getZ()));
+			entity.fallDistance = (float) (0);
+		}
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), (int) 1, 0.3,
 					0.1, 0.3, 0.1);
@@ -68,14 +70,12 @@ public class Cloud9ActiveProcedure extends ZanyelementsModElements.ModElement {
 						}
 					}.compareDistOf(x, y, z)).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if ((!(entity instanceof ItemEntity))) {
-					if ((!(entityiterator == entity))) {
-						entityiterator.setMotion((entityiterator.getMotion().getX()), ((entityiterator.getMotion().getY()) + 0.1),
-								(entityiterator.getMotion().getZ()));
-						if (world instanceof ServerWorld) {
-							((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entityiterator.getPosX()), (entityiterator.getPosY()),
-									(entityiterator.getPosZ()), (int) 1, 0.3, 0.1, 0.3, 0.1);
-						}
+				if (((!(entityiterator == entity)) && (!(entity.isSneaking())))) {
+					entityiterator.setMotion((entityiterator.getMotion().getX()), ((entityiterator.getMotion().getY()) + 0.06),
+							(entityiterator.getMotion().getZ()));
+					if (world instanceof ServerWorld) {
+						((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entityiterator.getPosX()), (entityiterator.getPosY()),
+								(entityiterator.getPosZ()), (int) 1, 0.3, 0.1, 0.3, 0.1);
 					}
 				}
 			}

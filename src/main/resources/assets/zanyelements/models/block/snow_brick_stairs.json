@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "zanyelements:blocks/znow_bricks",
+    "top": "zanyelements:blocks/znow_bricks",
+    "side": "zanyelements:blocks/znow_bricks"
+  }
+}

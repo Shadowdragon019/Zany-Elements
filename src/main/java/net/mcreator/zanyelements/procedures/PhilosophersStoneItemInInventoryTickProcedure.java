@@ -14,6 +14,7 @@ import net.minecraft.advancements.Advancement;
 
 import net.mcreator.zanyelements.item.PhilosophersStoneItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
@@ -28,12 +29,12 @@ public class PhilosophersStoneItemInInventoryTickProcedure extends ZanyelementsM
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure PhilosophersStoneItemInInventoryTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure PhilosophersStoneItemInInventoryTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure PhilosophersStoneItemInInventoryTick!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure PhilosophersStoneItemInInventoryTick!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

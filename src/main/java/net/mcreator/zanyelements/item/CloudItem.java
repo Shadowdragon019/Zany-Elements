@@ -41,32 +41,44 @@ public class CloudItem extends ZanyelementsModElements.ModElement {
 	@Override
 	public void initElements() {
 		IArmorMaterial armormaterial = new IArmorMaterial() {
+			@Override
 			public int getDurability(EquipmentSlotType slot) {
 				return new int[]{13, 15, 16, 11}[slot.getIndex()] * 25;
 			}
 
+			@Override
 			public int getDamageReductionAmount(EquipmentSlotType slot) {
 				return new int[]{2, 5, 6, 2}[slot.getIndex()];
 			}
 
+			@Override
 			public int getEnchantability() {
 				return 9;
 			}
 
+			@Override
 			public net.minecraft.util.SoundEvent getSoundEvent() {
 				return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 			}
 
+			@Override
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
 
 			@OnlyIn(Dist.CLIENT)
+			@Override
 			public String getName() {
 				return "cloud";
 			}
 
+			@Override
 			public float getToughness() {
+				return 0f;
+			}
+
+			@Override
+			public float getKnockbackResistance() {
 				return 0f;
 			}
 		};

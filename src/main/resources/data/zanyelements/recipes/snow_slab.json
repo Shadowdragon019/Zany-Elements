@@ -1,0 +1,19 @@
+{
+  "group": "snow_slab",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:snow_block"
+    },
+    "1": {
+      "item": "minecraft:snow_block"
+    }
+  },
+  "result": {
+    "item": "zanyelements:snow_slab",
+    "count": 4
+  }
+}

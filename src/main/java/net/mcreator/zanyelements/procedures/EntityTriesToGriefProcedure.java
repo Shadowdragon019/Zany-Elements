@@ -16,6 +16,7 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.stream.Collectors;
 import java.util.function.Function;
@@ -35,27 +36,27 @@ public class EntityTriesToGriefProcedure extends ZanyelementsModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure EntityTriesToGrief!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure EntityTriesToGrief!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure EntityTriesToGrief!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency x for procedure EntityTriesToGrief!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure EntityTriesToGrief!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency y for procedure EntityTriesToGrief!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure EntityTriesToGrief!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency z for procedure EntityTriesToGrief!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure EntityTriesToGrief!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure EntityTriesToGrief!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -5,6 +5,7 @@ import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -18,17 +19,17 @@ public class MaxiumumVoidPouchLevelCommandExecutedProcedure extends Zanyelements
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure MaxiumumVoidPouchLevelCommandExecuted!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency entity for procedure MaxiumumVoidPouchLevelCommandExecuted!");
 			return;
 		}
 		if (dependencies.get("cmdparams") == null) {
 			if (!dependencies.containsKey("cmdparams"))
-				System.err.println("Failed to load dependency cmdparams for procedure MaxiumumVoidPouchLevelCommandExecuted!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency cmdparams for procedure MaxiumumVoidPouchLevelCommandExecuted!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure MaxiumumVoidPouchLevelCommandExecuted!");
+				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure MaxiumumVoidPouchLevelCommandExecuted!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
