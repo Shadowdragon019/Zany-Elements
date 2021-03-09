@@ -1,0 +1,23 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "ancient_iron_filled_chalice",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "CUSTOM:IronFilledChalice"
+    },
+    "brewingIngredientStack": {
+      "value": "Items.NETHERITE_SCRAP"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:AncientIronFilledChalice"
+    },
+    "name": "ancient_iron_filled_chalice",
+    "namespace": "mod"
+  }
+}

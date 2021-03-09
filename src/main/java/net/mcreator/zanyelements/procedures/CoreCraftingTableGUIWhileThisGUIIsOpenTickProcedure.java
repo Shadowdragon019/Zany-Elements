@@ -1,11 +1,32 @@
 package net.mcreator.zanyelements.procedures;
 
+import net.minecraftforge.items.CapabilityItemHandler;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.container.Slot;
+import net.minecraft.inventory.container.Container;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.BlockState;
+
+import net.mcreator.zanyelements.item.PhilosophersStoneItem;
+import net.mcreator.zanyelements.item.EndstoneShardItem;
+import net.mcreator.zanyelements.ZanyelementsModElements;
+import net.mcreator.zanyelements.ZanyelementsMod;
+
+import java.util.function.Supplier;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.Map;
+
 @ZanyelementsModElements.ModElement.Tag
 public class CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure extends ZanyelementsModElements.ModElement {
-
 	public CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure(ZanyelementsModElements instance) {
 		super(instance, 92);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -34,23 +55,21 @@ public class CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure extends Zanyele
 				ZanyelementsMod.LOGGER.warn("Failed to load dependency world for procedure CoreCraftingTableGUIWhileThisGUIIsOpenTick!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		double checkNumber = 0;
 		double tally = 0;
-		if (!world.getWorld().isRemote) {
+		if (!world.isRemote()) {
 			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 			TileEntity _tileEntity = world.getTileEntity(_bp);
 			BlockState _bs = world.getBlockState(_bp);
 			if (_tileEntity != null)
 				_tileEntity.getTileData().putString("outputName", " ");
-
-			world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+			if (world instanceof World)
+				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 		tally = (double) (-1);
 		checkNumber = (double) (-1);
@@ -68,14 +87,14 @@ public class CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure extends Zanyele
 					return _retval.get();
 				}
 			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) ((checkNumber)))).getItem())) {
-				if (!world.getWorld().isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putString("outputName", "9x Philosopher's Shard");
-
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 		}
@@ -113,18 +132,16 @@ public class CoreCraftingTableGUIWhileThisGUIIsOpenTickProcedure extends Zanyele
 					return ItemStack.EMPTY;
 				}
 			}.getItemStack((int) (4))).getItem()))) {
-				if (!world.getWorld().isRemote) {
+				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_tileEntity != null)
 						_tileEntity.getTileData().putString("outputName", "1x Condensed Iron");
-
-					world.getWorld().notifyBlockUpdate(_bp, _bs, _bs, 3);
+					if (world instanceof World)
+						((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 				}
 			}
 		}
-
 	}
-
 }

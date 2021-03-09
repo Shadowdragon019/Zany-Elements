@@ -1,0 +1,23 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "lapis_lazuli_filled_chalice",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "CUSTOM:GoldenChalice"
+    },
+    "brewingIngredientStack": {
+      "value": "Blocks.LAPIS_BLOCK"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:LapisLazuilFilledChalice"
+    },
+    "name": "lapis_lazuli_filled_chalice",
+    "namespace": "mod"
+  }
+}

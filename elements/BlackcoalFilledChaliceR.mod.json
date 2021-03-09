@@ -1,0 +1,23 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "blackcoal_filled_chalice",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "CUSTOM:CoalFilledChalice"
+    },
+    "brewingIngredientStack": {
+      "value": "Blocks.REDSTONE_BLOCK"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:BlackcoalFilledChalice"
+    },
+    "name": "blackcoal_filled_chalice",
+    "namespace": "mod"
+  }
+}

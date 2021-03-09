@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "zanyelements:items/emerald_diamond_golden_chalice"
+  }
+}

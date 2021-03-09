@@ -1,0 +1,12 @@
+{
+  "_fv": 15,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Elytra Jump",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "ElytraJumpOnKeyPressed"
+    }
+  }
+}

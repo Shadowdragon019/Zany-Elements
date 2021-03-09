@@ -1,0 +1,23 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "blue_quartz_filled_chalice",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "CUSTOM:LapisLazuilFilledChalice"
+    },
+    "brewingIngredientStack": {
+      "value": "Blocks.QUARTZ_BLOCK#3"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:BlueQuartzFilledChalice"
+    },
+    "name": "blue_quartz_filled_chalice",
+    "namespace": "mod"
+  }
+}

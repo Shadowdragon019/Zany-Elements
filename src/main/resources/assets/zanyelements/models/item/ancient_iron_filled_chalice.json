@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "zanyelements:items/iron_netherite_scrap_golden_chalice"
+  }
+}

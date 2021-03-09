@@ -1,0 +1,29 @@
+{
+  "_fv": 15,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "coal_redstone_golden_chalice",
+    "customModelName": "Normal",
+    "name": "Blackcoal Filled Chalice",
+    "rarity": "COMMON",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "BREWING"
+    },
+    "stackSize": 1,
+    "nutritionalValue": 0,
+    "saturation": 1.0,
+    "eatingSpeed": 48,
+    "resultItem": {
+      "value": "CUSTOM:GoldenChalice"
+    },
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "drink",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "BlackcoalFilledChaliceFoodEaten"
+    }
+  }
+}

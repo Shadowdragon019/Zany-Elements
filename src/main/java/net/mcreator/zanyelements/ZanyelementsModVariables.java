@@ -207,6 +207,7 @@ public class ZanyelementsModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("chance", instance.chance);
+			nbt.putDouble("avaliableElytras", instance.avaliableElytras);
 			return nbt;
 		}
 
@@ -214,11 +215,13 @@ public class ZanyelementsModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.chance = nbt.getDouble("chance");
+			instance.avaliableElytras = nbt.getDouble("avaliableElytras");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double chance = 0;
+		public double avaliableElytras = 0.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -254,6 +257,7 @@ public class ZanyelementsModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.chance = original.chance;
+			clone.avaliableElytras = original.avaliableElytras;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -278,6 +282,7 @@ public class ZanyelementsModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.chance = message.data.chance;
+					variables.avaliableElytras = message.data.avaliableElytras;
 				}
 			});
 			context.setPacketHandled(true);
