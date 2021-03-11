@@ -53,7 +53,7 @@ public class TotemOfFluffItem extends ZanyelementsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Drops from SHeep"));
+			list.add(new StringTextComponent("Drops from Sheep"));
 		}
 	}
 }

@@ -5,7 +5,7 @@
     "structure": "fire_waystone",
     "randomlyRotateStructure": false,
     "surfaceDetectionType": "First motion blocking block",
-    "spawnProbability": 2000,
+    "spawnProbability": 3000,
     "minCountPerChunk": 1,
     "maxCountPerChunk": 1,
     "spawnLocation": "Ground",

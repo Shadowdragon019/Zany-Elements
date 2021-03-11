@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "totem_of_fluff",
+    "texture": "void_book",
     "customModelName": "Normal",
-    "name": "Totem of Fluff",
-    "rarity": "UNCOMMON",
+    "name": "Void Book",
+    "rarity": "EPIC",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "MISC"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -24,12 +24,10 @@
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "specialInfo": [
-      "Drops from Sheep"
-    ],
+    "specialInfo": [],
     "hasGlow": false,
-    "guiBoundTo": "<NONE>",
-    "inventorySize": 9,
+    "guiBoundTo": "VoidBookG",
+    "inventorySize": 0,
     "inventoryStackSize": 64
   }
 }

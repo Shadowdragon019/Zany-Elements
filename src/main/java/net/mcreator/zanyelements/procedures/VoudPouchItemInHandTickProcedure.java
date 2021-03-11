@@ -50,7 +50,9 @@ public class VoudPouchItemInHandTickProcedure extends ZanyelementsModElements.Mo
 			((itemstack)).setDisplayName(
 					new StringTextComponent((("Void Pouch | Level ") + "" + (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel"))) + ""
 							+ (" | ") + "" + (((itemstack).getOrCreateTag().getDouble("consumedEndermen"))) + "" + ("/") + ""
-							+ (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4))) + "" + (" Consumed Endermen"))));
+							+ (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4))
+									* (ZanyelementsModVariables.MapVariables.get(world).voidPouchLevelUpRequirmentMultiplier))))
+							+ "" + (" Consumed Endermen"))));
 		} else {
 			((itemstack)).setDisplayName(new StringTextComponent(
 					(("Void Pouch | Level ") + "" + (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel"))) + "" + (" | ") + ""

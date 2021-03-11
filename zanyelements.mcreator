@@ -259,40 +259,6 @@
       }
     },
     {
-      "name": "MaxiumumVoidPouchLevel",
-      "type": "command",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "maxiumum_void_pouch_level"
-    },
-    {
-      "name": "MaxiumumVoidPouchLevelCommandExecuted",
-      "type": "procedure",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "maxiumum_void_pouch_level_command_executed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "cmdparams",
-            "type": "map"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "Totem",
       "type": "block",
       "sortid": 4,
@@ -3027,6 +2993,213 @@
           }
         ]
       }
+    },
+    {
+      "name": "VoidBook",
+      "type": "item",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_book"
+    },
+    {
+      "name": "VoidBookG",
+      "type": "gui",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_book_g"
+    },
+    {
+      "name": "VoidPouchMaxLevelIncrease",
+      "type": "procedure",
+      "sortid": 252,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_max_level_increase",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchMaxLevelDecrease",
+      "type": "procedure",
+      "sortid": 253,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_max_level_decrease",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchSizeMultiplierIncrease",
+      "type": "procedure",
+      "sortid": 254,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_size_multiplier_increase",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchSizeMultiplierDecrease",
+      "type": "procedure",
+      "sortid": 255,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_size_multiplier_decrease",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchLevelUpRequirementIncrease",
+      "type": "procedure",
+      "sortid": 256,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_level_up_requirement_increase",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchLevelUpRequirmentDecrease",
+      "type": "procedure",
+      "sortid": 257,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_level_up_requirment_decrease",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchLevelIncrease",
+      "type": "procedure",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_level_increase",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoidPouchLevelDecreave",
+      "type": "procedure",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "void_pouch_level_decreave",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetVoidPouchLevel",
+      "type": "procedure",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_void_pouch_level",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3034,7 +3207,7 @@
       "name": "voidPouchMaxLevel",
       "type": "number",
       "scope": "map",
-      "value": "3.0"
+      "value": "0.0"
     },
     {
       "name": "chance",
@@ -3049,10 +3222,22 @@
       "value": "false"
     },
     {
-      "name": "avaliableElytras",
+      "name": "voidPouchSizeMultiplier",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
+      "scope": "map",
+      "value": "1.0"
+    },
+    {
+      "name": "voidPouchLevelUpRequirmentMultiplier",
+      "type": "number",
+      "scope": "map",
+      "value": "1.0"
+    },
+    {
+      "name": "voidPouchSetLevel",
+      "type": "number",
+      "scope": "map",
+      "value": "3.0"
     }
   ],
   "sound_elements": [],
@@ -3103,6 +3288,7 @@
       "block.zanyelements.olive_slab": "Olive Slab",
       "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
       "item.zanyelements.totem_of_supplementary": "Totem of Supplementary",
+      "item.zanyelements.void_book": "Void Book",
       "block.zanyelements.cloud": "Cloud",
       "advancements.mine_philosophers_ore.title": "A Shard of Philosophers",
       "advancements.get_cloud_boots.descr": "Craft cloud boots",
@@ -3189,7 +3375,7 @@
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Join the Discord!: https://discord.gg/YYM3NYssSJ",
     "author": "Shadowdragon, MCreator",
     "websiteURL": "https://mcreator.net",

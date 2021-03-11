@@ -78,12 +78,19 @@ public class VoudPouchRightClickedInAirProcedure extends ZanyelementsModElements
 		{
 			List<Entity> _entfound = world
 					.getEntitiesWithinAABB(Entity.class,
-							new AxisAlignedBB(x - (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d),
-									y - (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d),
-									z - (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d),
-									x + (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d),
-									y + (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d),
-									z + (Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2)) / 2d)),
+							new AxisAlignedBB(
+									x - (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d),
+									y - (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d),
+									z - (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d),
+									x + (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d),
+									y + (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d),
+									z + (Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 2))
+											* (ZanyelementsModVariables.MapVariables.get(world).voidPouchSizeMultiplier))) / 2d)),
 							null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
@@ -164,10 +171,13 @@ public class VoudPouchRightClickedInAirProcedure extends ZanyelementsModElements
 				}
 			}
 		}
-		if ((((itemstack).getOrCreateTag().getDouble("consumedEndermen")) >= Math.pow(2,
-				(((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4)))) {
-			(itemstack).getOrCreateTag().putDouble("consumedEndermen", (((itemstack).getOrCreateTag().getDouble("consumedEndermen"))
-					- Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4))));
+		if ((((itemstack).getOrCreateTag().getDouble("consumedEndermen")) >= Math
+				.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4))
+						* (ZanyelementsModVariables.MapVariables.get(world).voidPouchLevelUpRequirmentMultiplier))))) {
+			(itemstack).getOrCreateTag().putDouble("consumedEndermen",
+					(((itemstack).getOrCreateTag().getDouble("consumedEndermen"))
+							- Math.ceil((Math.pow(2, (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 4))
+									* (ZanyelementsModVariables.MapVariables.get(world).voidPouchLevelUpRequirmentMultiplier)))));
 			(itemstack).getOrCreateTag().putDouble("pouchCurrentLevel", (((itemstack).getOrCreateTag().getDouble("pouchCurrentLevel")) + 1));
 		}
 	}

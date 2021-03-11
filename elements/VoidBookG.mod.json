@@ -1,0 +1,258 @@
+{
+  "_fv": 15,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 260,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:voidPouchMaxLevel>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:voidPouchMaxLevel>",
+          "x": 123,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Void Book",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Void Book",
+          "x": 87,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "VoidPouchMaxLevelDecrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 87,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "VoidPouchMaxLevelIncrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 141,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Void Pouch max level",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Void Pouch max level",
+          "x": 87,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Void Pouch range multiplier",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Void Pouch range multiplier",
+          "x": 87,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "VoidPouchSizeMultiplierDecrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 87,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "VoidPouchSizeMultiplierIncrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 141,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Void Pouch level up requirment multiplier",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Void Pouch level up requirment multiplier",
+          "x": 87,
+          "y": 152
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "VoidPouchLevelUpRequirmentDecrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 87,
+          "y": 170
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "VoidPouchLevelUpRequirementIncrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 141,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:voidPouchSizeMultiplier>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:voidPouchSizeMultiplier>",
+          "x": 123,
+          "y": 130
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:voidPouchLevelUpRequirmentMultiplier>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:voidPouchLevelUpRequirmentMultiplier>",
+          "x": 123,
+          "y": 175
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "<",
+          "onClick": {
+            "name": "VoidPouchLevelDecreave"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "<",
+          "x": 249,
+          "y": 80
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": ">",
+          "onClick": {
+            "name": "VoidPouchLevelIncrease"
+          },
+          "width": 30,
+          "height": 20,
+          "name": ">",
+          "x": 303,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<VAR:voidPouchSetLevel>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<VAR:voidPouchSetLevel>",
+          "x": 285,
+          "y": 85
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Set Void Pouch in hand level",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Set Void Pouch in hand level",
+          "x": 195,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Set",
+          "onClick": {
+            "name": "SetVoidPouchLevel"
+          },
+          "width": 40,
+          "height": 20,
+          "name": "Set",
+          "x": 271,
+          "y": 103
+        }
+      }
+    ]
+  }
+}

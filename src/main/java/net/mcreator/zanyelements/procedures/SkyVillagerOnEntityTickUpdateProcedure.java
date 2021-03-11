@@ -10,7 +10,6 @@ import net.minecraft.util.Util;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.zanyelements.ZanyelementsModVariables;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 import net.mcreator.zanyelements.ZanyelementsMod;
 
@@ -55,13 +54,6 @@ public class SkyVillagerOnEntityTickUpdateProcedure extends ZanyelementsModEleme
 			entity.getPersistentData().putBoolean("isDay", (true));
 		} else {
 			entity.getPersistentData().putBoolean("isDay", (false));
-		}
-		{
-			double _setval = (double) (entity.getPersistentData().getDouble("avaliableElytras"));
-			entity.getCapability(ZanyelementsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.avaliableElytras = _setval;
-				capability.syncPlayerVariables(entity);
-			});
 		}
 	}
 }

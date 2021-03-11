@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "condensed_iron",
+    "texture": "condensed_iron_ingot_two",
     "customModelName": "Normal",
     "name": "Condensed Iron",
     "rarity": "COMMON",

@@ -107,7 +107,10 @@ public class ZanyelementsModVariables {
 
 	public static class MapVariables extends WorldSavedData {
 		public static final String DATA_NAME = "zanyelements_mapvars";
-		public double voidPouchMaxLevel = 3.0;
+		public double voidPouchMaxLevel = 0.0;
+		public double voidPouchSizeMultiplier = 1.0;
+		public double voidPouchLevelUpRequirmentMultiplier = 1.0;
+		public double voidPouchSetLevel = 3.0;
 		public MapVariables() {
 			super(DATA_NAME);
 		}
@@ -119,11 +122,17 @@ public class ZanyelementsModVariables {
 		@Override
 		public void read(CompoundNBT nbt) {
 			voidPouchMaxLevel = nbt.getDouble("voidPouchMaxLevel");
+			voidPouchSizeMultiplier = nbt.getDouble("voidPouchSizeMultiplier");
+			voidPouchLevelUpRequirmentMultiplier = nbt.getDouble("voidPouchLevelUpRequirmentMultiplier");
+			voidPouchSetLevel = nbt.getDouble("voidPouchSetLevel");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
 			nbt.putDouble("voidPouchMaxLevel", voidPouchMaxLevel);
+			nbt.putDouble("voidPouchSizeMultiplier", voidPouchSizeMultiplier);
+			nbt.putDouble("voidPouchLevelUpRequirmentMultiplier", voidPouchLevelUpRequirmentMultiplier);
+			nbt.putDouble("voidPouchSetLevel", voidPouchSetLevel);
 			return nbt;
 		}
 
@@ -207,7 +216,6 @@ public class ZanyelementsModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("chance", instance.chance);
-			nbt.putDouble("avaliableElytras", instance.avaliableElytras);
 			return nbt;
 		}
 
@@ -215,13 +223,11 @@ public class ZanyelementsModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.chance = nbt.getDouble("chance");
-			instance.avaliableElytras = nbt.getDouble("avaliableElytras");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double chance = 0;
-		public double avaliableElytras = 0.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				ZanyelementsMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -257,7 +263,6 @@ public class ZanyelementsModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.chance = original.chance;
-			clone.avaliableElytras = original.avaliableElytras;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -282,7 +287,6 @@ public class ZanyelementsModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.chance = message.data.chance;
-					variables.avaliableElytras = message.data.avaliableElytras;
 				}
 			});
 			context.setPacketHandled(true);
