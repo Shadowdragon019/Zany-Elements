@@ -185,7 +185,7 @@ public class TotemUpdateTickProcedure extends ZanyelementsModElements.ModElement
 				for (Entity entityiterator : _entfound) {
 					if ((entityiterator instanceof PlayerEntity)) {
 						if (entityiterator instanceof LivingEntity)
-							((LivingEntity) entityiterator).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 100, (int) 0));
+							((LivingEntity) entityiterator).addPotionEffect(new EffectInstance(Effects.RESISTANCE, (int) 1, (int) 0));
 					}
 				}
 			}

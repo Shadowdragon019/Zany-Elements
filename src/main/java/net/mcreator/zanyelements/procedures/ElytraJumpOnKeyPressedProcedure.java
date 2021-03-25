@@ -52,11 +52,19 @@ public class ElytraJumpOnKeyPressedProcedure extends ZanyelementsModElements.Mod
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+		double xOffset = 0;
+		double zOffset = 0;
+		if ((x < 0)) {
+			xOffset = (double) (-1);
+		}
+		if ((z < 0)) {
+			zOffset = (double) (-1);
+		}
 		if (((((EnchantmentHelper.getEnchantmentLevel(UpliftingEnchantment.enchantment,
 				((entity instanceof LivingEntity)
 						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
 						: ItemStack.EMPTY)) != 0))
-				&& (world.getBlockState(new BlockPos((int) x, (int) (y - 0.1), (int) z)).isSolid()))
+				&& (!(world.isAirBlock(new BlockPos((int) (x + (xOffset)), (int) (y - 0.1), (int) (z + (zOffset)))))))
 				&& (!(((PlayerEntity) entity).isElytraFlying())))) {
 			entity.setMotion((entity.getMotion().getX()), (1 + (entity.getMotion().getY())), (entity.getMotion().getZ()));
 			if (entity instanceof PlayerEntity) {

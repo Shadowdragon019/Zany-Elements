@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Pep In Your Step!",
-    "achievementDescription": "Craft cloud boots",
+    "achievementDescription": "Craft Cloud Boots",
     "achievementIcon": {
       "value": "CUSTOM:Cloud.boots"
     },

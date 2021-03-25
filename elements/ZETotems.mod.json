@@ -18,10 +18,26 @@
       },
       {
         "value": "CUSTOM:TotemOfSupplementary"
+      },
+      {
+        "value": "CUSTOM:TotemOfGuarding"
+      },
+      {
+        "value": "CUSTOM:TotemOfElderGuardian"
+      },
+      {
+        "value": "CUSTOM:Phantom"
+      },
+      {
+        "value": "CUSTOM:TotemOfCutness"
+      },
+      {
+        "value": "CUSTOM:TotemOfBlazing"
       }
     ],
     "blocks": [],
     "functions": [],
+    "entities": [],
     "name": "ze_totems",
     "namespace": "forge"
   }

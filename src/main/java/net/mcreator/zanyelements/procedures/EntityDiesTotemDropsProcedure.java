@@ -10,17 +10,27 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.passive.SheepEntity;
+import net.minecraft.entity.passive.FoxEntity;
 import net.minecraft.entity.monster.ShulkerEntity;
+import net.minecraft.entity.monster.PhantomEntity;
+import net.minecraft.entity.monster.GuardianEntity;
 import net.minecraft.entity.monster.EndermanEntity;
+import net.minecraft.entity.monster.ElderGuardianEntity;
 import net.minecraft.entity.monster.CreeperEntity;
+import net.minecraft.entity.monster.BlazeEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
 import net.mcreator.zanyelements.item.TotemOfSupplementaryItem;
 import net.mcreator.zanyelements.item.TotemOfShulkingItem;
+import net.mcreator.zanyelements.item.TotemOfGuardingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
+import net.mcreator.zanyelements.item.TotemOfElderGuardianItem;
+import net.mcreator.zanyelements.item.TotemOfCutnessItem;
+import net.mcreator.zanyelements.item.TotemOfBlazingItem;
+import net.mcreator.zanyelements.item.PhantomItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 import net.mcreator.zanyelements.ZanyelementsMod;
 
@@ -95,6 +105,41 @@ public class EntityDiesTotemDropsProcedure extends ZanyelementsModElements.ModEl
 					if (world instanceof World && !world.isRemote()) {
 						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
 								new ItemStack(TotemOfShulkingItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if ((entity instanceof GuardianEntity)) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+								new ItemStack(TotemOfGuardingItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if ((entity instanceof ElderGuardianEntity)) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+								new ItemStack(TotemOfElderGuardianItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if ((entity instanceof PhantomEntity)) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+								new ItemStack(PhantomItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if ((entity instanceof FoxEntity)) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+								new ItemStack(TotemOfCutnessItem.block, (int) (1)));
+						entityToSpawn.setPickupDelay((int) 10);
+						world.addEntity(entityToSpawn);
+					}
+				} else if ((entity instanceof BlazeEntity)) {
+					if (world instanceof World && !world.isRemote()) {
+						ItemEntity entityToSpawn = new ItemEntity((World) world, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()),
+								new ItemStack(TotemOfBlazingItem.block, (int) (1)));
 						entityToSpawn.setPickupDelay((int) 10);
 						world.addEntity(entityToSpawn);
 					}

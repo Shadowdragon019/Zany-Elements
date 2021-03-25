@@ -9,7 +9,7 @@
     "enableLeggings": false,
     "textureLeggings": "",
     "enableBoots": true,
-    "textureBoots": "cloud_boots_good",
+    "textureBoots": "cloud_boots2",
     "onBootsTick": {
       "name": "CloudBootsTickEvent"
     },
@@ -24,7 +24,9 @@
     "helmetSpecialInfo": [],
     "bodySpecialInfo": [],
     "leggingsSpecialInfo": [],
-    "bootsSpecialInfo": [],
+    "bootsSpecialInfo": [
+      "Doesn't work with Elytras"
+    ],
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
     "helmetModelTexture": "From armor",
@@ -52,6 +54,10 @@
     "equipSound": {
       "value": ""
     },
-    "repairItems": []
+    "repairItems": [
+      {
+        "value": "CUSTOM:Clouds"
+      }
+    ]
   }
 }

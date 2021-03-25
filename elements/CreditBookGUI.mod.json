@@ -35,6 +35,71 @@
           "x": 132,
           "y": 62
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "basically, i am fox #5356",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "basically, i am fox #5356",
+          "x": 132,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": " - Textures",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": " - Textures",
+          "x": 132,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "PotatoWyvern #8542 - Textures, ",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "PotatoWyvern #8542 - Textures, ",
+          "x": 132,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Geo #1553 - Textures, bug help",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Geo #1553 - Textures, bug help",
+          "x": 132,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "bug help",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "bug help",
+          "x": 132,
+          "y": 89
+        }
       }
     ]
   }

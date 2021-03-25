@@ -2,7 +2,7 @@
   "_fv": 15,
   "_type": "structure",
   "definition": {
-    "structure": "snow_could_castle",
+    "structure": "acacia_web",
     "randomlyRotateStructure": true,
     "surfaceDetectionType": "First motion blocking block",
     "spawnProbability": 750,

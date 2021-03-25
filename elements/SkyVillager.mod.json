@@ -5,7 +5,7 @@
     "mobName": "Azure Villager",
     "mobLabel": "",
     "mobModelName": "Villager",
-    "mobModelTexture": "sky_villager.png",
+    "mobModelTexture": "sky_villager_ura.png",
     "mobModelGlowTexture": "",
     "modelWidth": 0.6,
     "modelHeight": 1.95,

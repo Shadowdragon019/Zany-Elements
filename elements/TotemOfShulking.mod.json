@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "totem_of_shulking",
+    "texture": "totem_of_shulking_geo",
     "customModelName": "Normal",
     "name": "Totem of Shulking",
     "rarity": "UNCOMMON",

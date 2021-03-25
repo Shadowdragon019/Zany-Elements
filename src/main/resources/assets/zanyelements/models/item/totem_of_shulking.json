@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "zanyelements:items/totem_of_shulking"
+    "layer0": "zanyelements:items/totem_of_shulking_geo"
   }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "zanyelements:custom/frozen_chest",
+  "textures": {
+    "all": "zanyelements:blocks/frozen_chest",
+    "particle": "zanyelements:blocks/frozen_chest",
+    "0": "zanyelements:blocks/frozen_chest"
+  }
+}

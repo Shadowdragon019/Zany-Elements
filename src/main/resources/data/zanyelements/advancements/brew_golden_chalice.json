@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "zanyelements:diamond_filled_chalice"
+    },
+    "title": {
+      "translate": "advancements.brew_golden_chalice.title"
+    },
+    "description": {
+      "translate": "advancements.brew_golden_chalice.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "brew_golden_chalice": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "zanyelements:get_golden_chalice"
+}

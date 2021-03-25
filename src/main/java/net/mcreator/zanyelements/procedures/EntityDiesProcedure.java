@@ -10,6 +10,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -28,13 +29,19 @@ import net.mcreator.zanyelements.potion.EndgelicPotion;
 import net.mcreator.zanyelements.item.TotemOfTheEndItem;
 import net.mcreator.zanyelements.item.TotemOfSupplementaryItem;
 import net.mcreator.zanyelements.item.TotemOfShulkingItem;
+import net.mcreator.zanyelements.item.TotemOfGuardingItem;
 import net.mcreator.zanyelements.item.TotemOfFluffItem;
 import net.mcreator.zanyelements.item.TotemOfExplosivesItem;
+import net.mcreator.zanyelements.item.TotemOfElderGuardianItem;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 import net.mcreator.zanyelements.ZanyelementsMod;
 
+import java.util.stream.Collectors;
+import java.util.function.Function;
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
+import java.util.Comparator;
 import java.util.Collections;
 
 @ZanyelementsModElements.ModElement.Tag
@@ -77,6 +84,19 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))) {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				Minecraft.getInstance().gameRenderer
+						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY));
+			}
+			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
@@ -92,6 +112,19 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				((LivingEntity) entity).clearActivePotions();
 		} else if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
 				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem()))) {
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
+			}
+			if (world instanceof World && !world.isRemote()) {
+				Minecraft.getInstance().gameRenderer
+						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY));
+			}
+			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")),
@@ -110,14 +143,6 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				.getItem() == new ItemStack(TotemOfExplosivesItem.block, (int) (1)).getItem())
 				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(TotemOfExplosivesItem.block, (int) (1)).getItem()))) {
-			if (dependencies.get("event") != null) {
-				Object _obj = dependencies.get("event");
-				if (_obj instanceof Event) {
-					Event _evt = (Event) _obj;
-					if (_evt.isCancelable())
-						_evt.setCanceled(true);
-				}
-			}
 			if (world instanceof World && !((World) world).isRemote) {
 				((World) world).createExplosion(null, (int) (entity.getPosX()), (int) (entity.getPosY()), (int) (entity.getPosZ()), (float) 4,
 						Explosion.Mode.BREAK);
@@ -132,14 +157,6 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				.getItem() == new ItemStack(TotemOfTheEndItem.block, (int) (1)).getItem())
 				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(TotemOfTheEndItem.block, (int) (1)).getItem()))) {
-			if (dependencies.get("event") != null) {
-				Object _obj = dependencies.get("event");
-				if (_obj instanceof Event) {
-					Event _evt = (Event) _obj;
-					if (_evt.isCancelable())
-						_evt.setCanceled(true);
-				}
-			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 1200, (int) 4));
 			if (entity instanceof LivingEntity)
@@ -162,14 +179,6 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				.getItem() == new ItemStack(TotemOfFluffItem.block, (int) (1)).getItem())
 				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(TotemOfFluffItem.block, (int) (1)).getItem()))) {
-			if (dependencies.get("event") != null) {
-				Object _obj = dependencies.get("event");
-				if (_obj instanceof Event) {
-					Event _evt = (Event) _obj;
-					if (_evt.isCancelable())
-						_evt.setCanceled(true);
-				}
-			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 120, (int) 1));
 			if (entity instanceof LivingEntity)
@@ -188,14 +197,6 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				.getItem() == new ItemStack(TotemOfShulkingItem.block, (int) (1)).getItem())
 				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(TotemOfShulkingItem.block, (int) (1)).getItem()))) {
-			if (dependencies.get("event") != null) {
-				Object _obj = dependencies.get("event");
-				if (_obj instanceof Event) {
-					Event _evt = (Event) _obj;
-					if (_evt.isCancelable())
-						_evt.setCanceled(true);
-				}
-			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 120, (int) 1));
 			if (entity instanceof LivingEntity)
@@ -208,21 +209,44 @@ public class EntityDiesProcedure extends ZanyelementsModElements.ModElement {
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.LEVITATION, (int) 400, (int) 0));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 800, (int) 0));
-		}
-		if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
-				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY).getItem()))) {
-			if (world instanceof World && !world.isRemote()) {
-				Minecraft.getInstance().gameRenderer
-						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY));
+		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(TotemOfGuardingItem.block, (int) (1)).getItem())
+				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == new ItemStack(TotemOfGuardingItem.block, (int) (1)).getItem()))) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 120, (int) 1));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 900, (int) 1));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, (int) 900, (int) 0));
+		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(TotemOfElderGuardianItem.block, (int) (1)).getItem())
+				|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)
+						.getItem() == new ItemStack(TotemOfElderGuardianItem.block, (int) (1)).getItem()))) {
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.ABSORPTION, (int) 120, (int) 3));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.REGENERATION, (int) 900, (int) 1));
+			if (entity instanceof LivingEntity)
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 800, (int) 0));
+			{
+				List<Entity> _entfound = world
+						.getEntitiesWithinAABB(Entity.class,
+								new AxisAlignedBB(x - (8 / 2d), y - (8 / 2d), z - (8 / 2d), x + (8 / 2d), y + (8 / 2d), z + (8 / 2d)), null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf(x, y, z)).collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if ((!(entity == entityiterator))) {
+						if (entityiterator instanceof LivingEntity)
+							((LivingEntity) entityiterator).clearActivePotions();
+					}
+				}
 			}
-			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)).shrink((int) 1);
-		} else if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("forge:ze_totems").toLowerCase(java.util.Locale.ENGLISH)))
-				.contains(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY).getItem()))) {
-			if (world instanceof World && !world.isRemote()) {
-				Minecraft.getInstance().gameRenderer
-						.displayItemActivation(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY));
-			}
-			(((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemOffhand() : ItemStack.EMPTY)).shrink((int) 1);
 		}
 		if ((((!(entity instanceof ItemEntity)) && (!(entity instanceof PlayerEntity))) && (0 == Math.round((Math.random() * 511))))) {
 			if (world instanceof World && !world.isRemote()) {

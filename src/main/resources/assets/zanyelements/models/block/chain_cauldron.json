@@ -1,0 +1,13 @@
+{
+  "parent": "zanyelements:custom/chain_cauldron",
+  "textures": {
+    "all": "zanyelements:blocks/chain",
+    "particle": "zanyelements:blocks/chain",
+    "side": "zanyelements:blocks/cauldron_side",
+    "chain": "zanyelements:blocks/chain",
+    "top": "zanyelements:blocks/cauldron_top",
+    "bottom": "zanyelements:blocks/cauldron_bottom",
+    "missing": "zanyelements:blocks/",
+    "inside": "zanyelements:blocks/cauldron_inner"
+  }
+}

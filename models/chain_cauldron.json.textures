@@ -1,0 +1,15 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "side": "cauldron_side",
+        "chain": "chain",
+        "top": "cauldron_top",
+        "bottom": "cauldron_bottom",
+        "missing": "",
+        "inside": "cauldron_inner"
+      },
+      "name": "default"
+    }
+  }
+}

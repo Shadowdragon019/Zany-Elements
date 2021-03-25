@@ -2844,6 +2844,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3200,6 +3212,331 @@
           }
         ]
       }
+    },
+    {
+      "name": "GetGoldenChalice",
+      "type": "achievement",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_golden_chalice"
+    },
+    {
+      "name": "KillGlacier",
+      "type": "achievement",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kill_glacier"
+    },
+    {
+      "name": "PlayerKillsMob",
+      "type": "procedure",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "player_kills_mob",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BrewGoldenChalice",
+      "type": "achievement",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_golden_chalice"
+    },
+    {
+      "name": "BrewGoldenChaliceTier2",
+      "type": "achievement",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "brew_golden_chalice_tier_2"
+    },
+    {
+      "name": "EnchantElytra",
+      "type": "achievement",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "enchant_elytra"
+    },
+    {
+      "name": "FullyEnchantElytea",
+      "type": "achievement",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fully_enchant_elytea"
+    },
+    {
+      "name": "RentAElytra",
+      "type": "achievement",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rent_a_elytra"
+    },
+    {
+      "name": "ChainCauldron",
+      "type": "block",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chain_cauldron"
+    },
+    {
+      "name": "ChainCauldronLT",
+      "type": "loottable",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chain_cauldron_lt"
+    },
+    {
+      "name": "TotemOfGuarding",
+      "type": "item",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_guarding"
+    },
+    {
+      "name": "TotemOfElderGuardian",
+      "type": "item",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_elder_guardian"
+    },
+    {
+      "name": "Phantom",
+      "type": "item",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_phantoming"
+    },
+    {
+      "name": "TotemOfCutness",
+      "type": "item",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_cutness"
+    },
+    {
+      "name": "TotemOfBlazing",
+      "type": "item",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totem_of_blazing"
+    },
+    {
+      "name": "CreditBookR",
+      "type": "recipe",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "credit_book_r"
+    },
+    {
+      "name": "IceMirror",
+      "type": "gun",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_mirror"
+    },
+    {
+      "name": "IceMirrorRangedItemUsed",
+      "type": "procedure",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_mirror_ranged_item_used",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FrozenChest",
+      "type": "block",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frozen_chest"
+    },
+    {
+      "name": "FrozenChestG",
+      "type": "gui",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frozen_chest_g"
+    },
+    {
+      "name": "FrozenChestLT",
+      "type": "loottable",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frozen_chest_lt"
+    },
+    {
+      "name": "FrozenChestR",
+      "type": "recipe",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frozen_chest_r"
+    },
+    {
+      "name": "CloudBottle",
+      "type": "item",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cloud_bottle"
+    },
+    {
+      "name": "CloudBottleRightClickedInAir",
+      "type": "procedure",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "cloud_bottle_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FindOcean",
+      "type": "achievement",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "find_ocean"
+    },
+    {
+      "name": "GetInkSac",
+      "type": "achievement",
+      "sortid": 286,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_ink_sac"
+    },
+    {
+      "name": "EntityDie",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_die",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetBoat",
+      "type": "achievement",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "get_boat"
+    },
+    {
+      "name": "Boat",
+      "type": "tag",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "boat"
     }
   ],
   "variable_elements": [
@@ -3243,28 +3580,35 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.zanyelements.totem_of_phantoming": "Totem of Phantoming",
+      "item.zanyelements.totem_of_elder_guardian": "Totem Of Elder Guarding",
       "advancements.get_void_pouch.descr": "Craft a Void Pouch",
       "item.zanyelements.glacier_spawn_egg": "Glacier Spawn Egg",
       "item.zanyelements.blue_quartz_filled_chalice": "Blue Quartz Filled Chalice",
       "advancements.get_64_stone.title": "Stack Some Stones",
       "advancements.totems.title": "Your First Totem",
       "item.minecraft.potion.effect.endgelic": "Endgelic",
-      "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
       "enchantment.zanyelements.acceleration": "Acceleration",
+      "item.minecraft.lingering_potion.effect.cloud_9": "Lingering Cloud 9",
+      "advancements.brew_golden_chalice.descr": "Put some Ores in a Golden Chalice",
       "item.zanyelements.tnt_leggings": "TNT Leggings",
       "item.zanyelements.philosophers_stone": "Philosopher\u0027s Stone",
       "block.zanyelements.totem_pole_shulker": "Totem Pole Shulker",
+      "advancements.get_golden_chalice.title": "The Golden Chalice...",
       "item.zanyelements.cloud_helmet": "Cloud Helmet",
-      "advancements.totem_of_the_end_a.title": "Endgelic",
       "item.zanyelements.ancient_iron_filled_chalice": "Ancient Iron Filled Chalice",
+      "advancements.totem_of_the_end_a.title": "Endgelic",
       "item.zanyelements.lapis_lazuil_filled_chalice": "Lapis Lazuli Filled Chalice",
       "item.zanyelements.totem_of_the_end": "Totem of the End",
       "block.zanyelements.stripped_olive_log": "Stripped Olive Log",
       "effect.endgelic": "Endgelic",
       "item.minecraft.tipped_arrow.effect.cloud_9": "Arrow of Cloud 9",
+      "item.zanyelements.cloud_bottle": "Cloud Bottle",
+      "advancements.get_ink_sac.descr": "Kill a Squid",
       "item.minecraft.tipped_arrow.effect.endgelic": "Arrow of Endgelic",
       "item.minecraft.potion.effect.cloud_9": "Cloud 9",
       "item.zanyelements.credit_book": "Credit Book",
+      "advancements.get_boat.title": "Ocean Transportation",
       "advancements.sheep_totem.title": "IT\u0027S SO FLUFFY!!",
       "item.zanyelements.redstone_filled_chalice": "Redstone Filled Chalice",
       "block.zanyelements.philosophers_ore": "Philosopher\u0027s Ore",
@@ -3276,22 +3620,25 @@
       "advancements.get_64_ghast_tears.descr": "Get 64 Ghast Tears",
       "advancements.max_void_pouch.title": "Max Void Pouch",
       "item.minecraft.splash_potion.effect.endgelic": "Splash Endgelic",
+      "advancements.fully_enchant_elytea.descr": "Fully Enchant an Elytra with Movement Enchantments",
       "advancements.get_1_stone.descr": "Smelt Cobblestone to Stone",
       "block.zanyelements.snow_bricks_chiseled": "Snow Bricks Chiseled",
       "advancements.get_charcoal_block.descr": "Get a Charcoal Block",
+      "advancements.kill_glacier.title": "Stay Frosty",
       "item.zanyelements.endstone_shard": "Endstone Shard",
       "item.zanyelements.totem_of_explosives": "Totem of Explosives",
       "block.zanyelements.olive_stairs": "Olive Stairs",
       "advancements.test.descr": "Tessst",
+      "advancements.kill_glacier.descr": "Kill a Galicer",
       "advancements.get_charcoal_block.title": "Wait That\u0027s Not Coal!",
       "advancements.two_philosophers_stones.title": "Why Do You Need Two of Them?",
       "block.zanyelements.olive_slab": "Olive Slab",
-      "advancements.max_void_pouch.descr": "Upgrade your void pouch to the maximum level",
+      "advancements.max_void_pouch.descr": "Upgrade your Void Pouch to the maximum level",
       "item.zanyelements.totem_of_supplementary": "Totem of Supplementary",
       "item.zanyelements.void_book": "Void Book",
       "block.zanyelements.cloud": "Cloud",
       "advancements.mine_philosophers_ore.title": "A Shard of Philosophers",
-      "advancements.get_cloud_boots.descr": "Craft cloud boots",
+      "advancements.get_cloud_boots.descr": "Craft Cloud Boots",
       "item.zanyelements.permafrost_creeper_spawn_egg": "Permafrost Creeper Spawn Egg",
       "advancements.get_cloud_boots.title": "Pep In Your Step!",
       "block.zanyelements.collapsing_stone": "Collapsing Stone",
@@ -3299,13 +3646,16 @@
       "advancements.physical_clouds.descr": "Find the more physical cousin of the normal clouds",
       "advancements.mine_philosophers_ore.descr": "Mine Philosopher\u0027s Ore",
       "enchantment.zanyelements.elytra_rental": "Elytra Rental",
+      "block.zanyelements.chain_cauldron": "Chain Cauldron",
       "item.zanyelements.netherite_scrap_filled_chalice": "Netherite Scrap Filled Chalice",
       "block.zanyelements.olive_trapdoor": "Olive Trapdoor",
       "block.zanyelements.totel_pole_creeper": "Totem Pole Creeper",
+      "advancements.get_boat.descr": "Make your first boat!",
       "effect.cloud_9": "Cloud 9",
       "advancements.sheep_totem.descr": "Get a Totem of Fluff",
       "advancements.suprem_max_void_pouch.descr": "Max out your Void Pouch and get all enchantments on it",
       "block.zanyelements.core_crafting_table": "Core Crafting Table",
+      "block.zanyelements.frozen_chest": "Frozen Chest",
       "item.minecraft.lingering_potion.effect.endgelic": "Lingering Endgelic",
       "entity.zanyelements.glacier": "Glacier",
       "item.zanyelements.totem_chisel": "Totem Chisel",
@@ -3314,26 +3664,35 @@
       "item.minecraft.splash_potion.effect.cloud_9": "Splash Cloud 9",
       "advancements.break_collapsing_stone.title": "A Crumy Stone",
       "advancements.totem_of_the_end_a.descr": "Get A Totem Of The End",
+      "advancements.brew_golden_chalice.title": "Like Golden Poitons",
       "block.zanyelements.totem_pole_endermen": "Totem Pole Enderman",
       "advancements.get_64_stone.descr": "Achieve 64 Stones!",
+      "item.zanyelements.ice_mirror": "Ice Mirror",
       "block.zanyelements.olive_fence_gate": "Olive Fence Gate",
       "item.zanyelements.blackcoal_filled_chalice": "Blackcoal Filled Chalice",
       "entity.zanyelements.permafrost_creeper": "Permafrost Creeper",
       "item.zanyelements.tnt_chestplate": "TNT Body",
+      "advancements.get_golden_chalice.descr": "Get a Golden Chalice",
       "item.zanyelements.quartz_filled_chalice": "Quartz Filled Chalice",
       "enchantment.zanyelements.xp_siphon": "Xp Siphon",
       "block.zanyelements.totem_pole_sheep": "Totem Pole Sheep",
       "item.zanyelements.cloud_leggings": "Cloud Leggings",
       "block.zanyelements.snow_bricks": "Snow Bricks",
+      "item.zanyelements.totem_of_blazing": "Totem Of Blazing",
+      "advancements.brew_golden_chalice_tier_2.title": "Even MORE Golden Potions!",
       "advancements.test.title": "Test",
       "enchantment.zanyelements.uplifting": "Uplifting",
       "advancements.suprem_max_void_pouch.title": "Supreme Maximum Void Pouch",
       "advancements.physical_clouds.title": "Physical Clouds",
-      "advancements.totems.descr": "Obtain a totem pole",
+      "advancements.totems.descr": "Obtain a Totem Pole",
       "enchantment.zanyelements.arrow_attractor": "Arrow Attractor",
+      "advancements.find_ocean.descr": "Explore an Ocean",
       "item.zanyelements.totem_of_fluff": "Totem of Fluff",
+      "advancements.rent_a_elytra.title": "Rental Elytra",
       "block.zanyelements.snow_stairs": "Snow Stairs",
+      "advancements.enchant_elytra.title": "Magic Powered Flying",
       "advancements.get_1_stone.title": "Stoned",
+      "advancements.fully_enchant_elytea.title": "Full Magic Elytra",
       "advancements.break_collapsing_stone.descr": "Collapse Collapsing Stone",
       "block.zanyelements.charcoal_block": "Charcoal Block",
       "block.zanyelements.crafting_core": "Crafting Core",
@@ -3342,6 +3701,7 @@
       "block.zanyelements.totem_pole": "Totem Pole",
       "advancements.notable_advamcement.descr": "This is a very Notable advancement!",
       "block.zanyelements.snow_slab": "Snow Slab",
+      "advancements.enchant_elytra.descr": "Enchant an Elytra",
       "advancements.two_philosophers_stones.descr": "Craft a second Philosopher\u0027s Stone",
       "advancements.shulker_totem.title": "Shulking",
       "advancements.creeper_totem.title": "Explosive Life",
@@ -3349,6 +3709,8 @@
       "block.zanyelements.olive_planks": "Olive Planks",
       "block.zanyelements.olive_log": "Olive Log",
       "advancements.get_philosophers_stone.descr": "Craft a Philosopher\u0027s Stone",
+      "advancements.find_ocean.title": "Oceanic",
+      "advancements.brew_golden_chalice_tier_2.descr": "Put some more Ores in a Golden Chalice",
       "block.zanyelements.snow_brick_stairs": "Snow Brick Stairs",
       "block.zanyelements.olive_fence": "Olive Fence",
       "item.zanyelements.condensed_iron": "Condensed Iron",
@@ -3358,10 +3720,13 @@
       "item.zanyelements.golden_chalice": "Golden Chalice",
       "entity.zanyelements.azure_villager": "Azure Villager",
       "block.zanyelements.olive_wood": "Olive Wood",
+      "item.zanyelements.totem_of_guarding": "Totem Of Guarding",
       "item.zanyelements.tnt_helmet": "TNT Helmet",
+      "advancements.get_ink_sac.title": "Underwater Kill",
       "item.zanyelements.totem_of_shulking": "Totem of Shulking",
       "item.zanyelements.diamond_filled_chalice": "Diamond Filled Chalice",
       "block.zanyelements.stripped_olive_wood": "Stripped Olive Wood",
+      "item.zanyelements.totem_of_cutness": "Totem Of Cutness",
       "advancements.notable_advamcement.title": "Notable Advancement",
       "block.zanyelements.olive_door": "Olive Door",
       "advancements.get_64_ghast_tears.title": "I\u0027m All Teary Eyed!",
@@ -3369,13 +3734,14 @@
       "advancements.creeper_totem.descr": "Get a Totem Of Explosives",
       "item.zanyelements.philosophers_shard": "Philosopher\u0027s Shard",
       "advancements.shulker_totem.descr": "Get a Shulker Totem",
-      "block.zanyelements.cracked_snow_bricks": "Cracked Snow Bricks"
+      "block.zanyelements.cracked_snow_bricks": "Cracked Snow Bricks",
+      "advancements.rent_a_elytra.descr": "Rent a Elytra"
     }
   },
   "workspaceSettings": {
     "modid": "zanyelements",
     "modName": "ZanyElements",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "Join the Discord!: https://discord.gg/YYM3NYssSJ",
     "author": "Shadowdragon, MCreator",
     "websiteURL": "https://mcreator.net",

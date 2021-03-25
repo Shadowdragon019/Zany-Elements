@@ -1,0 +1,46 @@
+{
+  "_fv": 15,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "credit_book",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:OliveSlab"
+      },
+      {
+        "value": "CUSTOM:OliveSlab"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:OliveSlab"
+      },
+      {
+        "value": "Items.PAPER"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CreditBook"
+    },
+    "name": "credit_book",
+    "namespace": "mod"
+  }
+}

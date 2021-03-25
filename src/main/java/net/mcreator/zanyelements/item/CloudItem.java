@@ -7,6 +7,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.ItemStack;
@@ -17,11 +19,14 @@ import net.minecraft.item.ArmorItem;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.util.ITooltipFlag;
 
 import net.mcreator.zanyelements.procedures.CloudBootsTickEventProcedure;
+import net.mcreator.zanyelements.block.CloudsBlock;
 import net.mcreator.zanyelements.ZanyelementsModElements;
 
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
 
 @ZanyelementsModElements.ModElement.Tag
@@ -63,7 +68,7 @@ public class CloudItem extends ZanyelementsModElements.ModElement {
 
 			@Override
 			public Ingredient getRepairMaterial() {
-				return Ingredient.EMPTY;
+				return Ingredient.fromStacks(new ItemStack(CloudsBlock.block, (int) (1)));
 			}
 
 			@OnlyIn(Dist.CLIENT)
@@ -83,6 +88,12 @@ public class CloudItem extends ZanyelementsModElements.ModElement {
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.FEET, new Item.Properties().group(ItemGroup.COMBAT)) {
+			@Override
+			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+				super.addInformation(itemstack, world, list, flag);
+				list.add(new StringTextComponent("Doesn't work with Elytras"));
+			}
+
 			@Override
 			public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType slot, String type) {
 				return "zanyelements:textures/models/armor/cloud__layer_" + (slot == EquipmentSlotType.LEGS ? "2" : "1") + ".png";

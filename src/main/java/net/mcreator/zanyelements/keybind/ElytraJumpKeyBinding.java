@@ -39,7 +39,7 @@ public class ElytraJumpKeyBinding extends ZanyelementsModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.elytra_jump", GLFW.GLFW_KEY_SPACE, "key.categories.movement");
+		keys = new KeyBinding("key.mcreator.elytra_jump", GLFW.GLFW_KEY_Z, "key.categories.movement");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

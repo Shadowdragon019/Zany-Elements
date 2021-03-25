@@ -3,16 +3,22 @@ package net.mcreator.zanyelements.procedures;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import net.mcreator.zanyelements.ZanyelementsModElements;
 import net.mcreator.zanyelements.ZanyelementsMod;
 
 import java.util.Map;
+import java.util.Iterator;
 
 @ZanyelementsModElements.ModElement.Tag
 public class SkyVillagerRightClickedOnEntityProcedure extends ZanyelementsModElements.ModElement {
@@ -67,6 +73,18 @@ public class SkyVillagerRightClickedOnEntityProcedure extends ZanyelementsModEle
 										"give @p elytra{Enchantments:[{id:\"zanyelements:elytra_rental\",lvl:1s}]} 1");
 							}
 						}
+						if (sourceentity instanceof ServerPlayerEntity) {
+							Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) sourceentity).server).getAdvancementManager()
+									.getAdvancement(new ResourceLocation("zanyelements:rent_a_elytra"));
+							AdvancementProgress _ap = ((ServerPlayerEntity) sourceentity).getAdvancements().getProgress(_adv);
+							if (!_ap.isDone()) {
+								Iterator _iterator = _ap.getRemaningCriteria().iterator();
+								while (_iterator.hasNext()) {
+									String _criterion = (String) _iterator.next();
+									((ServerPlayerEntity) sourceentity).getAdvancements().grantCriterion(_adv, _criterion);
+								}
+							}
+						}
 					} else {
 						if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
 							((PlayerEntity) sourceentity).sendStatusMessage(
@@ -74,7 +92,7 @@ public class SkyVillagerRightClickedOnEntityProcedure extends ZanyelementsModEle
 											+ (((((sourceentity instanceof LivingEntity)
 													? ((LivingEntity) sourceentity).getHeldItemMainhand()
 													: ItemStack.EMPTY)).getCount()))
-											+ "" + (" is not enough Emeralds, you need 16 Emeralds"))),
+											+ "" + (" isn't enough Emeralds, you need 16 Emeralds"))),
 									(false));
 						}
 					}
@@ -89,7 +107,8 @@ public class SkyVillagerRightClickedOnEntityProcedure extends ZanyelementsModEle
 			} else {
 				if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
 					((PlayerEntity) sourceentity).sendStatusMessage(
-							new StringTextComponent(("" + ("<Azure Villager> Phantoms are fun. Bonk, bonk, bonk. Bonk, bonk, bonk. Get out."))),
+							new StringTextComponent(
+									("" + ("<Azure Villager> Phantoms are fun. Bonk, bonk, bonk. Bonk, bonk, bonk. Get out. I need my sleep."))),
 							(false));
 				}
 			}
@@ -116,8 +135,10 @@ public class SkyVillagerRightClickedOnEntityProcedure extends ZanyelementsModEle
 			}
 		} else {
 			if (sourceentity instanceof PlayerEntity && !sourceentity.world.isRemote()) {
-				((PlayerEntity) sourceentity).sendStatusMessage(
-						new StringTextComponent(("" + ("<Azure Villager> Phantoms are fun. Bonk, bonk, bonk. Bonk, bonk, bonk. Get out."))), (false));
+				((PlayerEntity) sourceentity)
+						.sendStatusMessage(new StringTextComponent((("<Azure Villager> Welcome to Elytra Rental Emporium! I have ") + ""
+								+ ((entity.getPersistentData().getDouble("avaliableElytras"))) + ""
+								+ (" Rental Elytras left and I sell them for 16 emeralds a piece!"))), (false));
 			}
 		}
 	}

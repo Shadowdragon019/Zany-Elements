@@ -70,7 +70,7 @@ public class SnowCloudCastleStructure extends ZanyelementsModElements.ModElement
 						int y = spawnTo.getY();
 						int z = spawnTo.getZ();
 						Template template = world.getWorld().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("zanyelements", "snow_could_castle"));
+								.getTemplateDefaulted(new ResourceLocation("zanyelements", "acacia_web"));
 						if (template == null)
 							return false;
 						template.func_237144_a_(world, spawnTo, new PlacementSettings().setRotation(rotation).setRandom(random).setMirror(mirror)

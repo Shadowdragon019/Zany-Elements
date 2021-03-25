@@ -3,6 +3,7 @@ package net.mcreator.zanyelements.procedures;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import net.mcreator.zanyelements.particle.CloudDustParticle;
@@ -52,30 +53,30 @@ public class Cloud9ActiveProcedure extends ZanyelementsModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((!(entity.isSneaking()))) {
+		if (((!(entity.isSneaking())) && (!(((PlayerEntity) entity).isElytraFlying())))) {
 			entity.setMotion((entity.getMotion().getX()), ((entity.getMotion().getY()) + 0.07), (entity.getMotion().getZ()));
 			entity.fallDistance = (float) (0);
-		}
-		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), (int) 1, 0.3,
-					0.1, 0.3, 0.1);
-		}
-		{
-			List<Entity> _entfound = world
-					.getEntitiesWithinAABB(Entity.class,
-							new AxisAlignedBB(x - (8 / 2d), y - (8 / 2d), z - (8 / 2d), x + (8 / 2d), y + (8 / 2d), z + (8 / 2d)), null)
-					.stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+			if (world instanceof ServerWorld) {
+				((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), (int) 1,
+						0.3, 0.1, 0.3, 0.1);
+			}
+			{
+				List<Entity> _entfound = world
+						.getEntitiesWithinAABB(Entity.class,
+								new AxisAlignedBB(x - (8 / 2d), y - (8 / 2d), z - (8 / 2d), x + (8 / 2d), y + (8 / 2d), z + (8 / 2d)), null)
+						.stream().sorted(new Object() {
+							Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+								return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+							}
+						}.compareDistOf(x, y, z)).collect(Collectors.toList());
+				for (Entity entityiterator : _entfound) {
+					if (((!(entityiterator == entity)) && (!(entity.isSneaking())))) {
+						entityiterator.setMotion((entityiterator.getMotion().getX()), ((entityiterator.getMotion().getY()) + 0.06),
+								(entityiterator.getMotion().getZ()));
+						if (world instanceof ServerWorld) {
+							((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entityiterator.getPosX()), (entityiterator.getPosY()),
+									(entityiterator.getPosZ()), (int) 1, 0.3, 0.1, 0.3, 0.1);
 						}
-					}.compareDistOf(x, y, z)).collect(Collectors.toList());
-			for (Entity entityiterator : _entfound) {
-				if (((!(entityiterator == entity)) && (!(entity.isSneaking())))) {
-					entityiterator.setMotion((entityiterator.getMotion().getX()), ((entityiterator.getMotion().getY()) + 0.06),
-							(entityiterator.getMotion().getZ()));
-					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(CloudDustParticle.particle, (entityiterator.getPosX()), (entityiterator.getPosY()),
-								(entityiterator.getPosZ()), (int) 1, 0.3, 0.1, 0.3, 0.1);
 					}
 				}
 			}

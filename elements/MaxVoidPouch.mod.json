@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Max Void Pouch",
-    "achievementDescription": "Upgrade your void pouch to the maximum level",
+    "achievementDescription": "Upgrade your Void Pouch to the maximum level",
     "achievementIcon": {
       "value": "CUSTOM:VoudPouch"
     },

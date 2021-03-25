@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "zanyelements:block/frozen_chest"
+    },
+    "facing=east": {
+      "model": "zanyelements:block/frozen_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "zanyelements:block/frozen_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "zanyelements:block/frozen_chest",
+      "y": 270
+    }
+  }
+}

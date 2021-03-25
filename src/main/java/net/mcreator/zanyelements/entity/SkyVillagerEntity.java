@@ -87,7 +87,7 @@ public class SkyVillagerEntity extends ZanyelementsModElements.ModElement {
 			RenderingRegistry.registerEntityRenderingHandler(entity, renderManager -> new MobRenderer(renderManager, new VillagerModel(0), 0.5f) {
 				@Override
 				public ResourceLocation getEntityTexture(Entity entity) {
-					return new ResourceLocation("zanyelements:textures/sky_villager.png");
+					return new ResourceLocation("zanyelements:textures/sky_villager_ura.png");
 				}
 			});
 		}
@@ -203,6 +203,9 @@ public class SkyVillagerEntity extends ZanyelementsModElements.ModElement {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				SkyVillagerOnEntityTickUpdateProcedure.executeProcedure($_dependencies);
 			}

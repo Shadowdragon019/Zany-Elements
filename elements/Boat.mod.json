@@ -1,0 +1,32 @@
+{
+  "_fv": 15,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.BOAT"
+      },
+      {
+        "value": "Items.SPRUCE_BOAT"
+      },
+      {
+        "value": "Items.BIRCH_BOAT"
+      },
+      {
+        "value": "Items.JUNGLE_BOAT"
+      },
+      {
+        "value": "Items.ACACIA_BOAT"
+      },
+      {
+        "value": "Items.DARK_OAK_BOAT"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "boat",
+    "namespace": "forge"
+  }
+}

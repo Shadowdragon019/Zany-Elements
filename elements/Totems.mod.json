@@ -3,7 +3,7 @@
   "_type": "achievement",
   "definition": {
     "achievementName": "Your First Totem",
-    "achievementDescription": "Obtain a totem pole",
+    "achievementDescription": "Obtain a Totem Pole",
     "achievementIcon": {
       "value": "CUSTOM:Totem"
     },

@@ -1,0 +1,26 @@
+{
+  "group": "credit_book",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "zanyelements:olive_slab"
+    },
+    "1": {
+      "item": "zanyelements:olive_slab"
+    },
+    "2": {
+      "item": "zanyelements:olive_slab"
+    },
+    "3": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "item": "zanyelements:credit_book",
+    "count": 1
+  }
+}

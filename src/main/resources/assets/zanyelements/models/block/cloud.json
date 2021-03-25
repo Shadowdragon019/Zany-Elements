@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "zanyelements:blocks/clouds",
-    "particle": "zanyelements:blocks/clouds"
+    "all": "zanyelements:blocks/cloud_block3",
+    "particle": "zanyelements:blocks/cloud_block3"
   }
 }

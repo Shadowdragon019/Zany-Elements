@@ -151,6 +151,11 @@ public class CreditBookGUIGui extends ZanyelementsModElements.ModElement {
 		protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
 			this.font.drawString(ms, "Credit Book", 6, 7, -12829636);
 			this.font.drawString(ms, "Uraneptus #5442 - Textures", 6, 25, -12829636);
+			this.font.drawString(ms, "basically, i am fox #5356", 6, 88, -12829636);
+			this.font.drawString(ms, " - Textures", 6, 97, -12829636);
+			this.font.drawString(ms, "PotatoWyvern #8542 - Textures, ", 6, 43, -12829636);
+			this.font.drawString(ms, "Geo #1553 - Textures, bug help", 6, 70, -12829636);
+			this.font.drawString(ms, "bug help", 6, 52, -12829636);
 		}
 
 		@Override

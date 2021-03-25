@@ -2,7 +2,7 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "clouds",
+    "texture": "cloud_block3",
     "textureTop": "clouds",
     "textureLeft": "clouds",
     "textureFront": "clouds",
@@ -19,7 +19,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": true,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "TRANSLUCENT",
     "mx": 0.01,
     "my": 0.01,
     "mz": 0.01,
@@ -27,7 +27,9 @@
     "My": 0.99,
     "Mz": 0.99,
     "name": "Cloud",
-    "specialInfo": [],
+    "specialInfo": [
+      "Can be put in a bottle"
+    ],
     "hardness": 0.0,
     "resistance": 0.0,
     "hasGravity": false,

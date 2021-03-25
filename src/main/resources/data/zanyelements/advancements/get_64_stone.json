@@ -9,7 +9,7 @@
     "description": {
       "translate": "advancements.get_64_stone.descr"
     },
-    "frame": "task",
+    "frame": "goal",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
